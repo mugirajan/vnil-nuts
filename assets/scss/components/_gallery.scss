@@ -1,0 +1,110 @@
+.gallery_content_wrap{
+    @include bg_img_property;
+}
+.gallery_lft_title{
+    max-width: 18rem;
+    height: auto;
+    h2{
+        color: #292929;
+        font-size: 2.8125rem;
+        font-weight: 700;
+    }
+}
+.gallery_lft_desc{
+    p{
+        color: #afb2ae;
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 30px;
+    }
+}
+.gallery_mid_content{
+    max-width: 28.75rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 30px 10px #ebe9e9!important;
+    margin: 0 auto;
+}
+.gallery_mid_thumb{
+    img{
+        width: 100%;
+        height: 13.875rem;
+    }
+}
+.gallery_mid_inner_content{
+    h2{
+        max-width: 14.375rem;
+        color: #252525;
+        font-size: 1.375rem;
+        font-weight: 700;
+    }
+}
+.gallery_mid_author_content,
+.gallery_end_author_content{
+    max-width: 16.375rem;
+    .far{
+        color: #46ba56;
+    }
+}
+.gallery_mid_author_title,
+.gallery_mid_author_time,
+.gallery_end_author_title,
+.gallery_end_author_time{
+    span{
+        color: #9fadb5;
+        font-size: 0.8375rem;
+        font-weight: 400;
+    }
+}
+.gallery_mid_desc{
+    p{
+        color: #9fadb5;
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 32px;
+    }
+}
+.gallery_end_content{
+    max-width: 28.75rem;
+    height: 500px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 30px 10px #ebe9e9!important;
+}
+
+.gallery_end_thumb{
+    width: 10rem;
+    height: 6rem;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    transition: $default_transition;
+    img{
+        background-size: cover;
+        background-origin: border-box;
+    }
+    cursor: pointer;
+    &:hover{
+        opacity: .7;
+        transition: $default_transition;
+        
+    }
+}
+.gallery_end_inner_content{
+    h4{
+        color: #252525;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: $default_transition;
+        &:hover{
+            color: #8799a3;
+            transition: $default_transition;
+        }
+    }
+}
+.gallery_left_thumb {
+    bottom: 70px;
+    left: -50px;
+}
+.gallery_right_thumb {
+    top: 70px;
+    right: -50px;
+}

@@ -1,0 +1,182 @@
+.cart_section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .container {
+        max-width: 1200px;
+    }
+}
+.form_item{
+    position: relative;
+    margin-bottom: 30px;
+}
+.billing_form {
+    .form_title {
+        font-size: 24px;
+    }
+    .form_wrap {
+        padding: 60px;
+        border: 2px solid #e6e6e6;
+    }
+    .form_item, .option_select {
+        padding-left: 180px;
+    }
+    .form_item .input_title {
+        top: 6px;
+        left: 0px;
+        font-size: 18px;
+        font-weight: 500;
+        max-width: 170px;
+        position: absolute;
+        color: black;
+    }
+    
+    .form_item .input_title sup {
+        top: -2px;
+        color: $default_color;
+    }
+    .form_item {
+        input {
+            height: 40px;
+            padding: 0px;
+            border: none;
+            border-radius: 0px;
+            border-bottom: 2px solid #e6e6e6;
+            &:focus {
+                border-color: $default_color;
+            }
+        }
+        textarea {
+            padding: 0px;
+            border: none;
+            min-height: 70px;
+            border-radius: 0px;
+            border-bottom: 2px solid #e6e6e6;
+            background-color: white;
+        }
+    }
+    &.checkbox_item {
+        padding-left: 180px;
+    }
+    hr {
+        height: 2px;
+    }
+}
+.checkbox_item {
+    input{
+        float: left;
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+        appearance: none;
+        position: relative;
+        border-radius: 3px;
+        margin: 3px 10px 0 0;
+        background-color: $default_color;
+        &:before{
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            color: $white;
+            font-size: 12px;
+            content: '\f00c';
+            font-weight: 700;
+            position: absolute;
+            transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            transform: translate(-50%, -50%);
+            font-family: 'Font Awesome 5 Free';
+        }
+        &:checked:before{
+            opacity: 1;
+        }
+    }
+    label{
+        margin: 0;
+        display: table;
+        color: #999;
+        cursor: pointer;
+        font-weight: 500;
+    }
+}
+
+.billing_payment_mathod {
+    li {
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+    .checkbox_item {
+        .paypal_image {
+            margin-top: 15px;
+        }
+    }
+    .custom_btn {
+        width: 100%;
+    }
+}
+.billing_form {
+    .form_title {
+        font-size: 24px;
+    }
+    .form_wrap {
+        padding: 60px;
+        border: 2px solid #e6e6e6;
+    }
+    .form_item {
+        padding-left: 180px;
+        .input_title {
+            top: 6px;
+            left: 0px;
+            font-size: 18px;
+            max-width: 170px;
+            position: absolute;
+            color: black;
+            sup {
+                top: -2px;
+                color: $default_color;
+            }
+        }
+        input {
+            height: 40px;
+            padding: 0px;
+            border: none;
+            border-radius: 0px;
+            border-bottom: 2px solid #e6e6e6;
+            &:focus {
+                border-color: $default_color;
+            }
+        }
+        textarea {
+            padding: 0px;
+            border: none;
+            min-height: 70px;
+            border-radius: 0px;
+            border-bottom: 2px solid #e6e6e6;
+        }
+    }
+    hr {
+        height: 2px;
+    }
+}
+.billing_form.checkbox_item {
+    padding-left: 180px;
+}
+.checkout_table {
+    .item_image.item_image {
+        width: 80px;
+        margin-right: 20px;
+    }
+    span{
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+.checkout_table {
+    .table {
+        td{
+            border: none;
+            padding: 20px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+    }
+}

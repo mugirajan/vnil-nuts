@@ -1,0 +1,71 @@
+/* table of content - start
+================================================== */
+/*
+* Project Name   :  Organic - Food E-commerce HTML Template
+* File           :  CSS Base
+* Version        :  1.0.0
+* Last change    :  01 Jan 2022
+* Author         :  JThemes (https://themeforest.net/user/jthemes)
+* Developer		 :	Imran Hosain
+*/
+/* table of content - end
+================================================== */
+
+// template global settings
+@import 'variable';
+@import 'mixin';
+@import 'reset';
+
+// template elements
+@import 'elements/animation';
+@import 'elements/backtotop';
+@import 'elements/button';
+@import 'elements/form';
+@import 'elements/list';
+@import 'elements/pagination';
+@import 'elements/rating';
+@import 'elements/social';
+@import 'elements/space';
+@import 'elements/title';
+
+// template components
+@import 'components/about';
+@import 'components/banner';
+@import 'components/blogs';
+@import 'components/breadcrumb';
+@import 'components/cart';
+@import 'components/category';
+@import 'components/compare';
+@import 'components/contact';
+@import 'components/collection';
+@import 'components/checkout';
+@import 'components/deals';
+@import 'components/faqs';
+@import 'components/facts';
+@import 'components/funfact';
+@import 'components/footer';
+@import 'components/gallery';
+@import 'components/header';
+@import 'components/instagram';
+@import 'components/media';
+@import 'components/recent';
+@import 'components/register';
+@import 'components/review';
+@import 'components/search';
+@import 'components/navbar';
+@import 'components/shop';
+@import 'components/product';
+@import 'components/sale';
+@import 'components/store';
+@import 'components/sidebar';
+@import 'components/slider';
+@import 'components/testimonial';
+@import 'components/service';
+@import 'components/team';
+@import 'components/trend';
+@import 'components/countdown';
+@import 'components/quick';
+@import 'components/vendor';
+
+// template responsive
+@import 'responsive';

@@ -1,0 +1,28 @@
+.recent_product{
+    .recent_product_title{
+        font-size: 30px;
+    }
+    .modal-header {
+        border-bottom: none;
+    }
+    .modal-dialog{
+        max-width: 1000px;
+        height: auto;
+        border-radius: 20px;
+    }
+    .modal-content {
+        border-radius: 1.3rem;
+    }
+    .btn-close {
+        background-color: $default_color;
+        border-radius: 100%;
+    }
+}
+.quick_view {
+    .modal-dialog{
+        max-width: 1000px;
+        height: auto;
+        border-radius: 20px;
+    }
+}
+

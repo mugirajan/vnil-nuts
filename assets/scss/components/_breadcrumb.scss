@@ -1,0 +1,35 @@
+.breadcrumb_wrap{
+    @include bg_img_property;
+}
+.breadcrumb_title{
+    h2{
+        font-size: 52px;
+        font-weight: 700;
+    }
+}
+.breadcrumb_item{
+    li{
+        font-size: 18px;
+        font-weight: 500;
+        a{
+            color: $white;
+        }
+        &:not(:last-child){
+            margin-right: 10px;
+        }
+    }
+    i{
+        color: #505050;
+        margin-right: 20px;
+        &.active{
+            color: #9fcb22;
+            border: 3px solid #9fcb22;
+            padding: 7px;
+            border-radius: 100%;
+        }
+    }
+}
+
+
+
+

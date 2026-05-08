@@ -1,0 +1,42 @@
+/* funfact section - start
+================================================== */
+
+.funfact_item {
+	display: flex;
+	color: #ffffff;
+	padding: 44px 44px;
+	align-items: center;
+	margin-bottom: 30px;
+	@include bg_img_property;
+	justify-content: space-between;
+	.item_icon {
+		order: 13;
+		height: 72px;
+		flex: 0 0 72px;
+		border-radius: 100%;
+		align-items: center;
+		display: inline-flex;
+		justify-content: center;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+		img {
+			max-height: 36px;
+		}
+	}
+	h3 {
+		line-height: 1;
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 400;
+		margin-bottom: 10px;
+	}
+	span {
+		display: block;
+		line-height: 1;
+		font-size: 35px;
+		font-weight: 600;
+	}
+}
+
+/* funfact section - end
+================================================== */

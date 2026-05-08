@@ -1,0 +1,40 @@
+/* rating star - start
+================================================== */
+.rating_star {
+    li {
+        color: #aeaeae;
+        font-size: 12px;
+        &:not(:last-child) {
+            margin-right: 2px;
+        }
+        &.active {
+            color: #ffa900;
+        }
+    }
+}
+.rating_wrap {
+    display: flex;
+    align-items: center;
+    .shop_review_text {
+        color: #aeaeae;
+        font-size: 12px;
+        font-weight: 700;
+        margin-left: 7px;
+    }
+}
+
+/* rating star - start */
+.rating_star2 {
+    margin-bottom: 15px;
+    >li {
+        color: #feb312;
+        line-height: 1;
+        font-size: 12px;
+        &:not(:last-child) {
+            margin-right: 2px;
+        }
+    }
+}
+/* rating star - end */
+/* rating star - end
+================================================== */

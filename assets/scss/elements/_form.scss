@@ -1,0 +1,25 @@
+.comment_area_title{
+    color: #252525;
+    font-size: 32px;
+}
+.form_item{
+    input{
+        padding: 35px 30px;
+        background-color: #f3f4f6;
+        border: none;
+        &::placeholder {
+            color: #8799a3;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+    textarea{
+        border-radius: 30px;
+        background-color: #f3f4f6;
+        &::placeholder {
+            color: #8799a3;
+            font-size: 16px;
+            font-weight: 700;
+        } 
+    }
+}

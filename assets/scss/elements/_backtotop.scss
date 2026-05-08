@@ -1,0 +1,25 @@
+/* back to top button - start
+================================================== */
+.backtotop {
+    right: 15px;
+    z-index: 999;
+    bottom: 60px;
+    display: none;
+    position: fixed;
+    .scroll {
+      z-index: 1;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      font-size: 14px;
+      position: relative;
+      align-items: center;
+      border-radius: 100%;
+      color: $default_color;
+      justify-content: center;
+      background-color: #ffffff;
+      box-shadow: 0px 10px 33.25px 1.75px rgb(0, 0, 0, 0.15);
+    }
+  }
+  /* back to top button - end
+  ================================================== */

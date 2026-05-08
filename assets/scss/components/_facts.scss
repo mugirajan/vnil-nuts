@@ -1,0 +1,32 @@
+.fact_section{
+    padding-top: 80px;
+    padding-bottom: 150px;
+}
+.facts_cont_wrap{
+    padding: 0px 50px;
+}
+.fact_content{
+    position: relative;
+    z-index: 2;
+    &::after{
+        content: "";
+        top: -6px;
+        left: 56px;
+        width: 170px;
+        height: 140px;
+        position: absolute;
+        background-color: #f7fded;
+        z-index: -1;
+    }
+    .fact_number{
+        color: #2b3132;
+        font-size: 50px;
+        font-weight: 700;
+    }
+    .fact_title{
+        color: #737879;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+}

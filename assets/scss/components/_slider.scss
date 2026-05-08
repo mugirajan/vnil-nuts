@@ -1,0 +1,193 @@
+// Styling the default Slick dots
+
+.slick-dots {
+	bottom: 30px;
+	right: 5px;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 1rem 0;
+	position: absolute;
+	list-style-type: none;
+	li {
+		margin: 0 0.25rem;
+		button {
+			display: block;
+			width: 1rem;
+			height: 1rem;
+			padding: 0;
+			border: none;
+			border-radius: 100%;
+			background-color: red;
+			text-indent: -9999px;
+		}
+	}
+	li.slick-active button {
+		background-color: #41508a;
+	}
+}
+
+.store_gallery_testimonial{
+	.slick-dots {
+		bottom: 30px;
+		right: 5px;
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		padding: 1rem 0;
+		position: absolute;
+		list-style-type: none;
+		li {
+			margin: 0 0.25rem;
+			button {
+				display: block;
+				width: 10px;
+				height: 10px;
+				padding: 0;
+				border: none;
+				border-radius: 100%;
+				background-color: #565656;
+				text-indent: -9999px;
+			}
+		}
+		li.slick-active button {
+			background-color: white;
+		}
+	}
+}
+
+// slick style 2
+.instagram_2{
+	.slick-dots{
+		bottom: -80px;
+		right: 0px;
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		padding: 1rem 0;
+		position: absolute;
+		list-style-type: none;
+		li.slick-active{
+			color: green;
+		}
+		button {
+			display: block;
+			width: 0.5rem;
+			height: 0.5rem;
+			padding: 0;
+			border: 0px;
+			border-radius: 100%;
+			background-color: #2e3e66;
+			text-indent: -9999px;
+		}
+	} 
+}
+
+
+// testimonial-2 section start =============
+.product__slider-main {
+	margin-bottom: 15px;
+	display: none;
+	img {
+		margin: 0 auto;
+	}
+}
+.product__slider-thmb {
+	.slick-slide {
+		opacity: 0.5;
+		transition: all .3s ease;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.slick-slide.slick-active {
+		opacity: 1;
+	}
+	display: none;
+}
+
+
+/*USE CSS for Slider*/
+/*End USE CSS for Slider*/
+.banner-slider {
+	.slider.slider-for {
+		max-width: 78%;
+		padding-right: 35px;
+		width: 100%;
+		float: left;
+	}
+	.slider.slider-nav {
+		max-width: 24%;
+		width: 100%;
+		float: left;
+		height: 610px;
+		overflow: hidden;
+		padding: 20px 0 0;
+		z-index: 9;
+	}
+}
+.slider-banner-image {
+	width: 400px;
+	height: 550px;
+	border-radius: 30px;
+	margin-right: 30px;
+	transition: $default_transition;
+	z-index: 999999;
+	position: relative;
+	left: 20px;
+	top: 0px;
+	img {
+		height: 85%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+.banner-slider .slider.slider-for {
+    max-width: 73%;
+    padding-right: 35px;
+    width: 100%;
+    float: right!important;
+}
+.slider-nav {
+	.slick-slide.thumbnail-image {
+		.thumbImg {
+			width: 130px;
+			height: 120px;
+			padding: 15px;
+			border-radius: 20px;
+			transition: $default_transition;
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+	.slick-slide {
+		text-align: center;
+		span {
+			font-size: 14px;
+			display: block;
+			padding: 5px 0 15px;
+		}
+	}
+}
+.slick-vertical {
+	.slick-slide {
+		margin-top: 7px;
+		&:active {
+			border: 0;
+			outline: 0;
+		}
+		&:focus {
+			border: 0;
+			outline: 0;
+		}
+	}
+}
+.slick-prev {
+	top: 0;
+}
+.slick-next {
+	bottom: 0;
+	background-color: #fff;
+}

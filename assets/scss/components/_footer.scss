@@ -1,0 +1,150 @@
+.border_top{
+    border-top: 10px solid;
+    border-image: linear-gradient(to right, #01b2ec 25%, #0412de 25%, #460b99 50%,#8100c8 50%, #d20097 75%) 5;
+}
+.footer_section_wrap{
+    @include bg_img_property;
+    &:before{
+        content: "";
+        top: 155px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #282828;
+        position: absolute;
+    }
+    &:after{
+        content: "";
+        bottom: 77px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #282828;
+        position: absolute;
+    }
+}
+.footer_top_subs{
+    input{
+        width: 580px;
+        color: #a6a6a6;
+        padding: 20px;
+        background-color: #1b1b1b;
+        border: 0!important;
+        outline: 0!important;
+        cursor: pointer;
+    }
+}
+.footer_top_subs{
+    button{
+        top: 50%;
+        right: 3px;
+        padding: 20px 30px;
+        transform: translateY(-50%);
+    }
+}
+.footer_inner_info_content,
+.footer_inner_acct_content{
+    padding-left: 30px;
+}
+.footer_inner_choose_content,
+.footer_inner_info_content,
+.footer_inner_acct_content{
+    position: relative;
+    &::after{
+        content: "";
+        top: -31px;
+        right: 0px;
+        width: 1px;
+        height: 326px;
+        background-color: #282828;
+        position: absolute;
+    }
+}
+.footer_inner_choose_title,
+.footer_inner_info_title,
+.footer_inner_acct_title,
+.footer_inner_ctc_title{
+    h4{
+        a{
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration-line: underline;
+        }
+    }
+}
+.footer_inner_choose_desc{
+    p{
+        color: #6e6e6e;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 30px;
+    }
+}
+.footer_inner_info_item,.footer_inner_acct_item{
+    a{
+        color: #696969;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 40px;
+        transition: $default_transition;
+        &:hover{
+            color: #504f4f;
+            transition: $default_transition;
+        }
+    }
+}
+.footer_inner_ctc_info{
+    p{
+        font-size: 0.9375rem;
+        font-weight: 500;
+        font{
+            color: #6e6e6e;
+        }
+    }
+}
+.footer_inner_payment_title{
+    h5{
+        font-size: 0.9375rem;
+        font-weight: 400;
+    }
+}
+.footer_bootom_copyright{
+    p{
+        color: #6e6e6e;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        font{
+            color: #5e9d03;
+        }
+    }
+}
+.footer_bootom_privicy,.footer_bootom_terms,.footer_bootom_refunds{
+    .priv{
+        color: #62a403;
+    }
+    p{
+        color: #9f9f9f;
+        font-size: 0.875rem;
+        font-weight: 500;
+        &:after{
+            width: 2px;
+            height: 15px;
+            content: "";
+            top: 50%;
+            right: -27px;
+            transform: translateY(-50%);
+            background-color: #6e6e6e;
+            position: absolute;
+        }
+    }
+}
+.footer_left_thumb{
+    top: 50px;
+    left: -150px;
+}
+.footer_right_thumb{
+    top: 50px;
+    right: -150px;
+}

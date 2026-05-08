@@ -1,0 +1,43 @@
+.collection_sec_wrap{
+    @include bg_img_property;
+    overflow: hidden;
+    border-radius: 30px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.collection_cont_wrap{
+    max-width: 630px;
+}
+.collection_title{
+    h2{
+        color: #303030;
+        font-size: 46px;
+        font-family: 400;
+        position: relative;
+        z-index: 3;
+        font{
+            color: #82c408;
+            z-index: 3;
+        }
+    }
+    number{
+        top: -183px;
+        right: -39px;
+        color: #e4e0e0;
+        font-size: 300px;
+        font-weight: 900;
+        z-index: 1;
+    }
+}
+.collection_desc{
+    max-width: 540px;
+    position: relative;
+    z-index: 3;
+    p{
+        color: #525252;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 35px;
+        padding-top: 15px;
+    }
+}

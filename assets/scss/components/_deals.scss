@@ -1,0 +1,59 @@
+.deal_item_content_wrap{
+    border-radius: 8px;
+    overflow: hidden;
+    &:hover{
+        transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        .deal_item_content{
+            transform: scale(1.08);
+            transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+    }
+}
+.deal_item_content{
+    max-width: 100%;
+    min-height: 21rem;
+    border-radius: 8px;
+    overflow: hidden;
+    @include bg_img_property;
+    transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.deal_item_txt{
+    bottom: 50px;
+    left: 40px;
+}
+.deal_sub_title{
+    h5{
+        color: #525252;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+}
+.deal_title{
+    max-width: 24rem;
+    margin-bottom: 15px;
+    h3{
+        color: #272727;
+        font-size: 2.1875rem;
+        font-weight: 700;
+    }
+}
+.deal_btn{
+    display: inline-block;
+    &:hover{
+        i{
+            transform: translateX(5px);
+        }
+    }
+    button{
+        color: $black;
+        font-size: 1rem;
+        font-weight: 500;
+        border: 3px solid transparent;
+        border-radius: 0;
+    }
+    i{
+        display: inline-block;
+        transition: transform 0.3s ease-out;
+    }
+}

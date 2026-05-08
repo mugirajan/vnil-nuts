@@ -1,0 +1,91 @@
+.contact_us_tetimonial{
+    .tetimonial_desc{
+        color: #272727;
+        font-size: 38px;
+        font-weight: 900;
+        line-height: 50px;
+    }
+}
+.tetimonial_author{
+    color: #242323;
+    font-size: 16px;
+    font-weight: 500;
+}
+.contact_top_desc{
+    color: #787777;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+// contact info start ============
+.contact_info_thumb_left{
+    top: 77px;
+    left: -77px;
+}
+.contact_info_thumb_right {
+    bottom: -48px;
+    right: -47px;
+}
+.contact_us_info{
+    .form_item{
+        input,
+        textarea
+        {
+            margin-top: 20px;
+        }
+    }
+    .custom_btn{
+        margin-top: 30px;
+    }
+}
+#mapBox {
+    min-height: 615px;
+    margin-bottom: 70px;
+}
+// address info section start ==============
+.address_sec_cont{
+    width: 100%;
+    height: 250px;
+    padding: 70px 50px 60px 40px;
+    background-color: #f8f6f4;
+    .address_author{
+        top: -47px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90px;
+        height: 90px;
+        font-size: 30px;
+        border-radius: 100%;
+        line-height: 80px;
+    }
+    .address_author2{
+        top: -47px;
+        left: 38%;
+        transform: translateX(-50%);
+        width: 90px;
+        height: 90px;
+        font-size: 30px;
+        border-radius: 100%;
+        line-height: 80px;
+    }
+}
+.address_author3{
+    top: -47px;
+    right: 13%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 90px;
+    font-size: 30px;
+    border-radius: 100%;
+    line-height: 80px;
+}
+.address_title{
+    color: #2d1b41;
+    font-size: 22px;
+    font-weight: 700;
+}
+.address_desc{
+    color: #636363;
+    font-size: 16px;
+    font-weight: 400;
+}

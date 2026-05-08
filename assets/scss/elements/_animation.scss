@@ -1,0 +1,166 @@
+/* all pages animation */
+@-webkit-keyframes fadeInDown {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+} 
+
+@-webkit-keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+	
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+	
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+// images moving animation
+.img_moving_anim1 {
+	position: relative;
+	animation: glide1 2s ease-in-out alternate infinite;
+}
+@keyframes glide1 {
+	from {
+		right: 0px;
+		top: 0px;
+	}
+	to {
+		right: 0px;
+		top: 20px;
+	}
+}
+.img_moving_anim2 {
+	position: relative;
+	animation: glide2 2s ease-in-out alternate infinite;
+}
+
+@keyframes glide2 {
+	from {
+		left: 0px;
+		bottom: 0px;
+	}
+	
+	to {
+		left: 0px;
+		bottom: 20px;
+	}
+}
+
+// text effect css
+
+.text-effect {
+	span {
+		display: inline-block;
+		opacity: 0;
+		transform: rotateX(-90deg);
+		position: relative;
+		top: -100px;
+		animation: text-effect 2s ease-in-out infinite;
+		
+		&:nth-child(1) {
+			animation-delay: 1.2s;
+		}
+		
+		&:nth-child(2) {
+			animation-delay: 1.3s;
+		}
+		
+		&:nth-child(3) {
+			animation-delay: 1.4s;
+		}
+		
+		&:nth-child(4) {
+			animation-delay: 1.5s;
+		}
+		
+		&:nth-child(5) {
+			animation-delay: 1.6s;
+		}
+		
+		&:nth-child(6) {
+			animation-delay: 1.7s;
+		}
+		
+		&:nth-child(7) {
+			animation-delay: 1.8s;
+		}
+		
+		&:nth-child(8) {
+			animation-delay: 1.9s;
+		}
+		
+		&:nth-child(9) {
+			animation-delay: 2s;
+		}
+		
+		&:nth-child(10) {
+			animation-delay: 2.1s;
+		}
+	}
+}
+
+@keyframes "text-effect" {
+	10% {
+		opacity: 0.5;
+	}
+	
+	20% {
+		opacity: 1;
+		transform: rotateX(-360deg);
+		top: 0;
+	}
+	
+	80% {
+		opacity: 1;
+		transform: rotateX(-360deg);
+		top: 0;
+	}
+	
+	90% {
+		opacity: 0.5;
+	}
+	
+	100% {
+		opacity: 0;
+		top: 100px;
+	}
+}

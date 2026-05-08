@@ -1,0 +1,52 @@
+.faqs_sec_cont1{
+    .accordion-item{
+        outline: none;
+    }
+    .accordion-button{
+        color: #545454;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .accordion-button:not(.collapsed){
+        color: $default_color;
+        font-size: 20px;
+        font-weight: 900;
+        background-color: $white!important;
+    }
+    .accordion-body{
+        color: #636363;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .accordion-item{
+        border: 2px solid #ededed;
+        border-radius: 5px;
+    }
+}
+
+.faqs_sec_cont2{
+    .accordion-item{
+        outline: none;
+    }
+    .accordion-button{
+        color: #252525;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .accordion-button:not(.collapsed){
+        color: $white;
+        font-size: 20px;
+        font-weight: 900;
+        background-color: #212121!important;
+    }
+    .accordion-body{
+        color: $white;
+        font-size: 18px;
+        font-weight: 400;
+        background-color: #212121;
+    }
+    .accordion-item{
+        border: 2px solid #ededed;
+        border-radius: 5px;
+    }
+}

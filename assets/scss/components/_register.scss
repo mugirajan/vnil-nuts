@@ -1,0 +1,79 @@
+.signup_news_wrap{
+    max-width: 450px;
+    height: auto;
+    border-radius: 15px;
+    background-color: $white;
+    padding: 50px 30px;
+}
+.signup_news_title{
+    color: #333333;
+    font-size: 24px;
+    font-weight: 700;
+}
+.signup_news_text{
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+}
+.signup_news_field{
+    input{
+        width: 100%;
+        padding: 13px 15px;
+        border: 1px solid #e1e8ee;
+    }
+    .btn{
+        width: 100%;
+        padding: 15px 0px;
+        background-color: #82c408;
+        &:hover{
+            i{
+                transform: translateX(5px);
+            }
+        }
+        i{
+            display: inline-block;
+            transition: transform 0.3s ease-out;
+        }
+    }
+}
+.signup_news_terms{
+    padding-top: 25px;
+    span{
+        color: #d1cfd0;
+    }
+    font{
+        color: #5892d0;
+    }
+}
+.signup_news_socials{
+    a{
+        margin: 10px;
+    }
+    .social_face{
+        width: 45px;
+        height: 45px;
+        color: $white;
+        line-height: 45px;
+        border-radius: 100%;
+        background-color: #5892d0;
+        text-align: center;
+    }
+    .social_twitt{
+        width: 45px;
+        height: 45px;
+        color: $white;
+        line-height: 45px;
+        border-radius: 100%;
+        background-color: #88d9f7;
+        text-align: center;
+    }
+    .social_linked{
+        width: 45px;
+        height: 45px;
+        color: $white;
+        line-height: 45px;
+        border-radius: 100%;
+        background-color: #909090;
+        text-align: center;
+    }
+}
