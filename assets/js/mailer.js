@@ -36,7 +36,7 @@ $(document).ready(function () {
         showMessage(msgId, null, "Sending...");
 
         $.ajax({
-            url     : "php/mailer.php",   // ← path to mailer.php inside php/ folder
+           url     : "../php/mailer.php",// ← path to mailer.php inside php/ folder
             type    : "POST",
             data    : data,
             dataType: "json",
