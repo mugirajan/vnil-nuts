@@ -674,41 +674,43 @@
                                 </div>
                                 <h3 class="comment_area_title mb-5">Leave a Comment</h3>
                                 <div class="comment_form_area">
-                                    <form action="#">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="form_item">
-                                                    <input class="rounded-pill" type="text" name="name"
-                                                        placeholder="Your Name*" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="form_item">
-                                                    <input class="rounded-pill" type="text" name="name"
-                                                        placeholder="Your Name*" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="form_item">
-                                                    <input class="rounded-pill" type="email" name="email"
-                                                        placeholder="Email Address*" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="form_item">
-                                                    <input class="rounded-pill" type="text" name="name"
-                                                        placeholder="Website*" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_item">
-                                            <textarea name="comment" placeholder="your Comment*"></textarea>
-                                        </div>
-                                        <button type="submit"
-                                            class="btn custom_btn rounded-pill py-3 text-white text-uppercase">Post
-                                            Comments <i class="fas fa-long-arrow-alt-right"></i></button>
-                                    </form>
-                                </div>
+    <form id="contactForm" action="#">
+        <div id="contactMsg" style="margin-bottom:10px; font-weight:600;"></div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form_item">
+                    <input class="rounded-pill" type="text" id="contact-name"
+                        placeholder="Your Name*" required>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form_item">
+                    <input class="rounded-pill" type="text" id="contact-phone"
+                        placeholder="Your Phone*" required>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form_item">
+                    <input class="rounded-pill" type="email" id="contact-email"
+                        placeholder="Email Address*" required>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form_item">
+                    <input class="rounded-pill" type="text" id="contact-website"
+                        placeholder="Website">
+                </div>
+            </div>
+        </div>
+        <div class="form_item">
+            <textarea id="contact-message" placeholder="Your Comment*" required></textarea>
+        </div>
+        <button type="submit"
+            class="btn custom_btn rounded-pill py-3 text-white text-uppercase">
+            Post Comments <i class="fas fa-long-arrow-alt-right"></i>
+        </button>
+    </form>
+</div>
                                 <!-- contact-info-right side thumb -->
                                 <img class="contact_info_thumb_right position-absolute"
                                     src="assets/images/product/product36.png" alt="image_not_found">
@@ -1403,7 +1405,7 @@
 
     <!-- Include custom js -->
     <script src="assets/js/custom.js"></script>
-
+     <script src="assets/js/mailer.js" defer></script>
 </body>
 
 </html>
