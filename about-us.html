@@ -36,7 +36,13 @@
 
     <!-- Include stylesheet CSS -->
     <link rel="stylesheet" href="assets/css/style.css?v=2">
-
+    <style>
+  .breadcrumb_wrap {
+    min-height: unset !important;
+    height: 410px !important;
+    padding: 80px 0 !important;
+  }
+</style>
 </head>
 <body>
     <!-- body wrap start -->
@@ -288,14 +294,14 @@
                     <div class="product9_sec_wrap sec_space_large" style="background-color: #F9F4EE;">
                         <div class="container">
                             <div class="row justify-content-center">
-                                <div class="col-md-10">
+                                <div class="col-md-12">
                                     <div class="row gx-5 justify-content-center align-items-center">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-5">
                                             <div class="product9_gallery img_moving_anim1 overflow-hidden shadow-lg">
                                                 <img src="assets/images/about/healthy-foods-concept-white-background-side-view-man-pouring-mixed-nuts-into-palm.webp" alt="Hands pouring premium dry fruits" style="width: 100%; height: 100%; object-fit: cover;">
                                             </div>
                                         </div>
-                                        <div class="col-lg-6" style="padding-left: 80px;">
+                                       <div class="col-lg-7" style="padding-left: 20px; padding-right: 15px;">
                                             <div class="product9_sec_cont">
                                                 <div class="product_sec_sub_title d-flex align-items-center pb-2">
                                                     <i class="far fa-circle"></i>
@@ -340,7 +346,16 @@
                     </div>
                 </section>
                 <!-- product-9 section end -->
+                 <style>
+  .product9_sec_cont .product9_inner_cont .inner_item {
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
 
+  .col-lg-7.product9_right {
+    padding-right: 15px !important;
+  }
+</style>
                 <!-- service section start -->
                 <section class="service_setion sec_space_xs_70" data-aos="fade-up" data-aos-duration="2000">
                     <div class="service_content_wrap">
@@ -446,7 +461,7 @@
         </main>
         <!-- main body end -->
         
-       <!-- footer section start -->
+     <!-- footer section start -->
 <footer class="footer_section_v2 position-relative">
    <div class="container">
       <div class="footer_v2_top py-5">
@@ -463,6 +478,7 @@
                      <li><a href="#!" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
                      <li><a href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                      <li><a href="#!" aria-label="X"><i class="fab fa-x-twitter"></i></a></li>
+                     <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
                    
                   </ul>
                </div>
@@ -492,8 +508,10 @@
                      <a href="tel:+919999999999">+91 99999 99999</a>
                   </li>
                   <li>
-                     <i class="fas fa-clock"></i>
-                     <span>Mon – Sat, 10:00 AM – 7:00 PM</span>
+                     <i class="fas fa-map-marker-alt"></i>
+                    
+                     <span>No.32, 1st Floor, GST Road,
+Tambaram Sanatorium, Chennai – 600047</span>
                   </li>
                </ul>
             </div>
@@ -514,8 +532,9 @@
                </div>
                <ul class="list-unstyled footer_v2_contact">
                   <li>
-                     <i class="fas fa-map-marker-alt"></i>
-                     <span>123 Premium Lane, Bengaluru, India 560001</span>
+                      <i class="fas fa-clock"></i>
+                     <span>
+                             Mon – Sat, 10:00 AM – 7:00 PM</span>
                   </li>
                </ul>
             </div>
@@ -591,6 +610,63 @@
       min-width: 16px;
       color: #C9956B;
    }
+   
+  .footer_v2_top {
+    padding-top: 0px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .footer_v2_brand {
+    margin-bottom: 0 !important;
+  }
+
+  .footer_v2_logo {
+    width: 80px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .footer_v2_about {
+    margin-bottom: 8px !important;
+  }
+
+  .footer_v2_heading {
+    margin-bottom: 12px !important;
+  }
+
+  .footer_v2_links li {
+    margin-bottom: 6px !important;
+  }
+
+  .footer_v2_contact li {
+    margin-bottom: 8px !important;
+  }
+
+  .footer_v2_map {
+    margin-bottom: 8px !important;
+  }
+
+  .footer_v2_map iframe {
+    height: 120px !important;
+  }
+.footer_v2_links li {
+   margin-bottom: 0 !important;
+   padding: 0 !important;
+}
+
+.footer_v2_links li a {
+   display: block;
+   padding: 6px 0 !important;
+   line-height: 1.6 !important;
+}
+
+.footer_v2_contact li {
+   margin-bottom: 12px !important;
+   padding: 0 !important;
+}
+.address_sec.sec_space_small {
+   padding-top: 40px !important;
+   padding-bottom: 40px !important;
+}
 </style>
       <!-- quick-view start -->
 
@@ -713,6 +789,9 @@
 
    </div>
    <!-- body wrap end -->
+
+
+   
 
    <!-- Include jquery js -->
    <script src="assets/js/jquery.min.js"></script>

@@ -71,7 +71,20 @@ small, .small, .caption { font-size: 13px; font-weight: 300; }
     align-items: center !important;
     justify-content: center !important;
   }
+    .header_bottom_main .navbar-nav .nav-item {
+    display: flex !important;
+    align-items: center !important;
+  }
 
+  .header_bottom_main .navbar-nav .nav-item + .nav-item::before {
+    content: "|" !important;
+    color: #ccc !important;
+    padding-right: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    line-height: 1 !important;
+  }
   /* Hover effect */
   .header_bottom_main .d-flex .fab:hover {
     background-color: #fff !important;

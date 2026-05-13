@@ -38,6 +38,23 @@
    <!-- Include stylesheet CSS -->
    <link rel="stylesheet" href="assets/css/style.css?v=2">
     <style>
+      
+      
+  .header_bottom_main .navbar-nav .nav-item {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .header_bottom_main .navbar-nav .nav-item + .nav-item::before {
+    content: "|" !important;
+    color: #ccc !important;
+    padding-right: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    line-height: 1 !important;
+  }
+
      .banner_sub_title {
     position: relative;
     display: inline-block;
@@ -383,10 +400,16 @@
                <div class="container">
                   <div class="row text-center">
                      <div class="col banner_content">
-                        <div class="banner_sub_title position-relative">
-                           <h6 class="position-absolute text-white text-uppercase">Premium Dry Fruits</h6>
-                           <img class="sub_title_bg" src="assets/images/shapes/shape2.png" alt="image_not_found">
-                        </div>
+                       <div class="banner_sub_title position-relative">
+    <h6 class="position-absolute text-white text-uppercase" style="white-space: nowrap;">Premium Dry Fruits</h6>
+    <img class="sub_title_bg" src="assets/images/shapes/shape2.png" alt="image_not_found">
+</div>
+                        <style>
+  .banner_section_item {
+    padding-top: 120px !important;
+    padding-bottom: 80px !important;
+  }
+</style>
                         <div class="banner_title m-auto">
                            <h1>Pure <font class="first">Premium Dry Fruits</font> You Eat<font class="text-effect">
                                  <span>H</span><span>e</span><span>a</span><span>l</span><span>t</span><span>h</span><span>y</span>
@@ -394,24 +417,20 @@
                            </h1>
                         </div>
                         <div class="banner-btn-container">
-  <a href="products.html" class="banner-btn banner-btn-primary">View Products</a>
-  <a href="contact-us.html" class="banner-btn banner-btn-outline">Contact Us</a>
+   <a href="products.html" class="btn custom_btn rounded-pill text-white px-3 py-3">View Products <i class="fas fa-long-arrow-alt-right ps-2"></i></a>               
+  <a href="products.html" class="btn custom_btn rounded-pill text-white px-3 py-3">Contact</a>               
+  
 </div>
-                        <!-- <div class="banner_search_bar d-inline-block position-relative">
-                           <input class="d-inline-block rounded-pill border-0 shadow py-3 px-5" type="search"
-                              id="bannerSearchInput" placeholder="Search Product">
-                           <select class="select_option position-absolute rounded-pill">
-                              <option data-display="Select a Category" selected>Choose Your Range</option>
-                              <option value="almonds">Almonds</option>
-                              <option value="cashews">Cashews</option>
-                              <option value="pistachios">Pistachios</option>
-                              <option value="walnuts">Walnuts</option>
-                              <option value="dates">Dates</option>
-                              <option value="anjeer">Anjeer</option>
-                              <option value="raisins">Black Raisins</option>
-                              <option value="apricots">Apricots</option>
-                           </select>
-                        </div> -->
+<style>
+  .btn.custom_btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2px !important;
+    
+  }
+</style>
+            
                      </div>
                   </div>
                </div>
@@ -421,6 +440,17 @@
                alt="image_not_found">
             <img class="banner_left_thumb img_moving_anim2 position-absolute" src="assets/images/banner/nuts-banner-2.png"
                alt="image_not_found">
+               <style>
+  .banner_right_thumb {
+    width: 250px !important;
+    max-width: 250px !important;
+  }
+
+  .banner_left_thumb {
+    width: 250px !important;
+    max-width: 250px !important;
+  }
+</style>
             <!-- banner side image end -->
          </section>
          <!-- banner section end -->
@@ -446,70 +476,79 @@
                               class="fas fa-arrow-right"></i></button>
                      </div>
                   </div>
+               <style>
+  .category_slick .item_content,
+  .category_slick .item_image_content,
+  .category_slick .item_image_content img,
+  .category_slick .item_title {
+    cursor: default !important;
+    pointer-events: none !important;
+  }
+</style>
                   <div class="category_slick slideshow1_slider clearfix" data-slick='{"dots": false}'>
                      <div class="item_content slider_item text-center" data-aos="fade-up" data-aos-duration="300">
-                        <a href="product-detail.html">
+                        <!-- <a href="product-detail.html"> -->
                            <div class="item_image_content overflow-hidden position-relative">
                               <img src="assets/images/category/almond.webp" alt="Almonds">
                            </div>
                            <h6 class="item_title">Almonds</h6>
-                        </a>
+                        <!-- </a> -->
                      </div>
                      <div class="item_content slider_item text-center" data-aos="fade-up" data-aos-duration="450">
-                        <a href="product-detail.html">
+                        <!-- <a href="product-detail.html"> -->
                            <div class="item_image_content overflow-hidden position-relative">
                               <img src="assets/images/category/cashew.webp" alt="Cashews">
                            </div>
                            <h6 class="item_title">Cashews</h6>
-                        </a>
+                        <!-- </a> -->
                      </div>
                      <div class="item_content slider_item text-center" data-aos="fade-up" data-aos-duration="600">
-                        <a href="product-detail.html">
+                        <!-- <a href="product-detail.html"> -->
                            <div class="item_image_content overflow-hidden position-relative">
                               <img src="assets/images/category/black-risin.webp" alt="Black Raisins">
                            </div>
                            <h6 class="item_title">Black Raisins</h6>
-                        </a>
+                        <!-- </a> -->
                      </div>
                      <div class="item_content slider_item text-center" data-aos="fade-up" data-aos-duration="750">
-                        <a href="product-detail.html">
+                        <!-- <a href="product-detail.html"> -->
                            <div class="item_image_content overflow-hidden position-relative">
                               <img src="assets/images/category/walnut.webp" alt="Walnuts">
                            </div>
                            <h6 class="item_title">Walnuts</h6>
-                        </a>
+                        <!-- </a> -->
                      </div>
                      <div class="item_content slider_item text-center" data-aos="fade-up" data-aos-duration="900">
-                        <a href="product-detail.html">
+                        <!-- <a href="product-detail.html"> -->
                            <div class="item_image_content overflow-hidden position-relative">
                               <img src="assets/images/category/ajeer.webp" alt="Anjeer">
                            </div>
                            <h6 class="item_title">Anjeer</h6>
-                        </a>
+                        <!-- </a> -->
                      </div>
                      <div class="item_content slider_item text-center" data-aos="fade-up" data-aos-duration="1050">
-                        <a href="product-detail.html">
+                        <!-- <a href="product-detail.html"> -->
                            <div class="item_image_content overflow-hidden position-relative">
                               <img src="assets/images/category/pista.webp" alt="Pistachios">
                            </div>
                            <h6 class="item_title">Pistachios</h6>
-                        </a>
+                        <!-- </a> -->
                      </div>
                      <div class="item_content slider_item text-center" data-aos="fade-up" data-aos-duration="1200">
-                        <a href="product-detail.html">
+                        <!-- <a href="product-detail.html"> -->
                            <div class="item_image_content overflow-hidden position-relative">
                               <img src="assets/images/category/dates.webp" alt="Dates">
                            </div>
                            <h6 class="item_title">Dates</h6>
-                        </a>
+                        <!-- </a> -->
                      </div>
                      <div class="item_content slider_item text-center" data-aos="fade-up" data-aos-duration="1350">
-                        <a href="product-detail.html">
+                        <!-- <a href="product-detail.html"> -->
                            <div class="item_image_content overflow-hidden position-relative">
                               <img src="assets/images/category/apricot.webp" alt="Apricots">
                            </div>
                            <h6 class="item_title">Apricots</h6>
-                        </a>
+                        <!-- </a> -->
                      </div>
                   </div>
                </div>
@@ -549,8 +588,13 @@
                                  <textPath href="#expCirclePath" startOffset="0">YEARS OF EXPERIENCE  •  PREMIUM QUALITY  •  </textPath>
                               </text>
                            </svg>
+                           <style>
+  .exp_rotating_text text {
+    letter-spacing: 4px !important;
+  }
+</style>
                            <div class="exp_inner text-center">
-                              <span class="exp_number d-block">15+</span>
+                              <span class="exp_number d-block">50+</span>
                               <span class="exp_label d-block">YEARS</span>
                            </div>
                         </div>
@@ -596,18 +640,9 @@
                         <img class="pic-2" src="assets/images/category/almond.webp" alt="Premium Almonds">
                      </div>
                   </div>
-                  <div class="rating_wrap d-flex">
-                     <ul class="rating_star ul_li">
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                     </ul>
-                     <span class="shop_review_text">( 5.0 )</span>
-                  </div>
+                 
                   <div class="product_content">
-                     <h3 class="product_title">Premium Almonds</h3>
+                     <h3 class="product_title" style="text-align: center;">Premium Almonds</h3>
                   </div>
                </div>
             </div>
@@ -621,18 +656,9 @@
                         <img class="pic-2" src="assets/images/category/cashew.webp" alt="Premium Cashews">
                      </div>
                   </div>
-                  <div class="rating_wrap d-flex">
-                     <ul class="rating_star ul_li">
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                     </ul>
-                     <span class="shop_review_text">( 5.0 )</span>
-                  </div>
+                 
                   <div class="product_content">
-                     <h3 class="product_title">Premium Cashews</h3>
+                     <h3 class="product_title" style="text-align: center;">Premium Cashews</h3>
                   </div>
                </div>
             </div>
@@ -646,23 +672,14 @@
                         <img class="pic-2" src="assets/images/category/pista.webp" alt="Premium Pistachios">
                      </div>
                   </div>
-                  <div class="rating_wrap d-flex">
-                     <ul class="rating_star ul_li">
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                     </ul>
-                     <span class="shop_review_text">( 5.0 )</span>
-                  </div>
+                
                   <div class="product_content">
-                     <h3 class="product_title">Premium Pistachios</h3>
+                     <h3 class="product_title" style="text-align: center;">Premium Pistachios</h3>
                   </div>
                </div>
             </div>
          </div>
-         <div class="col-sm-6 col-md-6 col-xl-3">
+         <!-- <div class="col-sm-6 col-md-6 col-xl-3">
             <div class="product_layout_1 overflow-hidden position-relative">
                <div class="product_layout_content bg-white position-relative">
                   <div class="product_image_wrap">
@@ -686,8 +703,8 @@
                   </div>
                </div>
             </div>
-         </div>
-         <div class="col-sm-6 col-md-6 col-xl-3">
+         </div> -->
+         <!-- <div class="col-sm-6 col-md-6 col-xl-3">
             <div class="product_layout_1 overflow-hidden position-relative">
                <div class="product_layout_content bg-white position-relative">
                   <div class="product_image_wrap">
@@ -711,8 +728,8 @@
                   </div>
                </div>
             </div>
-         </div>
-         <div class="col-sm-6 col-md-6 col-xl-3">
+         </div> -->
+         <!-- <div class="col-sm-6 col-md-6 col-xl-3">
             <div class="product_layout_1 overflow-hidden position-relative">
                <div class="product_layout_content bg-white position-relative">
                   <div class="product_image_wrap">
@@ -736,8 +753,8 @@
                   </div>
                </div>
             </div>
-         </div>
-         <div class="col-sm-6 col-md-6 col-xl-3">
+         </div> -->
+         <!-- <div class="col-sm-6 col-md-6 col-xl-3">
             <div class="product_layout_1 overflow-hidden position-relative">
                <div class="product_layout_content bg-white position-relative">
                   <div class="product_image_wrap">
@@ -761,7 +778,7 @@
                   </div>
                </div>
             </div>
-         </div>
+         </div> -->
          <div class="col-sm-6 col-md-6 col-xl-3">
             <div class="product_layout_1 overflow-hidden position-relative">
                <div class="product_layout_content bg-white position-relative">
@@ -771,18 +788,9 @@
                         <img class="pic-2" src="assets/images/category/apricot.webp" alt="Dried Apricots">
                      </div>
                   </div>
-                  <div class="rating_wrap d-flex">
-                     <ul class="rating_star ul_li">
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                        <li class="active"><i class="fas fa-star"></i></li>
-                     </ul>
-                     <span class="shop_review_text">( 5.0 )</span>
-                  </div>
+                  
                   <div class="product_content">
-                     <h3 class="product_title">Dried Apricots</h3>
+                     <h3 class="product_title" style="text-align: center;">Premium Dried Apricots</h3>
                   </div>
                </div>
             </div>
@@ -1834,9 +1842,9 @@
                   </div>
                </div>
             </div>
-            <div class="container text-center pt-5" style="padding-bottom: 60px;">
-               <a href="products.html" class="btn custom_btn rounded-pill text-white px-5 py-3">View All Products <i class="fas fa-long-arrow-alt-right ps-2"></i></a>
-            </div>
+           <div class="container text-center pt-3" style="padding-bottom: 20px; padding-top: 20px;">
+   <a href="products.html" class="btn custom_btn rounded-pill text-white px-5 py-3">View All Products <i class="fas fa-long-arrow-alt-right ps-2"></i></a>
+</div>
          </section>
          <!-- product section end -->
 
@@ -1980,14 +1988,13 @@
                                  <h2 class="accordion-header" id="faqHeading1">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                        data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                                       What makes VNIL different from other dry fruit brands?
+                                      Do you export internationally?
                                     </button>
                                  </h2>
                                  <div id="faqCollapse1" class="accordion-collapse collapse show"
                                     aria-labelledby="faqHeading1" data-bs-parent="#faqAccordionLeft">
                                     <div class="accordion-body">
-                                       VNIL is built on a single promise — pure, premium, handpicked dry fruits sourced directly from the world's finest origins. Every batch is hand-selected, naturally preserved, and quality-tested so what reaches you is nothing less than nature's best.
-                                    </div>
+                                      Yes, we have over 30 years of export expertise, currently serving 20+ countries with full logistical support.</div>
                                  </div>
                               </div>
                               <div class="accordion-item mt-2">
@@ -1995,14 +2002,13 @@
                                     <button class="accordion-button collapsed" type="button"
                                        data-bs-toggle="collapse" data-bs-target="#faqCollapse2"
                                        aria-expanded="false" aria-controls="faqCollapse2">
-                                       Are your dry fruits truly preservative-free?
+                                      What certifications do you follow?
                                     </button>
                                  </h2>
                                  <div id="faqCollapse2" class="accordion-collapse collapse"
                                     aria-labelledby="faqHeading2" data-bs-parent="#faqAccordionLeft">
                                     <div class="accordion-body">
-                                       Yes — completely. We never use preservatives, artificial colors, or additives of any kind. Our vacuum-sealed packaging is what keeps every nut and dry fruit fresh, naturally.
-                                    </div>
+                                      We adhere to strict food safety standards including FSSAI, and our processing facility maintains high hygiene protocols suitable for global export markets. </div>
                                  </div>
                               </div>
                               <div class="accordion-item mt-2">
@@ -2010,14 +2016,13 @@
                                     <button class="accordion-button collapsed" type="button"
                                        data-bs-toggle="collapse" data-bs-target="#faqCollapse3"
                                        aria-expanded="false" aria-controls="faqCollapse3">
-                                       Where do you source your nuts and dry fruits from?
+                                       Do you support private labeling?
                                     </button>
                                  </h2>
                                  <div id="faqCollapse3" class="accordion-collapse collapse"
                                     aria-labelledby="faqHeading3" data-bs-parent="#faqAccordionLeft">
                                     <div class="accordion-body">
-                                       Each product is sourced from where it grows best — almonds from California, pistachios from Iran, walnuts from Kashmir, dates from the Middle East, anjeer and apricots from Afghanistan. We partner directly with growers we trust.
-                                    </div>
+                                      Yes, we offer complete private labeling services for retailers and brands, including packaging customization.  </div>
                                  </div>
                               </div>
                               <div class="accordion-item mt-2">
@@ -2025,14 +2030,13 @@
                                     <button class="accordion-button collapsed" type="button"
                                        data-bs-toggle="collapse" data-bs-target="#faqCollapse4"
                                        aria-expanded="false" aria-controls="faqCollapse4">
-                                       How should I store dry fruits at home?
+                                      What is your minimum order quantity?
                                     </button>
                                  </h2>
                                  <div id="faqCollapse4" class="accordion-collapse collapse"
                                     aria-labelledby="faqHeading4" data-bs-parent="#faqAccordionLeft">
                                     <div class="accordion-body">
-                                       For maximum freshness, keep dry fruits in an airtight container in a cool, dry place. For longer storage — especially in humid climates — refrigerate. They'll stay fresh and flavorful for months.
-                                    </div>
+                                     We offer flexible MOQs to support businesses of all sizes, from boutique sweet shops to large industrial buyers. Please contact us for specific quotes. </div>
                                  </div>
                               </div>
                            </div>
@@ -2048,12 +2052,14 @@
                                        Do you offer gift packs for festivals and occasions?
                                     </button>
                                  </h2>
-                                 <div id="faqCollapse5" class="accordion-collapse collapse show"
-                                    aria-labelledby="faqHeading5" data-bs-parent="#faqAccordionRight">
-                                    <div class="accordion-body">
-                           Absolutely. Our premium gift packs are crafted for Diwali, weddings, corporate gifting, and every special moment. Each pack is beautifully presented and thoughtfully curated — making it as much a delight to receive as to give.</div>
-                                 </div>
-                              </div>
+                                <div id="faqCollapse5" class="accordion-collapse collapse show"
+   aria-labelledby="faqHeading5" data-bs-parent="#faqAccordionRight">
+   <div class="accordion-body">
+      Premium gift packs for Diwali, weddings & corporate gifting — beautifully curated for every special moment.
+   </div>
+</div>
+</div>
+
                               <div class="accordion-item mt-2">
                                  <h2 class="accordion-header" id="faqHeading6">
                                     <button class="accordion-button collapsed" type="button"
@@ -2080,7 +2086,7 @@
                                  <div id="faqCollapse7" class="accordion-collapse collapse"
                                     aria-labelledby="faqHeading7" data-bs-parent="#faqAccordionRight">
                                     <div class="accordion-body">
-                                       Most of our nuts and dry fruits stay fresh for 6 to 12 months when stored properly. The exact best-before date is printed on every pack — but for the richest flavor, we always recommend enjoying them within a few months of opening.
+                                       Most products stays fresh for 6–12 months when stored properly — best-before date on every pack.
                                     </div>
                                  </div>
                               </div>
@@ -2124,156 +2130,247 @@
     margin-bottom: 0 !important;
 }
 </style>
-         <!-- testimonial section start -->
-         <section class="testimonial_section sec_space_xxs_50" data-aos="fade-up" data-aos-duration="2000">
-            <div class="testimonial_sec_content">
-               <div class="container">
-                  <div class="product_sec_sub_title d-flex justify-content-center align-items-center pb-2">
-                     <span class="text-uppercase px-2">Testimonials</span>
-                  </div>
-                  <h2 class="testimonial2_title text-center pb-4">What Our Customers Say</h2>
-                  <div class="row">
-                     <div class="col">
-                        <div class="slider_item_content slideshow3_slider" data-slick='{"dots": true, "arrows": false}'>
-                           <div class="slider_item">
-                              <div class="testimonial_layout_1 d-flex justify-content-center align-items-center">
-                                 <div class="testimonial_author2 position-relative me-5">
-                                    <img src="assets/images/testimonials/closeup-smiling-young-beautiful-indian-woman_1262-2261.png" alt="Aanya Mehta">
-                                    <div class="testimonial_back_img1 position-absolute"><img
-                                          src="assets/images/shapes/shape32.png" alt=""></div>
-                                    <div class="testimonial_back_img2 position-absolute"><img
-                                          src="assets/images/shapes/shape24.png" alt=""></div>
-                                 </div>
-                                 <div class="testimonial_text">
-                                    <span class="testimonial_qoute"><i class="fas fa-quote-left"></i></span>
-                                    <div class="testimonial_comment py-3">
-                                       <p>The quality is simply incomparable. Every cashew is uniform, fresh, and perfectly graded. You can taste the difference from the very first bite — worth every rupee.</p>
-                                    </div>
-                                    <div class="testimonial_author_title">
-                                       <h6>Aanya Mehta <font> — Mumbai</font></h6>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="slider_item">
-                              <div class="testimonial_layout_1 d-flex justify-content-center align-items-center">
-                                 <div class="testimonial_author2 position-relative me-5">
-                                    <img src="assets/images/testimonials/smiling-young-indian-man-grey-background_380164-213513.png" alt="Rohan Iyer">
-                                    <div class="testimonial_back_img1 position-absolute"><img
-                                          src="assets/images/shapes/shape32.png" alt=""></div>
-                                    <div class="testimonial_back_img2 position-absolute"><img
-                                          src="assets/images/shapes/shape24.png" alt=""></div>
-                                 </div>
-                                 <div class="testimonial_text">
-                                    <span class="testimonial_qoute"><i class="fas fa-quote-left"></i></span>
-                                    <div class="testimonial_comment py-3">
-                                       <p>I gifted these for Diwali and got compliments from everyone. The packaging itself is a delight — it makes the dry fruits feel like a treasure, not just a snack.</p>
-                                    </div>
-                                    <div class="testimonial_author_title">
-                                       <h6>Rohan Iyer <font> — Bangalore</font></h6>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="slider_item">
-                              <div class="testimonial_layout_1 d-flex justify-content-center align-items-center">
-                                 <div class="testimonial_author2 position-relative me-5">
-                                    <img src="assets/images/testimonials/smiley-woman-doing-thumbs-up_23-2148628939.png" alt="Priya Sharma">
-                                    <div class="testimonial_back_img1 position-absolute"><img
-                                          src="assets/images/shapes/shape32.png" alt=""></div>
-                                    <div class="testimonial_back_img2 position-absolute"><img
-                                          src="assets/images/shapes/shape24.png" alt=""></div>
-                                 </div>
-                                 <div class="testimonial_text">
-                                    <span class="testimonial_qoute"><i class="fas fa-quote-left"></i></span>
-                                    <div class="testimonial_comment py-3">
-                                       <p>Finally a brand that delivers on premium. The almonds are crunchy, the pistachios are vibrant green, and the dates are impossibly fresh. I won't go back to anything else.</p>
-                                    </div>
-                                    <div class="testimonial_author_title">
-                                       <h6>Priya Sharma <font> — Delhi</font></h6>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+        <!-- testimonial section start -->
+<section class="testimonial_section sec_space_xxs_50" data-aos="fade-up" data-aos-duration="2000" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(assets/images/contact-images/some-assorted-nuts-dried-fruits-with-pecan-pistachios-almond-peanut-mini-different-bowls.jpg); background-size: cover; background-position: center; background-attachment: fixed;">
+   <div class="testimonial_sec_content">
+      <div class="container-fluid px-0">
+         <div class="slideshow3_slider" data-slick='{"dots": true, "arrows": false, "autoplay": true, "autoplaySpeed": 3000, "speed": 800, "slidesToShow": 1, "slidesToScroll": 1, "infinite": true}'>
+
+            <!-- Slide 1 -->
+            <div class="slider_item">
+               <div class="testi_slide_wrap d-flex align-items-center" style="min-height: 450px; padding: 60px 80px;">
+                  <div class="row align-items-center w-100">
+                     <div class="col-lg-4 text-center">
+                        <div class="testi_img_wrap mx-auto">
+                           <img src="assets/images/testimonials/closeup-smiling-young-beautiful-indian-woman_1262-2261.png" alt="Aanya Mehta">
                         </div>
+                     </div>
+                     <div class="col-lg-8 ps-lg-5">
+                        <div class="product_sec_sub_title d-flex align-items-center pb-2">
+                           <span class="text-uppercase px-2" style="color: #C9956B;">Testimonials</span>
+                        </div>
+                        <h2 class="testi_slide_heading pb-3">What Our Customers Say.</h2>
+                        <p class="testi_slide_desc">"We have been sourcing cashew kernels from Pioneer for over a decade. Their consistency in grading and moisture control is unmatched in the Indian market."</p>
+                        <h5 class="testi_slide_name mt-4">Rajesh Mehta <font> Premium Sweet Exporter, Mumbai</font></h5>
                      </div>
                   </div>
                </div>
             </div>
-         </section>
-         <!-- testimonial section end -->
 
-
-         <!-- service section start -->
-         <section class="service_setion sec_space_xxs_50" data-aos="fade-up" data-aos-duration="2000">
-            <div class="service_content_wrap">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-6 col-md-4 col-xl-3">
-                        <div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="500">
-                           <div class="service_content_icon rounded-pill me-2">
-                              <i class="fas fa-hand-holding-heart"></i>
-                           </div>
-                           <div class="service_content_text">
-                              <div class="service_content_title">
-                                 <h6 class="text-uppercase">Farm Fresh</h6>
-                              </div>
-                              <div class="service_content_sub_title">
-                                 <span>Straight from the finest orchards</span>
-                              </div>
-                           </div>
+            <!-- Slide 2 -->
+            <div class="slider_item">
+               <div class="testi_slide_wrap d-flex align-items-center" style="min-height: 450px; padding: 60px 80px;">
+                  <div class="row align-items-center w-100">
+                     <div class="col-lg-4 text-center">
+                        <div class="testi_img_wrap mx-auto">
+                           <img src="assets/images/testimonials/smiling-young-indian-man-grey-background_380164-213513.png" alt="Rohan Iyer">
                         </div>
                      </div>
-                     <div class="col-6 col-md-4 col-xl-3">
-                        <div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="1000">
-                           <div class="service_content_icon rounded-pill me-2">
-                              <i class="fas fa-leaf"></i>
-                           </div>
-                           <div class="service_content_text">
-                              <div class="service_content_title">
-                                 <h6 class="text-uppercase">Zero Additives</h6>
-                              </div>
-                              <div class="service_content_sub_title">
-                                 <span>Pure nature, nothing else</span>
-                              </div>
-                           </div>
+                     <div class="col-lg-8 ps-lg-5">
+                        <div class="product_sec_sub_title d-flex align-items-center pb-2">
+                           <span class="text-uppercase px-2" style="color: #C9956B;">Testimonials</span>
                         </div>
-                     </div>
-                     <div class="col-6 col-md-4 col-xl-3">
-                        <div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="1500">
-                           <div class="service_content_icon rounded-pill me-2">
-                              <i class="fas fa-award"></i>
-                           </div>
-                           <div class="service_content_text">
-                              <div class="service_content_title">
-                                 <h6 class="text-uppercase">Batch Tested</h6>
-                              </div>
-                              <div class="service_content_sub_title">
-                                 <span>Every pack checked for purity</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-6 col-md-4 col-xl-3">
-                        <div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="2000">
-                           <div class="service_content_icon rounded-pill me-2">
-                              <i class="fas fa-gift"></i>
-                           </div>
-                           <div class="service_content_text">
-                              <div class="service_content_title">
-                                 <h6 class="text-uppercase">Sealed Fresh </h6>
-                              </div>
-                              <div class="service_content_sub_title">
-                                 <span>Vacuum-locked, delivered fresh</span>
-                              </div>
-                           </div>
-                        </div>
+                        <h2 class="testi_slide_heading pb-3">What Our Customers Say.</h2>
+                        <p class="testi_slide_desc">"The 360-degree approach they offer, specifically the private labeling, helped us launch our own brand in Dubai effortlessly."</p>
+                        <h5 class="testi_slide_name mt-4">Ahmed Al-Fayed <font>Global Foods Trading, UAE</font></h5>
                      </div>
                   </div>
                </div>
             </div>
-         </section>
-         <!-- service section end -->
+
+            <!-- Slide 3 -->
+            <div class="slider_item">
+               <div class="testi_slide_wrap d-flex align-items-center" style="min-height: 450px; padding: 60px 80px;">
+                  <div class="row align-items-center w-100">
+                     <div class="col-lg-4 text-center">
+                        <div class="testi_img_wrap mx-auto">
+                           <img src="assets/images/testimonials/smiley-woman-doing-thumbs-up_23-2148628939.png" alt="Priya Sharma">
+                        </div>
+                     </div>
+                     <div class="col-lg-8 ps-lg-5">
+                        <div class="product_sec_sub_title d-flex align-items-center pb-2">
+                           <span class="text-uppercase px-2" style="color: #C9956B;">Testimonials</span>
+                        </div>
+                        <h2 class="testi_slide_heading pb-3">What Our Customers Say.</h2>
+                        <p class="testi_slide_desc">"Reliability is key in the hotel industry. Pioneer's supply chain ensures we never run out of stock, even during peak wedding seasons."</p>
+                        <h5 class="testi_slide_name mt-4">S. Karthikeyan<font>Purchasing Manager, 5-Star Hotel Chain</font></h5>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+</section>
+<!-- testimonial section end -->
+
+<style>
+   
+  .testimonial_section {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .testi_slide_wrap {
+    min-height: 220px !important;
+    padding: 30px 80px !important;
+  }
+
+  .testi_img_wrap {
+    width: 200px !important;
+    height: 100px !important;
+  }
+
+  .testi_slide_heading {
+    font-size: 28px !important;
+  }
+
+  .testi_slide_desc {
+    font-size: 14px !important;
+  }
+
+  .testi_img_wrap {
+    width: 280px !important;
+    height: 280px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    border: 6px solid rgba(255,255,255,0.3) !important;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3) !important;
+  }
+
+  .testi_img_wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: top !important;
+  }
+
+  .testi_slide_heading {
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+    line-height: 1.3 !important;
+  }
+
+  .testi_slide_desc {
+    font-size: 16px !important;
+    font-style: italic !important;
+    color: #f0e0cc !important;
+    line-height: 1.9 !important;
+  }
+
+  .testi_slide_name {
+    color: #C9956B !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+  }
+
+  .testi_slide_name font {
+    color: #ccc !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+  }
+
+  .testi_slide_wrap {
+    background: transparent !important;
+  }
+
+  .testimonial_section .slick-dots {
+    bottom: 20px !important;
+  }
+
+  .testimonial_section .slick-dots li button:before {
+    color: #C9956B !important;
+    font-size: 10px !important;
+  }
+
+  .testimonial_section .slick-dots li.slick-active button:before {
+    color: #C9956B !important;
+    opacity: 1 !important;
+  }
+</style>
+           <!-- service section start -->
+                <section class="service_setion sec_space_xs_70" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="service_content_wrap">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 text-center pb-5">
+                                    <div class="product_sec_sub_title d-flex align-items-center justify-content-center pb-2">
+                                        
+                                        <span class="ps-2 text-uppercase organi">why choose us </span>
+                                        
+                                     
+                                    </div>
+                                    <h2 class="product_top_title">Why Choose VNIL Nuts</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 col-md-3">
+                                    <div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="500">
+                                        <div class="service_content_icon rounded-pill me-2">
+                                            <i class="fas fa-hand-holding-heart"></i>
+                                        </div>
+                                        <div class="service_content_text">
+                                            <div class="service_content_title">
+                                                <h6>Handpicked</h6>
+                                            </div>
+                                            <div class="service_content_sub_title">
+                                                <span>At source, by trusted growers</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="1000">
+                                        <div class="service_content_icon rounded-pill me-2">
+                                            <i class="fas fa-flask"></i>
+                                        </div>
+                                        <div class="service_content_text">
+                                            <div class="service_content_title">
+                                                <h6>Lab-Tested</h6>
+                                            </div>
+                                            <div class="service_content_sub_title">
+                                                <span>Purity verified every batch</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="1500">
+                                        <div class="service_content_icon rounded-pill me-2">
+                                            <i class="fas fa-leaf"></i>
+                                        </div>
+                                        <div class="service_content_text">
+                                            <div class="service_content_title">
+                                                <h6>No Preservatives</h6>
+                                            </div>
+                                            <div class="service_content_sub_title">
+                                                <span>Just nuts, nothing added</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="service_inner_content d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="2000">
+                                        <div class="service_content_icon rounded-pill me-2">
+                                            <i class="fas fa-globe-asia"></i>
+                                        </div>
+                                        <div class="service_content_text">
+                                            <div class="service_content_title">
+                                                <h6>Direct Sourcing</h6>
+                                            </div>
+                                            <div class="service_content_sub_title">
+                                                <span>From orchard to your door</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- service section end -->
 <style>
    .product_section .tab-content {
     margin-bottom: 0 !important;
@@ -2298,8 +2395,7 @@
                         <p class="cta_desc pb-4">Explore our handpicked range of exotic dry fruits — carefully sourced, naturally pure, and crafted to bring health and richness to every moment.</p>
                         <div class="cta_buttons d-flex flex-wrap justify-content-center gap-3">
                            <a href="products.html" class="btn custom_btn rounded-pill text-white px-4">Explore Our Products <i class="fas fa-long-arrow-alt-right ps-2"></i></a>
-                           <a href="contact-us.html" class="btn cta_btn_outline rounded-pill px-4">Get In Touch</a>
-                        </div>
+                           <a href="contact-us.html" class="btn cta_btn_outline rounded-pill px-4" style="display: inline-flex; align-items: center; justify-content: center;">Get In Touch</a> </div>
                      </div>
                   </div>
                </div>
@@ -2309,7 +2405,7 @@
 
       </main>
       <!-- main body end -->
-<!-- footer section start -->
+ <!-- footer section start -->
 <footer class="footer_section_v2 position-relative">
    <div class="container">
       <div class="footer_v2_top py-5">
@@ -2326,6 +2422,7 @@
                      <li><a href="#!" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
                      <li><a href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                      <li><a href="#!" aria-label="X"><i class="fab fa-x-twitter"></i></a></li>
+                     <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
                    
                   </ul>
                </div>
@@ -2355,8 +2452,10 @@
                      <a href="tel:+919999999999">+91 99999 99999</a>
                   </li>
                   <li>
-                     <i class="fas fa-clock"></i>
-                     <span>Mon – Sat, 10:00 AM – 7:00 PM</span>
+                     <i class="fas fa-map-marker-alt"></i>
+                    
+                     <span>No.32, 1st Floor, GST Road,
+Tambaram Sanatorium, Chennai – 600047</span>
                   </li>
                </ul>
             </div>
@@ -2377,8 +2476,9 @@
                </div>
                <ul class="list-unstyled footer_v2_contact">
                   <li>
-                     <i class="fas fa-map-marker-alt"></i>
-                     <span>123 Premium Lane, Bengaluru, India 560001</span>
+                      <i class="fas fa-clock"></i>
+                     <span>
+                             Mon – Sat, 10:00 AM – 7:00 PM</span>
                   </li>
                </ul>
             </div>
@@ -2454,6 +2554,63 @@
       min-width: 16px;
       color: #C9956B;
    }
+   
+  .footer_v2_top {
+    padding-top: 0px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .footer_v2_brand {
+    margin-bottom: 0 !important;
+  }
+
+  .footer_v2_logo {
+    width: 80px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .footer_v2_about {
+    margin-bottom: 8px !important;
+  }
+
+  .footer_v2_heading {
+    margin-bottom: 12px !important;
+  }
+
+  .footer_v2_links li {
+    margin-bottom: 6px !important;
+  }
+
+  .footer_v2_contact li {
+    margin-bottom: 8px !important;
+  }
+
+  .footer_v2_map {
+    margin-bottom: 8px !important;
+  }
+
+  .footer_v2_map iframe {
+    height: 120px !important;
+  }
+.footer_v2_links li {
+   margin-bottom: 0 !important;
+   padding: 0 !important;
+}
+
+.footer_v2_links li a {
+   display: block;
+   padding: 6px 0 !important;
+   line-height: 1.6 !important;
+}
+
+.footer_v2_contact li {
+   margin-bottom: 12px !important;
+   padding: 0 !important;
+}
+.address_sec.sec_space_small {
+   padding-top: 40px !important;
+   padding-bottom: 40px !important;
+}
 </style>
       <!-- quick-view start -->
 
@@ -2576,6 +2733,9 @@
 
    </div>
    <!-- body wrap end -->
+
+
+   
 
    <!-- Include jquery js -->
    <script src="assets/js/jquery.min.js"></script>
