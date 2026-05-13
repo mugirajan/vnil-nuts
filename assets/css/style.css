@@ -1947,10 +1947,10 @@ p {
   margin-right: 20px;
 }
 .breadcrumb_item i.active {
-  color: #9fcb22;
-  border: 3px solid #9fcb22;
-  padding: 7px;
-  border-radius: 100%;
+   color: #ffffff;
+   border: 3px solid #C9956B;
+   padding: 7px;
+   border-radius: 100%;
 }
 
 .cart_table {
