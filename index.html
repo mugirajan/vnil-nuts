@@ -9,9 +9,7 @@
    <link rel="shortcut icon" href="assets/images/logo/vnil-logo-removebg-preview.png" type="image/png">
 
    <!-- Include fontawesome CDN -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
    <!-- Include google fonts CDN -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,6 +38,27 @@
    <!-- Include stylesheet CSS -->
    <link rel="stylesheet" href="assets/css/style.css?v=2">
     <style>
+       /* Fix horizontal overflow */
+   html, body {
+      overflow-x: hidden !important;
+   }
+
+   .banner_section_main {
+      overflow: hidden !important;
+   }
+
+   .banner_right_thumb,
+   .banner_left_thumb {
+      max-width: 40% !important;
+   }
+
+   .category_section {
+      overflow: hidden !important;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
   .banner-btn-container {
     display: flex;
     justify-content: center;
@@ -57,23 +76,23 @@
   }
 
   .banner-btn-primary {
-    background-color: #C08A5A;;
+    background-color: #C9956B;
     color: #fff;
   }
 
   .banner-btn-primary:hover {
-    background-color: #C08A5A;;
+    background-color: #C9956B;
     color: #fff;
   }
 
   .banner-btn-outline {
     background-color: transparent;
-    color: #C08A5A;;
-    border: 2px solid #C08A5A;;
+    color: #C9956B;
+    border: 2px solid #C9956B;
   }
 
   .banner-btn-outline:hover {
-    background-color: #C08A5A;;
+    background-color: #C9956B;
     color: #fff;
   }
 </style>
@@ -89,98 +108,137 @@
          </a>
       </div>
       <!-- back-to-top end -->
+<header class="header_section header_1">
 
-      <!-- header section start -->
-      <header class="header_section header_1">
-         <!-- top header start -->
-         <div class="top_header_main d-none d-sm-block">
-            <div class="container">
-               <div class="header_top d-flex align-items-center justify-content-between">
-                  <div class="header_top_content d-flex py-2">
-                     <p class="header_tagline text-white mb-0"><i class="fas fa-leaf pe-2"></i>Pure. Premium. Handpicked Dry Fruits.</p>
+   <!-- bottom header start -->
+   <div class="header_bottom_main">
+      <div class="container">
+         <!-- web menubar start-->
+         <div class="webMenu d-none d-lg-block position-relative">
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <!-- Logo Left -->
+               <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo/vnil-logo-removebg-preview.png" class="site-logo" alt="Vnil Nuts">
+               </a>
+
+               <!-- Menu Center -->
+               <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                  <ul class="navbar-nav main_menu_list">
+                     <li class="nav-item px-2">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item px-2">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                     </li>
+                     <li class="nav-item px-2">
+                        <a class="nav-link" href="products.html">Products</a>
+                     </li>
+                     <li class="nav-item px-2">
+                        <a class="nav-link" href="contact-us.html">Contact</a>
+                     </li>
+                  </ul>
+               </div>
+
+               <!-- Social Icons Right -->
+               <div class="d-flex align-items-center gap-3">
+                  <ul class="list-unstyled d-flex mb-0 gap-3">
+                     <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href="#!" aria-label="X"><i class="fab fa-x-twitter"></i></a></li>
+                     <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
+                     <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+               </div>
+
+            </nav>
+         </div>
+
+         <!-- mobile menubar start -->
+         <div class="mobileMenu d-block d-lg-none">
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo/vnil-logo-removebg-preview.png" class="site-logo" alt="Vnil Nuts">
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                  id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                  <div class="offcanvas-header">
+                     <button type="button" class="btn-close mobile_menu_close text-reset"
+                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
-                  <div class="header_top_socials py-2">
-                     <ul class="list-unstyled d-flex mb-0">
-                        <li><a href="#!"><i class="fab fa-facebook-f text-white pe-3"></i></a></li>
-                        <li><a href="#!"><i class="fab fa-twitter text-white pe-3"></i></a></li>
-                        <li><a href="#!"><i class="fab fa-instagram text-white pe-3"></i></a></li>
-                        <li><a href="#!"><i class="fab fa-linkedin-in text-white"></i></a></li>
+                  <div class="offcanvas-body">
+                     <ul class="navbar-nav main_menu_list m-auto">
+                        <li class="nav-item pe-4">
+                           <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item pe-4">
+                           <a class="nav-link" href="about-us.html">About Us</a>
+                        </li>
+                        <li class="nav-item pe-4">
+                           <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item pe-4">
+                           <a class="nav-link" href="contact-us.html">Contact</a>
+                        </li>
                      </ul>
                   </div>
                </div>
-            </div>
+            </nav>
          </div>
-         <!-- top header end -->
 
-         <!-- bottom header start -->
-         <div class="header_bottom_main">
-            <div class="container">
-               <!-- web menubar start-->
-               <div class="webMenu d-none d-lg-block position-relative">
-                  <nav class="navbar navbar-expand-lg navbar-light">
-                     <a class="navbar-brand position-relative" href="index.html"><img src="assets/images/logo/vnil-logo-removebg-preview.png" class="site-logo"
-                           alt="Vnil Nuts"></a>
-                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                     </button>
-                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav main_menu_list ms-auto after_navbar">
-                           <li class="nav-item px-2">
-                              <a class="nav-link" href="index.html">Home</a>
-                           </li>
-                           <li class="nav-item px-2">
-                              <a class="nav-link" href="about-us.html">About Us</a>
-                           </li>
-                           <li class="nav-item px-2">
-                              <a class="nav-link" href="shop-list.html">Products</a>
-                           </li>
-                        </ul>
-                     </div>
-                     <a href="contact-us.html" class="btn custom_btn rounded-pill text-white ms-3 px-4">Contact Us</a>
-                  </nav>
-               </div>
-               <!-- mobile menubar start -->
-               <div class="mobileMenu d-block d-lg-none">
-                  <nav class="navbar navbar-expand-lg navbar-light">
-                     <a class="navbar-brand" href="index.html"><img src="assets/images/logo/vnil-logo-removebg-preview.png" class="site-logo"
-                           alt="Vnil Nuts"></a>
-                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                     </button>
-                     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-                        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                        <div class="offcanvas-header">
-                           <button type="button" class="btn-close mobile_menu_close text-reset"
-                              data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                           <ul class="navbar-nav main_menu_list m-auto">
-                              <li class="nav-item pe-4">
-                                 <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                              </li>
-                              <li class="nav-item pe-4">
-                                 <a class="nav-link" href="about-us.html">About Us</a>
-                              </li>
-                              <li class="nav-item pe-4">
-                                 <a class="nav-link" href="shop-list.html">Products</a>
-                              </li>
-                              <li class="nav-item pe-4">
-                                 <a class="nav-link" href="contact-us.html">Contact</a>
-                              </li>
-                           </ul>
-                           
-                        </div>
-                     </div>
-                  </nav>
-               </div>
-            </div>
-         </div>
-      </header>
+      </div>
+   </div>
+</header>
 
+<style>
+   .header_bottom_main .navbar {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+   }
+
+   .header_bottom_main .collapse.navbar-collapse {
+      flex-grow: 1 !important;
+      justify-content: center !important;
+   }
+
+   .header_bottom_main .navbar-nav .nav-link {
+      color: #333 !important;
+   }
+
+   .header_bottom_main .d-flex .fab {
+      color: #C9956B;
+      font-size: 22px !important;
+   }
+
+   .header_bottom_main .d-flex .fab:hover {
+      color: #a07550;
+   }
+    .header_bottom_main .navbar-nav .nav-link {
+      color: #333 !important;
+      transition: color 0.3s ease !important;
+   }
+
+   .header_bottom_main .navbar-nav .nav-link:hover {
+      color: #C9956B !important;
+   }
+     .header_bottom_main .navbar-nav .nav-link {
+      color: #333 !important;
+      transition: color 0.3s ease !important;
+   }
+
+   .header_bottom_main .navbar-nav .nav-link:hover {
+      color: #C9956B !important;
+   }
+
+   .header_bottom_main .navbar-nav .nav-link.active {
+      color: #C9956B !important;
+      font-weight: 600 !important;
+   }
+</style>
       <!-- main body start -->
       <main>
          <!-- sidebar section start -->
@@ -202,7 +260,7 @@
                               </div>
                               <div class="prdc_ctg_product_text">
                                  <div class="prdc_ctg_product_title my-2">
-                                    <a href="shop-list.html" target="_blank"><h5>Organic Cabbage</h5></a>
+                                    <a href="products.html" target="_blank"><h5>Organic Cabbage</h5></a>
                                  </div>
                                  <div class="prdc_ctg_product_price mt-1 product_price">
                                     <span class="sale_price pe-1">$50.00</span>
@@ -216,7 +274,7 @@
                               </div>
                               <div class="prdc_ctg_product_text">
                                  <div class="prdc_ctg_product_title my-2">
-                                    <a href="shop-list.html" target="_blank"><h5>Organic Cabbage</h5></a>
+                                    <a href="products.html" target="_blank"><h5>Organic Cabbage</h5></a>
                                  </div>
                                  <div class="prdc_ctg_product_price mt-1 product_price">
                                     <span class="sale_price pe-1">$40.00</span>
@@ -230,7 +288,7 @@
                               </div>
                               <div class="prdc_ctg_product_text">
                                  <div class="prdc_ctg_product_title my-2">
-                                    <a href="shop-list.html" target="_blank"><h5>Organic Cabbage</h5></a>
+                                    <a href="products.html" target="_blank"><h5>Organic Cabbage</h5></a>
                                  </div>
                                  <div class="prdc_ctg_product_price mt-1 product_price">
                                     <span class="sale_price pe-1">$70.00</span>
@@ -291,7 +349,7 @@
                            </h1>
                         </div>
                         <div class="banner-btn-container">
-  <a href="shop-list.html" class="banner-btn banner-btn-primary">View Products</a>
+  <a href="products.html" class="banner-btn banner-btn-primary">View Products</a>
   <a href="contact-us.html" class="banner-btn banner-btn-outline">Contact Us</a>
 </div>
                         <!-- <div class="banner_search_bar d-inline-block position-relative">
@@ -696,7 +754,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product1.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product2.png" alt="image_not_found">
                                     </a>
@@ -717,7 +775,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -728,7 +786,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product2.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product3.png" alt="image_not_found">
                                     </a>
@@ -749,7 +807,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -760,7 +818,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product3.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product4.png" alt="image_not_found">
                                     </a>
@@ -781,7 +839,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -792,7 +850,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product4.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product5.png" alt="image_not_found">
                                     </a>
@@ -813,7 +871,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -824,7 +882,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product5.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product6.png" alt="image_not_found">
                                     </a>
@@ -845,7 +903,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -856,7 +914,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product6.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product7.png" alt="image_not_found">
                                     </a>
@@ -877,7 +935,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -888,7 +946,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product7.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product8.png" alt="image_not_found">
                                     </a>
@@ -909,7 +967,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -920,7 +978,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product8.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product9.png" alt="image_not_found">
                                     </a>
@@ -941,7 +999,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -956,7 +1014,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product5.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product8.png" alt="image_not_found">
                                     </a>
@@ -977,7 +1035,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -988,7 +1046,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product6.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product3.png" alt="image_not_found">
                                     </a>
@@ -1009,7 +1067,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1020,7 +1078,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product7.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product9.png" alt="image_not_found">
                                     </a>
@@ -1041,7 +1099,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1052,7 +1110,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product8.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product6.png" alt="image_not_found">
                                     </a>
@@ -1073,7 +1131,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1084,7 +1142,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product7.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product10.png" alt="image_not_found">
                                     </a>
@@ -1105,7 +1163,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1116,7 +1174,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product9.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product5.png" alt="image_not_found">
                                     </a>
@@ -1137,7 +1195,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1148,7 +1206,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product11.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product8.png" alt="image_not_found">
                                     </a>
@@ -1169,7 +1227,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1180,7 +1238,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product6.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product10.png" alt="image_not_found">
                                     </a>
@@ -1201,7 +1259,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1216,7 +1274,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product5.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product8.png" alt="image_not_found">
                                     </a>
@@ -1237,7 +1295,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1248,7 +1306,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product6.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product3.png" alt="image_not_found">
                                     </a>
@@ -1269,7 +1327,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1280,7 +1338,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product7.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product9.png" alt="image_not_found">
                                     </a>
@@ -1301,7 +1359,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1312,7 +1370,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product8.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product6.png" alt="image_not_found">
                                     </a>
@@ -1333,7 +1391,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1344,7 +1402,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product7.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product10.png" alt="image_not_found">
                                     </a>
@@ -1365,7 +1423,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1376,7 +1434,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product9.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product5.png" alt="image_not_found">
                                     </a>
@@ -1397,7 +1455,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1408,7 +1466,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product11.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product8.png" alt="image_not_found">
                                     </a>
@@ -1429,7 +1487,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1440,7 +1498,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product6.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product10.png" alt="image_not_found">
                                     </a>
@@ -1461,7 +1519,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1476,7 +1534,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product5.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product8.png" alt="image_not_found">
                                     </a>
@@ -1497,7 +1555,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1508,7 +1566,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product6.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product3.png" alt="image_not_found">
                                     </a>
@@ -1529,7 +1587,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1540,7 +1598,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product7.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product9.png" alt="image_not_found">
                                     </a>
@@ -1561,7 +1619,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1572,7 +1630,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product8.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product6.png" alt="image_not_found">
                                     </a>
@@ -1593,7 +1651,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1604,7 +1662,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product7.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product10.png" alt="image_not_found">
                                     </a>
@@ -1625,7 +1683,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1636,7 +1694,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product9.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product5.png" alt="image_not_found">
                                     </a>
@@ -1657,7 +1715,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1668,7 +1726,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product11.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product8.png" alt="image_not_found">
                                     </a>
@@ -1689,7 +1747,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1700,7 +1758,7 @@
                               <div class="product_layout_content bg-white position-relative">
                                  <div class="product_image_wrap">
                                     <a class="product_image d-flex justify-content-center align-items-center"
-                                       href="shop-list.html" target="_blank">
+                                       href="products.html" target="_blank">
                                        <img class="pic-1" src="assets/images/product/product6.png" alt="image_not_found">
                                        <img class="pic-2" src="assets/images/product/product10.png" alt="image_not_found">
                                     </a>
@@ -1721,7 +1779,7 @@
                                  </div>
                                  <div class="product_content">
                                     <h3 class="product_title">
-                                       <a href="shop-list.html" target="_blank">Organic Cabbage</a>
+                                       <a href="products.html" target="_blank">Organic Cabbage</a>
                                     </h3>
                                  </div>
                               </div>
@@ -1948,8 +2006,7 @@
                                  <div id="faqCollapse5" class="accordion-collapse collapse show"
                                     aria-labelledby="faqHeading5" data-bs-parent="#faqAccordionRight">
                                     <div class="accordion-body">
-                                       Absolutely. Our premium gift packs are crafted for Diwali, weddings, corporate gifting, and every special moment. Each pack is beautifully presented — making it as much a delight to receive as to give.
-                                    </div>
+                           Absolutely. Our premium gift packs are crafted for Diwali, weddings, corporate gifting, and every special moment. Each pack is beautifully presented and thoughtfully curated — making it as much a delight to receive as to give.</div>
                                  </div>
                               </div>
                               <div class="accordion-item mt-2">
@@ -2195,7 +2252,7 @@
                         <h2 class="cta_title pb-3">Taste the Premium Difference</h2>
                         <p class="cta_desc pb-4">Explore our handpicked range of exotic dry fruits — carefully sourced, naturally pure, and crafted to bring health and richness to every moment.</p>
                         <div class="cta_buttons d-flex flex-wrap justify-content-center gap-3">
-                           <a href="shop-list.html" class="btn custom_btn rounded-pill text-white px-4">Explore Our Range <i class="fas fa-long-arrow-alt-right ps-2"></i></a>
+                           <a href="products.html" class="btn custom_btn rounded-pill text-white px-4">Explore Our Range <i class="fas fa-long-arrow-alt-right ps-2"></i></a>
                            <a href="contact-us.html" class="btn cta_btn_outline rounded-pill px-4">Get In Touch</a>
                         </div>
                      </div>
@@ -2207,97 +2264,152 @@
 
       </main>
       <!-- main body end -->
+<!-- footer section start -->
+<footer class="footer_section_v2 position-relative">
+   <div class="container">
+      <div class="footer_v2_top py-5">
+         <div class="row gy-4">
 
-      <!-- footer section start -->
-      <footer class="footer_section_v2 position-relative">
-         <div class="container">
-            <div class="footer_v2_top">
-               <div class="row gy-5">
-                  <!-- Brand column -->
-                  <div class="col-md-6 col-lg-4">
-                     <div class="footer_v2_brand">
-                        <a href="index.html" class="d-inline-block mb-3">
-                           <img src="assets/images/logo/vnil-logo-removebg-preview.png" class="footer_v2_logo" alt="Vnil Nuts">
-                        </a>
-                        <p class="footer_v2_about">Premium handpicked dry fruits, sourced from the world's finest origins. Pure, naturally crafted, and delivered with care — bringing nature's goodness to every bite.</p>
-                        <ul class="list-unstyled d-flex footer_v2_social mb-0">
-                           <li><a href="#!" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                           <li><a href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                           <li><a href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
-                           <li><a href="#!" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <!-- Quick links -->
-                  <div class="col-md-6 col-lg-2">
-                     <h5 class="footer_v2_heading">Quick Links</h5>
-                     <ul class="list-unstyled footer_v2_links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="shop-list.html">Products</a></li>
-                        <li><a href="contact-us.html">Contact</a></li>
-                        <li><a href="faqs.html">FAQs</a></li>
-                     </ul>
-                  </div>
-
-                  <!-- Our Range -->
-                  <div class="col-md-6 col-lg-3">
-                     <h5 class="footer_v2_heading">Our Range</h5>
-                     <ul class="list-unstyled footer_v2_links footer_v2_range">
-                        <li><a href="shop-list.html">Almonds</a></li>
-                        <li><a href="shop-list.html">Cashews</a></li>
-                        <li><a href="shop-list.html">Pistachios</a></li>
-                        <li><a href="shop-list.html">Walnuts</a></li>
-                        <li><a href="shop-list.html">Dates</a></li>
-                        <li><a href="shop-list.html">Anjeer</a></li>
-                        <li><a href="shop-list.html">Raisins</a></li>
-                        <li><a href="shop-list.html">Apricots</a></li>
-                     </ul>
-                  </div>
-
-                  <!-- Contact -->
-                  <div class="col-md-6 col-lg-3">
-                     <h5 class="footer_v2_heading">Get In Touch</h5>
-                     <ul class="list-unstyled footer_v2_contact">
-                        <li>
-                           <i class="fas fa-map-marker-alt"></i>
-                           <span>123 Premium Lane,<br>Bengaluru, India 560001</span>
-                        </li>
-                        <li>
-                           <i class="fas fa-envelope"></i>
-                           <a href="mailto:hello@vnilnuts.com">hello@vnilnuts.com</a>
-                        </li>
-                        <li>
-                           <i class="fas fa-phone"></i>
-                           <a href="tel:+919999999999">+91 99999 99999</a>
-                        </li>
-                        <li>
-                           <i class="fas fa-clock"></i>
-                           <span>Mon – Sat, 10:00 AM – 7:00 PM</span>
-                        </li>
-                     </ul>
-                  </div>
+            <!-- Column 1: Brand -->
+            <div class="col-md-12 col-lg-4 pe-lg-5">
+               <div class="footer_v2_brand">
+                  <a href="index.html" class="d-inline-block mb-3">
+                     <img src="assets/images/logo/vnil-logo-removebg-preview.png" class="footer_v2_logo" alt="Vnil Nuts">
+                  </a>
+                  <p class="footer_v2_about">At VNIL Nuts, we bring you the finest handpicked dry fruits from nature's richest origins, carefully selected, naturally crafted, and packed with wholesome goodness.</p>
+                  <ul class="list-unstyled d-flex footer_v2_social mb-0">
+                     <li><a href="#!" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                     <li><a href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href="#!" aria-label="X"><i class="fab fa-x-twitter"></i></a></li>
+                   
+                  </ul>
                </div>
             </div>
 
-            <div class="footer_v2_bottom">
-               <div class="row align-items-center">
-                  <div class="col-md-6 text-center text-md-start">
-                     <p class="footer_v2_copy mb-0">© 2026 <span>VNIL Nuts</span>. All rights reserved.</p>
-                  </div>
-                  <div class="col-md-6 text-center text-md-end">
-                     <ul class="list-unstyled d-inline-flex footer_v2_legal mb-0">
-                        <li><a href="#!">Privacy Policy</a></li>
-                        <li><a href="#!">Terms of Use</a></li>
-                     </ul>
-                  </div>
+            <!-- Column 2: Quick Links -->
+            <div class="col-6 col-md-4 col-lg-2">
+               <h5 class="footer_v2_heading">Quick Links</h5>
+               <ul class="list-unstyled footer_v2_links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about-us.html">About Us</a></li>
+                  <li><a href="products.html">Products</a></li>
+                  <li><a href="contact-us.html">Contact</a></li>
+               </ul>
+            </div>
+
+            <!-- Column 3: Contact -->
+            <div class="col-6 col-md-4 col-lg-3">
+               <h5 class="footer_v2_heading">Contact</h5>
+               <ul class="list-unstyled footer_v2_contact">
+                  <li>
+                     <i class="fas fa-envelope"></i>
+                     <a href="mailto:hello@vnilnuts.com">hello@vnilnuts.com</a>
+                  </li>
+                  <li>
+                     <i class="fas fa-phone"></i>
+                     <a href="tel:+919999999999">+91 99999 99999</a>
+                  </li>
+                  <li>
+                     <i class="fas fa-clock"></i>
+                     <span>Mon – Sat, 10:00 AM – 7:00 PM</span>
+                  </li>
+               </ul>
+            </div>
+
+            <!-- Column 4: Find Us -->
+            <div class="col-md-4 col-lg-3">
+               <h5 class="footer_v2_heading">Find Us</h5>
+               <div class="footer_v2_map mb-3">
+                  <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE3LjgiTiA3N8KwMzUnNDAuNiJF!5e0!3m2!1sen!2sin!4v1234567890"
+                     width="100%"
+                     height="160"
+                     style="border:0; border-radius: 10px;"
+                     allowfullscreen=""
+                     loading="lazy"
+                     referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
                </div>
+               <ul class="list-unstyled footer_v2_contact">
+                  <li>
+                     <i class="fas fa-map-marker-alt"></i>
+                     <span>123 Premium Lane, Bengaluru, India 560001</span>
+                  </li>
+               </ul>
+            </div>
+
+         </div>
+      </div>
+
+      <div class="footer_v2_bottom">
+         <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+               <p class="footer_v2_copy mb-0">Developed by <span><a href="https://www.blackitechnologies.com/" target="_blank">Black I Technologies & Solutions</a></span></p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+               <ul class="list-unstyled d-inline-flex footer_v2_legal mb-0">
+                  <li><a href="#!">Privacy Policy</a></li>
+                  <li><a href="#!">Terms of Use</a></li>
+               </ul>
             </div>
          </div>
-      </footer>
-      <!-- footer section end -->
+      </div>
+   </div>
+</footer>
+<!-- footer section end -->
 
+<style>
+     .footer_v2_top .row {
+      align-items: flex-start !important;
+   }
+
+   .footer_v2_top .row > [class*="col-"] {
+      padding-top: 0 !important;
+   }
+
+   .footer_v2_heading {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+   }
+   .footer_v2_top {
+      padding-top: 25px !important;
+      padding-bottom: 40px !important;
+   }
+
+   .footer_v2_contact li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+   }
+
+   .footer_v2_contact li i {
+      margin-top: 3px;
+      min-width: 16px;
+      color: #C9956B;
+   }
+
+   .footer_v2_links li {
+      margin-bottom: 10px;
+   }
+
+   .footer_v2_heading {
+      margin-bottom: 20px;
+   }
+</style><style>
+   .footer_v2_contact li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+   }
+
+   .footer_v2_contact li i {
+      margin-top: 3px;
+      min-width: 16px;
+      color: #C9956B;
+   }
+</style>
       <!-- quick-view start -->
 
       <div class="modal fade quick_view" id="product_quick_view" tabindex="-1" aria-labelledby="exampleModalLabel"
