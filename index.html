@@ -38,7 +38,46 @@
    <!-- Include stylesheet CSS -->
    <link rel="stylesheet" href="assets/css/style.css?v=2">
     <style>
+     .banner_sub_title {
+    position: relative;
+    display: inline-block;
+  }
+
+  .banner_sub_title .sub_title_bg {
+    filter: brightness(0) saturate(100%) invert(60%) sepia(50%) saturate(400%) hue-rotate(345deg) brightness(90%) !important;
+  }
+      .banner_section_item {
+    padding-top: 90px !important;
+    padding-bottom: 160px !important;
+  }
      
+  /* Social icon circle style */
+  .header_bottom_main .d-flex .fab {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    background-color: #C9956B !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .header_bottom_main .d-flex a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Hover effect */
+  .header_bottom_main .d-flex .fab:hover {
+    background-color: #fff !important;
+    color: #C9956B !important;
+    border: 2px solid #C9956B !important;
+  }
+
 .testimonial_section.sec_space_xxs_50 {
     padding-top: 60px !important;
     padding-bottom: 60px !important;

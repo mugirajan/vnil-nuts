@@ -52,6 +52,33 @@ small, .small, .caption { font-size: 13px; font-weight: 300; }
   font-family: var(--vnil-font-serif);
   font-weight: 700;
 }
+  /* Social icon circle style */
+  .header_bottom_main .d-flex .fab {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    background-color: #C9956B !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .header_bottom_main .d-flex a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Hover effect */
+  .header_bottom_main .d-flex .fab:hover {
+    background-color: #fff !important;
+    color: #C9956B !important;
+    border: 2px solid #C9956B !important;
+  }
+
 .banner_title h1 { font-size: clamp(40px, 6vw, 64px); }
 
 /* Nav links — Lato, slightly smaller */
