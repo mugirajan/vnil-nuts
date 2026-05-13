@@ -151,8 +151,8 @@ a:hover { color: var(--vnil-rose-gold); }
 .sec_ptb_100,
 .sec_space_small,
 .sec_space_xxs_50 {
-  padding-top: 4em !important;
-  padding-bottom: 4em !important;
+  padding-top: 2em !important;
+  padding-bottom: 2em !important;
 }
 .sec_top_space_50 { padding-top: 4em !important; }
 .sec_bottom_space_70 { padding-bottom: 4em !important; }
