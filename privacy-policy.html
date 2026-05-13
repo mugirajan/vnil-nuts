@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Vnil Nuts</title>
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="assets/images/logo/vnil-logo-removebg-preview.png" type="image/png">
+    
+    <!-- Include fontawesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Include google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Include bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Include aos CSS -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+
+    <!-- Include magnific-popup CSS -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!-- Include nice-select CSS -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+
+    <!-- Include slick-theme CSS -->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+
+    <!-- Include slick CSS -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+
+    <!-- Include stylesheet CSS -->
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
+   <style>
+    :root {
+      --accent: #C9956B;
+      --accent-hover: #a07550;
+      --cream: #F9F4EE;
+      --text-dark: #333333;
+      --text-muted: #666;
+      --border: #e8ddd3;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text-dark);
+      background: #fff;
+      overflow-x: hidden;
+    }
+ .header_bottom_main .navbar-nav .nav-item + .nav-item::before {
+  content: "" !important;
+  display: inline-flex !important;
+  width: auto !important;   /* remove fixed width */
+  height: 25px !important;  /* height of the bar */
+  border-left: 2px solid #ccc !important; /* vertical line instead of width */
+  margin-right: 2px !important;
+  align-self: center !important;
+}
+    /* ── HEADER ── */
+    .header_bottom_main {
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .header_bottom_main .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+    }
+
+    .site-logo { width: 70px; }
+
+    .main_menu_list {
+      list-style: none;
+      display: flex;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+    }
+
+  .main_menu_list .nav-link {
+  color: var(--text-dark) !important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 18px;  /* ← changed from 14px */
+  padding: 6px 12px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+    .main_menu_list .nav-link:hover,
+    .main_menu_list .nav-link.active { color: var(--accent) !important; }
+
+    .social-icons { display: flex; gap: 10px; list-style: none; margin: 0; padding: 0; }
+
+    .social-icons li a {
+      width: 36px; height: 36px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .social-icons li a:hover { background: var(--accent-hover); }
+
+    /* ── HERO BREADCRUMB ── */
+    .breadcrumb_wrap {
+      height: 400px;
+      background-image: url(assets/images/contact-images/view-allergens-commonly-found-nuts.jpg);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .breadcrumb_wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.52);
+    }
+
+    .breadcrumb_cont {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .breadcrumb_cont h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .breadcrumb_cont p {
+      color: rgba(255,255,255,0.85);
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    .breadcrumb_items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+      margin: 0; padding: 0;
+    }
+
+    .breadcrumb_items li, .breadcrumb_items a {
+      color: rgba(255,255,255,0.8);
+      font-size: 13px;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .breadcrumb_items a:hover { color: var(--accent); }
+    .breadcrumb_items i { font-size: 11px; }
+
+    /* ── POLICY BODY ── */
+    .policy_section { padding: 70px 0 80px; }
+
+    .policy_inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Effective date badge */
+    .policy_meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--cream);
+      border-left: 4px solid var(--accent);
+      padding: 10px 18px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 36px;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .policy_meta i { color: var(--accent); }
+
+    /* Section sub-label */
+    .sub_label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 8px;
+    }
+
+    .sub_label i { font-size: 6px; color: var(--accent); }
+
+    .sub_label span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    .policy_page_title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+
+    .policy_intro {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Each policy block */
+    .policy_block {
+      margin-bottom: 36px;
+      padding: 28px 32px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      transition: box-shadow 0.3s;
+    }
+
+    .policy_block:hover { box-shadow: 0 4px 24px rgba(201,149,107,0.1); }
+
+    .policy_block_header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .policy_icon {
+      width: 44px; height: 44px;
+      background: var(--cream);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .policy_icon i {
+      font-size: 18px;
+      color: var(--accent);
+    }
+
+    .policy_block h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin: 0;
+    }
+
+    .policy_block p {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.85;
+      margin-bottom: 10px;
+    }
+
+    .policy_block p:last-child { margin-bottom: 0; }
+
+    .policy_block ul {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 10px;
+    }
+
+    .policy_block ul li {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      padding: 4px 0 4px 22px;
+      position: relative;
+    }
+
+    .policy_block ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 8px; height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      opacity: 0.7;
+    }
+
+    /* Contact highlight box */
+    .policy_contact_box {
+      background: var(--cream);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-top: 10px;
+      border: 1px solid #e6d8cc;
+    }
+
+    .policy_contact_box h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+    }
+
+    .contact_detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .contact_detail i {
+      color: var(--accent);
+      margin-top: 2px;
+      min-width: 16px;
+    }
+
+    .contact_detail a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact_detail a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+    /* mobile nav */
+    @media (max-width: 991px) {
+      .webMenu { display: none; }
+      .breadcrumb_cont h2 { font-size: 26px; }
+      .policy_page_title { font-size: 22px; }
+      .policy_block { padding: 20px 18px; }
+      .policy_contact_box { padding: 20px 18px; }
+    }
+
+    @media (min-width: 992px) {
+      .mobileMenu { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- body wrap start -->
+    <div class="body-wrap overflow-hidden">
+        <!-- back-to-top start -->
+        <div class="backtotop">
+            <a href="#!" class="scroll">
+                <i class="far fa-arrow-up fw-bold"></i>
+            </a>
+        </div>
+        <!-- back-to-top end -->
+        
+       <header class="header_section header_1">
+
+   <!-- bottom header start -->
+   <div class="header_bottom_main">
+      <div class="container">
+         <!-- web menubar start-->
+         <div class="webMenu d-none d-lg-block position-relative">
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <!-- Logo Left -->
+               <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo/vnil-logo-removebg-preview.png" class="site-logo" alt="Vnil Nuts">
+               </a>
+
+               <!-- Menu Center -->
+               <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                  <ul class="navbar-nav main_menu_list">
+                     <li class="nav-item px-2">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item px-2">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                     </li>
+                     <li class="nav-item px-2">
+                        <a class="nav-link" href="products.html">Products</a>
+                     </li>
+                     <li class="nav-item px-2">
+                        <a class="nav-link" href="contact-us.html">Contact</a>
+                     </li>
+                  </ul>
+               </div>
+
+               <!-- Social Icons Right -->
+               <div class="d-flex align-items-center gap-3">
+                  <ul class="list-unstyled d-flex mb-0 gap-3">
+                     <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href="#!" aria-label="X"><i class="fab fa-x-twitter"></i></a></li>
+                     <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
+                     <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+               </div>
+
+            </nav>
+         </div>
+
+         <!-- mobile menubar start -->
+         <div class="mobileMenu d-block d-lg-none">
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo/vnil-logo-removebg-preview.png" class="site-logo" alt="Vnil Nuts">
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                  id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                  <div class="offcanvas-header">
+                     <button type="button" class="btn-close mobile_menu_close text-reset"
+                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                     <ul class="navbar-nav main_menu_list m-auto">
+                        <li class="nav-item pe-4">
+                           <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item pe-4">
+                           <a class="nav-link" href="about-us.html">About Us</a>
+                        </li>
+                        <li class="nav-item pe-4">
+                           <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item pe-4">
+                           <a class="nav-link" href="contact-us.html">Contact</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+         </div>
+
+      </div>
+   </div>
+</header>
+
+
+            
+
+<!-- HERO BREADCRUMB -->
+<section class="breadcrumb_wrap">
+  <div class="breadcrumb_cont">
+    <h2>Privacy Policy</h2>
+    <p>Your trust matters to us — here's how we protect your information.</p>
+    <ul class="list-unstyled breadcrumb_item d-flex justify-content-center align-items-center text-white">
+                                <li><a href="index.html"><i class="fas fa-home active"></i>Home</a></li>
+                                <li><i class="fas fa-chevron-right"></i>Privacy policy</li>
+                            </ul>
+  </div>
+</section>
+
+<!-- POLICY CONTENT -->
+<section class="policy_section">
+  <div class="container">
+    <div class="policy_inner">
+
+      <!-- Meta -->
+      <div class="policy_meta">
+        <i class="fas fa-calendar-alt"></i>
+        Effective Date: June 2025 &nbsp;|&nbsp; Last Updated: June 2025
+      </div>
+
+      <!-- Intro heading -->
+      <div class="sub_label">
+        <i class="far fa-circle"></i>
+        <i class="far fa-circle"></i>
+        <i class="far fa-circle"></i>
+        <span>Our Commitment</span>
+      </div>
+      <h2 class="policy_page_title">Privacy Policy</h2>
+      <p class="policy_intro">
+        At VNIL Nuts, we believe in honest food and honest relationships. Just as every almond and cashew we source is pure and untouched, we are equally committed to handling your personal information with care, transparency, and integrity. This Privacy Policy explains what information we collect, how we use it, and how we protect it when you visit our website (<strong>vnilnuts.com</strong>) or interact with our business — whether as a retail customer, a wholesale buyer, or a global export partner.
+      </p>
+
+      <!-- 1. Information We Collect -->
+      <div class="policy_block">
+        <div class="policy_block_header">
+          <div class="policy_icon"><i class="fas fa-user-circle"></i></div>
+          <h3>1. Information We Collect</h3>
+        </div>
+        <p>We collect only the information necessary to serve you well. This may include:</p>
+        <ul>
+          <li><strong>Contact information</strong> — your name, email address, phone number, and business name when you fill out our contact form or reach out for bulk/export inquiries.</li>
+          <li><strong>Inquiry details</strong> — product preferences, order quantities, sourcing requirements, and any specific requests you share with us.</li>
+          <li><strong>Communication records</strong> — emails, messages, or calls exchanged between you and our team.</li>
+          <li><strong>Website usage data</strong> — pages visited, time spent, browser type, device, and IP address, collected automatically through cookies and analytics tools.</li>
+          <li><strong>Business information</strong> — for wholesale or export clients: company name, address, GST/TIN details, and trade requirements.</li>
+        </ul>
+        <p>We do not collect sensitive personal information such as payment card numbers, government ID numbers, or health data through our website.</p>
+      </div>
+
+      <!-- 2. How We Use Your Information -->
+      <div class="policy_block">
+        <div class="policy_block_header">
+          <div class="policy_icon"><i class="fas fa-cogs"></i></div>
+          <h3>2. How We Use Your Information</h3>
+        </div>
+        <p>The information you share with us is used solely to serve your needs and improve our service. Specifically, we use it to:</p>
+        <ul>
+          <li>Respond to your inquiries about our products, pricing, private labeling, or export requirements.</li>
+          <li>Process bulk orders, coordinate logistics, and manage our supply chain communications.</li>
+          <li>Send you relevant updates about new products, seasonal offerings, or festive gift packs — only if you have opted in.</li>
+          <li>Improve our website experience based on how visitors interact with our pages.</li>
+          <li>Comply with applicable legal obligations, food safety regulations (including FSSAI), and export compliance requirements.</li>
+          <li>Maintain records for our quality assurance and customer relationship processes.</li>
+        </ul>
+        <p>We do not use your information for automated decision-making or profiling, and we do not sell your personal data to any third party.</p>
+      </div>
+
+      <!-- 3. Sharing Your Information -->
+      <div class="policy_block">
+        <div class="policy_block_header">
+          <div class="policy_icon"><i class="fas fa-handshake"></i></div>
+          <h3>3. Sharing Your Information</h3>
+        </div>
+        <p>VNIL Nuts does not sell, trade, or rent your personal information. We may share it only in the following circumstances:</p>
+        <ul>
+          <li><strong>With service providers</strong> — trusted third parties who assist us with website hosting, analytics, or email communications, under strict confidentiality agreements.</li>
+          <li><strong>With logistics and shipping partners</strong> — only the minimum information necessary to fulfill an order or export shipment.</li>
+          <li><strong>For legal compliance</strong> — when required by law, court order, or applicable regulatory authority (such as FSSAI or customs bodies).</li>
+          <li><strong>With your consent</strong> — in any other circumstance, only with your explicit permission.</li>
+        </ul>
+        <p>For our international export clients (across 20+ countries), we ensure all cross-border data transfers are handled in accordance with applicable data protection laws.</p>
+      </div>
+
+      <!-- 4. Cookies & Website Data -->
+      <div class="policy_block">
+        <div class="policy_block_header">
+          <div class="policy_icon"><i class="fas fa-cookie-bite"></i></div>
+          <h3>4. Cookies &amp; Website Data</h3>
+        </div>
+        <p>Our website uses cookies — small text files stored on your device — to improve your browsing experience. We use:</p>
+        <ul>
+          <li><strong>Essential cookies</strong> — required for the website to function properly (navigation, form submissions).</li>
+          <li><strong>Analytics cookies</strong> — to understand how visitors use our site, so we can improve it. We use tools such as Google Analytics for this purpose.</li>
+          <li><strong>Preference cookies</strong> — to remember your settings and preferences across visits.</li>
+        </ul>
+        <p>You can manage or disable cookies through your browser settings at any time. Disabling certain cookies may affect the functionality of our website. We do not use cookies for advertising or cross-site tracking.</p>
+      </div>
+
+      <!-- 5. Data Retention -->
+      <div class="policy_block">
+        <div class="policy_block_header">
+          <div class="policy_icon"><i class="fas fa-database"></i></div>
+          <h3>5. Data Retention</h3>
+        </div>
+        <p>We retain your personal information only for as long as it is necessary for the purpose it was collected, or as required by law. Specifically:</p>
+        <ul>
+          <li>General inquiry records are retained for up to <strong>2 years</strong> from the date of last contact.</li>
+          <li>Business and export client records are retained for up to <strong>7 years</strong> in accordance with Indian accounting and trade regulations.</li>
+          <li>Website analytics data is typically retained for <strong>26 months</strong>, as per standard analytics platform policies.</li>
+        </ul>
+        <p>Once data is no longer required, we securely delete or anonymise it.</p>
+      </div>
+
+      <!-- 6. Data Security -->
+      <div class="policy_block">
+        <div class="policy_block_header">
+          <div class="policy_icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>6. Data Security</h3>
+        </div>
+        <p>We take the security of your personal information seriously. VNIL Nuts employs appropriate technical and organisational measures to protect your data from unauthorised access, loss, misuse, or disclosure. These include:</p>
+        <ul>
+          <li>Secure HTTPS encryption for all data transmitted through our website.</li>
+          <li>Restricted access to personal data — only authorised personnel who need the data to perform their roles can access it.</li>
+          <li>Regular review of our data handling practices and security protocols.</li>
+        </ul>
+        <p>While we do our utmost to protect your information, no digital system is 100% immune to risk. We encourage you to contact us immediately if you suspect any unauthorised use of your data.</p>
+      </div>
+
+      <!-- 7. Your Rights -->
+      <div class="policy_block">
+        <div class="policy_block_header">
+          <div class="policy_icon"><i class="fas fa-user-check"></i></div>
+          <h3>7. Your Rights</h3>
+        </div>
+        <p>You have the following rights with respect to your personal information held by VNIL Nuts:</p>
+        <ul>
+          <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
+          <li><strong>Correction</strong> — request that we correct any inaccurate or incomplete information.</li>
+          <li><strong>Deletion</strong> — request that we delete your personal data, subject to any legal retention obligations.</li>
+          <li><strong>Opt-out of communications</strong> — unsubscribe from any marketing communications at any time by emailing us or using the unsubscribe link in our emails.</li>
+          <li><strong>Withdraw consent</strong> — where processing is based on your consent, you may withdraw it at any time.</li>
+        </ul>
+        <p>To exercise any of these rights, please contact us using the details below. We will respond within 30 days of receiving your request.</p>
+      </div>
+
+      <!-- 8. Third-Party Links -->
+      <div class="policy_block">
+        <div class="policy_block_header">
+          <div class="policy_icon"><i class="fas fa-external-link-alt"></i></div>
+          <h3>8. Third-Party Links</h3>
+        </div>
+        <p>Our website may contain links to external websites — such as social media platforms (Instagram, Facebook, LinkedIn, X) or logistics partners. VNIL Nuts is not responsible for the privacy practices of these third-party websites. We encourage you to review their privacy policies before sharing any personal information with them.</p>
+      </div>
+
+      <!-- 9. Children's Privacy -->
+      <div class="policy_block">
+        <div class="policy_block_header">
+          <div class="policy_icon"><i class="fas fa-child"></i></div>
+          <h3>9. Children's Privacy</h3>
+        </div>
+        <p>Our website and services are intended for adults and business users. We do not knowingly collect personal information from individuals under the age of 18. If we become aware that a minor has submitted personal data to us, we will promptly delete it. If you believe a child has shared information with us, please contact us immediately.</p>
+      </div>
+
+      <!-- 10. Changes to This Policy -->
+      <div class="policy_block">
+        <div class="policy_block_header">
+          <div class="policy_icon"><i class="fas fa-sync-alt"></i></div>
+          <h3>10. Changes to This Policy</h3>
+        </div>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we do, we will revise the "Last Updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of our website after any changes constitutes your acceptance of the updated policy.</p>
+      </div>
+
+      <!-- 11. Contact Us -->
+      <div class="policy_block">
+        <div class="policy_block_header">
+          <div class="policy_icon"><i class="fas fa-envelope-open-text"></i></div>
+          <h3>11. Contact Us</h3>
+        </div>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how VNIL Nuts handles your personal data, please do not hesitate to reach out to us:</p>
+        <div class="policy_contact_box">
+          <h4>VNIL Nuts — Data &amp; Privacy Enquiries</h4>
+          <div class="contact_detail">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>No. 32, 1st Floor, GST Road, Tambaram Sanatorium, Chennai – 600047, Tamil Nadu, India</span>
+          </div>
+          <div class="contact_detail">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:hello@vnilnuts.com">hello@vnilnuts.com</a>
+          </div>
+          <div class="contact_detail">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+919999999999">+91 99999 99999</a>
+          </div>
+          <div class="contact_detail">
+            <i class="fas fa-globe"></i>
+            <a href="https://www.vnilnuts.com" target="_blank">www.vnilnuts.com</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+            
+     <!-- footer section start -->
+<footer class="footer_section_v2 position-relative">
+   <div class="container">
+      <div class="footer_v2_top py-5">
+         <div class="row gy-4">
+
+            <!-- Column 1: Brand -->
+            <div class="col-md-12 col-lg-4 pe-lg-5">
+               <div class="footer_v2_brand">
+                  <a href="index.html" class="d-inline-block mb-3">
+                     <img src="assets/images/logo/vnil-logo-removebg-preview.png" class="footer_v2_logo" alt="Vnil Nuts">
+                  </a>
+                  <p class="footer_v2_about">At VNIL Nuts, we bring you the finest handpicked dry fruits from nature's richest origins, carefully selected, naturally crafted, and packed with wholesome goodness.</p>
+                  <ul class="list-unstyled d-flex footer_v2_social mb-0">
+                     <li><a href="#!" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                     <li><a href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href="#!" aria-label="X"><i class="fab fa-x-twitter"></i></a></li>
+                     <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+                   
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-6 col-md-4 col-lg-2">
+               <h5 class="footer_v2_heading">Quick Links</h5>
+               <ul class="list-unstyled footer_v2_links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about-us.html">About Us</a></li>
+                  <li><a href="products.html">Products</a></li>
+                  <li><a href="contact-us.html">Contact</a></li>
+               </ul>
+            </div>
+
+            <!-- Column 3: Contact -->
+            <div class="col-6 col-md-4 col-lg-3">
+               <h5 class="footer_v2_heading">Contact</h5>
+               <ul class="list-unstyled footer_v2_contact">
+                  <li>
+                     <i class="fas fa-envelope"></i>
+                     <a href="mailto:hello@vnilnuts.com">hello@vnilnuts.com</a>
+                  </li>
+                  <li>
+                     <i class="fas fa-phone"></i>
+                     <a href="tel:+919999999999">+91 99999 99999</a>
+                  </li>
+                  <li>
+                     <i class="fas fa-map-marker-alt"></i>
+                    
+                     <span>No.32, 1st Floor, GST Road,
+Tambaram Sanatorium, Chennai – 600047</span>
+                  </li>
+               </ul>
+            </div>
+
+            <!-- Column 4: Find Us -->
+            <div class="col-md-4 col-lg-3">
+               <h5 class="footer_v2_heading">Find Us</h5>
+               <div class="footer_v2_map mb-3">
+                  <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE3LjgiTiA3N8KwMzUnNDAuNiJF!5e0!3m2!1sen!2sin!4v1234567890"
+                     width="100%"
+                     height="160"
+                     style="border:0; border-radius: 10px;"
+                     allowfullscreen=""
+                     loading="lazy"
+                     referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+               </div>
+               <ul class="list-unstyled footer_v2_contact">
+                 
+               </ul>
+            </div>
+
+         </div>
+      </div>
+
+      <div class="footer_v2_bottom">
+         <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+               <p class="footer_v2_copy mb-0">Developed by <span><a href="https://www.blackitechnologies.com/" target="_blank">Black I Technologies & Solutions</a></span></p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+               <ul class="list-unstyled d-inline-flex footer_v2_legal mb-0">
+                   <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                  <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+<!-- footer section end -->
+
+<style>
+     .footer_v2_top .row {
+      align-items: flex-start !important;
+   }
+
+   .footer_v2_top .row > [class*="col-"] {
+      padding-top: 0 !important;
+   }
+
+   .footer_v2_heading {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+   }
+   .footer_v2_top {
+      padding-top: 25px !important;
+      padding-bottom: 40px !important;
+   }
+
+   .footer_v2_contact li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+   }
+
+   .footer_v2_contact li i {
+      margin-top: 3px;
+      min-width: 16px;
+      color: #C9956B;
+   }
+
+   .footer_v2_links li {
+      margin-bottom: 10px;
+   }
+
+   .footer_v2_heading {
+      margin-bottom: 20px;
+   }
+</style><style>
+   .footer_v2_contact li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+   }
+
+   .footer_v2_contact li i {
+      margin-top: 3px;
+      min-width: 16px;
+      color: #C9956B;
+   }
+   
+  .footer_v2_top {
+    padding-top: 0px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .footer_v2_brand {
+    margin-bottom: 0 !important;
+  }
+
+  .footer_v2_logo {
+    width: 80px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .footer_v2_about {
+    margin-bottom: 8px !important;
+  }
+
+  .footer_v2_heading {
+    margin-bottom: 12px !important;
+  }
+
+  .footer_v2_links li {
+    margin-bottom: 6px !important;
+  }
+
+  .footer_v2_contact li {
+    margin-bottom: 8px !important;
+  }
+
+  .footer_v2_map {
+    margin-bottom: 8px !important;
+  }
+
+  .footer_v2_map iframe {
+    height: 120px !important;
+  }
+.footer_v2_links li {
+   margin-bottom: 0 !important;
+   padding: 0 !important;
+}
+
+.footer_v2_links li a {
+   display: block;
+   padding: 6px 0 !important;
+   line-height: 1.6 !important;
+}
+
+.footer_v2_contact li {
+   margin-bottom: 12px !important;
+   padding: 0 !important;
+}
+.address_sec.sec_space_small {
+   padding-top: 40px !important;
+   padding-bottom: 40px !important;
+}
+</style>
+      <!-- quick-view start -->
+
+      <div class="modal fade quick_view" id="product_quick_view" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content position-relative">
+               <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"><i
+                     class="fas fa-times"></i></button>
+               <div class="modal-body p-0">
+                  <div class="container-fluid-full product10_wrap sec_space_small"
+                     style="background-image: url(assets/images/backgrounds/bg17.png)">
+                     <div class="row justify-content-center p-5">
+                        <div class="col-lg-6">
+                           <div class="product10_thumb_content d-flex flex-column">
+                              <div class="product11_slide_item">
+                                 <div
+                                    class="d-flex justify-content-center align-items-center position-relative overflow-hidden">
+                                    <img src="assets/images/product/product40.png" alt="image_not_found">
+                                 </div>
+                                 <div
+                                    class="d-flex justify-content-center align-items-center position-relative overflow-hidden">
+                                    <img src="assets/images/product/product40.png" alt="image_not_found">
+                                 </div>
+                                 <div
+                                    class="d-flex justify-content-center align-items-center position-relative overflow-hidden">
+                                    <img src="assets/images/product/product40.png" alt="image_not_found">
+                                 </div>
+                              </div>
+
+                              <div class="product10_thumb_item product11_slide_thumb">
+                                 <div class="thumb_item">
+                                    <a href="#!"><img src="assets/images/product/product6.png"
+                                          alt="image_not_found"></a>
+                                 </div>
+                                 <div class="thumb_item">
+                                    <a href="#!"><img src="assets/images/product/product8.png"
+                                          alt="image_not_found"></a>
+                                 </div>
+                                 <div class="thumb_item">
+                                    <a href="#!"><img src="assets/images/product/product23.png"
+                                          alt="image_not_found"></a>
+                                 </div>
+                                 <div class="thumb_item">
+                                    <a href="#!"><img src="assets/images/product/product6.png"
+                                          alt="image_not_found"></a>
+                                 </div>
+                                 <div class="thumb_item">
+                                    <a href="#!"><img src="assets/images/product/product8.png"
+                                          alt="image_not_found"></a>
+                                 </div>
+                                 <div class="thumb_item">
+                                    <a href="#!"><img src="assets/images/product/product23.png"
+                                          alt="image_not_found"></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-6">
+                           <div class="rating_wrap d-flex justify-content-between">
+                              <div class="rating_review_cont d-flex d-flex align-items-center">
+                                 <ul class="rating_star ul_li">
+                                    <li class="active"><i class="fas fa-star"></i></li>
+                                    <li class="active"><i class="fas fa-star"></i></li>
+                                    <li class="active"><i class="fas fa-star"></i></li>
+                                    <li class="active"><i class="fas fa-star"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+                                 </ul>
+                                 <a href="#!" class="review">Read 3 Reviews</a>
+                              </div>
+                              <div class="product_btn">
+                                 <a href="#"><button type="button"
+                                       class="btn custom_btn rounded-pill px-4 text-white">Smoothies</button></a>
+                              </div>
+                           </div>
+                           <h2 class="product_detail_title">Good Organic Products</h2>
+                           <p class="product_detail_desc py-2">Morbi eget congue lectus. Donec eleifend ultricies urna
+                              et euismod. Sed consectetur tellus eget odio aliquet, vel vestibulum tellus sollicitudin.
+                              Morbi maximus metus eu eros tincidunt, vitae mollis ante imperdiet. Nulla imperdiet at
+                              mauris ut posuere. Nam at ultrices justo.</p>
+                           <div class="product10_quantity_btn_wrap d-flex align-items-center">
+                              <div class="quantity_input bg-white">
+                                 <form action="#">
+                                    <span class="input_number_decrement">–</span>
+                                    <input class="input_number" value="2KG">
+                                    <span class="input_number_increment">+</span>
+                                 </form>
+                              </div>
+                              <a href="#"><button type="button"
+                                    class="btn custom_btn rounded-pill ms-3 px-5 py-3 text-white">Order Now <i
+                                       class="fas fa-long-arrow-alt-right"></i></button></a>
+                           </div>
+                           <div class="product_tags_wrap d-flex align-items-center mt-5">
+                              <h6 class="product_tags_title text-uppercase">tags:</h6>
+                              <div class="tags_item d-flex align-items-center">
+                                 <a href="#!">T-shirt,</a>
+                                 <a class="ms-1" href="#!">Clothes,</a>
+                                 <a class="ms-1" href="#!">Fashion,</a>
+                                 <a class="ms-1" href="#!">Shop</a>
+                              </div>
+                           </div>
+                           <div class="product_social_links d-flex align-items-center">
+                              <h6 class="product_social_title text-uppercase">share:</h6>
+                              <ul class="list-unstyled d-flex mb-0">
+                                 <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                                 <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                                 <li><a href="#!"><i class="fab fa-google-plus-g"></i></a></li>
+                                 <li><a href="#!"><i class="fab fa-pinterest-p"></i></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- quick-view end -->
+
+   </div>
+   <!-- body wrap end -->
+
+
+   
+
+   <!-- Include jquery js -->
+   <script src="assets/js/jquery.min.js"></script>
+
+   <!-- Include bootstrap-bundle js -->
+   <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+   <!-- Include aos js -->
+   <script src="assets/js/aos.js"></script>
+
+   <!-- Include jquery-magnific-popup js -->
+   <script src="assets/js/magnific-popup.min.js"></script>
+
+   <!-- Include nice-select js -->
+   <script src="assets/js/nice-select.min.js"></script>
+
+   <!-- Include jquery-countdown js -->
+   <script src="assets/js/countdown.min.js"></script>
+
+   <!-- Include slick js -->
+   <script src="assets/js/slick.min.js"></script>
+
+   <!-- Include custom js -->
+   <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
