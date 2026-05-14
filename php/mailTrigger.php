@@ -72,7 +72,6 @@ New enquiry received from website contact form:
 Name    : {$data['name']}
 Phone   : {$data['phone']}
 Email   : {$data['email']}
-Website : {$data['website']}
 Message : {$data['message']}
             ";
             $mail->send();
