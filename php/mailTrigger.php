@@ -67,12 +67,12 @@ The Vnil Nuts Team
 
             $mail->Subject = "New Contact Enquiry - " . $data['name'];
             $mail->Body = "
-New enquiry received from website contact form:
+Hello Admin,
 
-Name    : {$data['name']}
-Phone   : {$data['phone']}
-Email   : {$data['email']}
-Message : {$data['message']}
+A new enquiry has been submitted through the Vnil Nuts website by {$data['name']} who can be reached at {$data['email']} or {$data['phone']}. They have shared the following message — {$data['message']}
+Kindly follow up with the customer at the earliest.
+
+- Vnil Nuts System
             ";
             $mail->send();
 
@@ -129,12 +129,12 @@ The Vnil Nuts Team
 
             $mail->Subject = "New Blog Comment - " . $data['name'];
             $mail->Body = "
-New comment received from blog:
+Hello Admin,
 
-Blog Post : {$data['blog_title']}
-Name      : {$data['name']}
-Email     : {$data['email']}
-Message   : {$data['message']}
+A new comment has been posted on the Vnil Nuts blog post titled \"{$data['blog_title']}\" by {$data['name']} who can be reached at {$data['email']}. They have shared the following message — {$data['message']}
+Kindly review and approve the comment at the earliest.
+
+- Vnil Nuts System
             ";
             $mail->send();
 
