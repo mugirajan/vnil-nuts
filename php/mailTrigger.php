@@ -26,7 +26,7 @@ class sndMail
         $mail->Username   = "soundarya.ramesh0712@gmail.com";
         $mail->Password   = "wprxfjbrqlgpirhr";    // ← paste your password here
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->setFrom("soundarya.ramesh0712@gmail.com", "Organi");
+        $mail->setFrom("soundarya.ramesh0712@gmail.com", "Vnil Nuts");
         $mail->isHTML(false);
         return $mail;
     }
@@ -43,12 +43,12 @@ class sndMail
             $mail->Body = "
 Dear {$data['name']},
 
-Thank you for reaching out to Organi.
+Thank you for reaching out to Vnil Nuts.
 
 We have received your enquiry and our team will get back to you shortly.
 
 Regards,
-Organi Team
+Vnil Nuts Team
             ";
             $mail->send();
 
@@ -110,7 +110,7 @@ Thank you for your comment on our blog post: \"{$data['blog_title']}\".
 We have received your message and will review it shortly.
 
 Regards,
-Organi Team
+Vnil Nuts Team
             ";
             $mail->send();
 
