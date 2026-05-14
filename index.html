@@ -66,8 +66,14 @@
   display: none !important;
 }
 
+.header_section {
+  position: relative !important;
+  z-index: 100 !important;
+  overflow: visible !important;
+}
+
 .header_bottom_main {
-  padding-top: 0 !important;
+  padding-top: 5px !important;
   padding-bottom: 0 !important;
   position: relative !important;
   z-index: 100 !important;
@@ -79,6 +85,7 @@
   padding-top: 2px !important;
   padding-bottom: 2px !important;
   min-height: unset !important;
+  align-items: center !important;
 }
 
 .navbar-brand img.site-logo,
@@ -90,6 +97,8 @@
   max-width: 90px !important;
   min-width: 0 !important;
   object-fit: contain !important;
+  position: relative !important;
+  z-index: 201 !important;
 }
 
 .header_bottom_main .navbar-brand {
@@ -97,31 +106,24 @@
   z-index: 200 !important;
   padding: 0 !important;
   margin-top: 5px !important;
-  margin-bottom: -20px !important;
+  margin-bottom: -30px !important;
 }
 
-.header_bottom_main .navbar-brand::after {
+.header_bottom_main .navbar-brand::before {
   content: "" !important;
   position: absolute !important;
-  bottom: -22px !important;
+  bottom: -35px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  width: 110px !important;
-  height: 55px !important;
+  width: 140px !important;
+  height: 70px !important;
   background: #fff !important;
-  border-radius: 0 0 50% 50% !important;
+  border-radius: 0 0 70px 70px !important;
   z-index: -1 !important;
 }
 
-.header_bottom_main .site-logo {
-  position: relative !important;
-  z-index: 201 !important;
-}
-
-.header_section {
-  position: relative !important;
-  z-index: 100 !important;
-  overflow: visible !important;
+.header_bottom_main .navbar-brand::after {
+  display: none !important;
 }
 
 .banner_section_main {
