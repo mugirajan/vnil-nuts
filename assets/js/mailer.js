@@ -35,7 +35,7 @@ $(document).ready(function () {
         showMessage(msgId, null, "Sending...");
 
         $.ajax({
-            url     : "../php/mailer.php",
+            url     : "php/mailer.php",
             type    : "POST",
             data    : data,
             dataType: "json",
