@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
@@ -36,455 +36,8 @@
    <link rel="stylesheet" href="assets/css/slick.css">
 
    <!-- Include stylesheet CSS -->
-   <link rel="stylesheet" href="assets/css/style.css?v=2">
-   
-    <style>
-      html, body {
-  overflow-x: hidden !important;
-}
-  /* ─── UNIFORM SECTION SPACING ───────────────────────────── */
+   <link rel="stylesheet" href="assets/css/style.css?v=9">
 
-.category_section,
-.about_section,
-.quality_section .quality_section_wrap,
-.testimonial_section,
-.service_setion,
-.cta_section .cta_wrap {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-}
-.product_section{
-   padding-top: 80px !important;
-}
-.faqs_section .faqs_sec_wrap{
-   padding-bottom: 50px !important;
-}
-
-/* ─── LOGO CURVE BUMP ─────────────────────────────── */
-
-.logo_curve_wrap {
-  position: relative !important;
-  display: inline-block !important;
-  padding: 5px 25px 12px 25px !important;
-  background: #fff !important;
-  border-radius: 0 0 50% 50% !important;
-  margin-top: 5px !important;
-  margin-bottom: -10px !important;
-}
-
-.header_section::after {
-  display: none !important;
-}
-
-.header_section {
-  position: relative !important;
-  z-index: 100 !important;
-  overflow: visible !important;
-}
-
-.header_bottom_main {
-  padding-top: 5px !important;
-  padding-bottom: 0 !important;
-  position: relative !important;
-  z-index: 100 !important;
-  overflow: visible !important;
-  background: #fff !important;
-}
-
-.header_bottom_main .navbar {
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
-  min-height: unset !important;
-  align-items: center !important;
-}
-
-.navbar-brand img.site-logo,
-.top_inner_logo img.site-logo,
-.webMenu img.site-logo,
-.header_bottom_main img.site-logo {
-  height: 90px !important;
-  width: 90px !important;
-  max-width: 90px !important;
-  min-width: 0 !important;
-  object-fit: contain !important;
-  position: relative !important;
-  z-index: 201 !important;
-}
-
-.header_bottom_main .navbar-brand {
-  position: relative !important;
-  z-index: 200 !important;
-  padding: 0 !important;
-  margin-top: 5px !important;
-  margin-bottom: -30px !important;
-}
-
-.header_bottom_main .navbar-brand::before {
-  content: "" !important;
-  position: absolute !important;
-  bottom: -15px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 140px !important;
-  height: 70px !important;
-  background: #fff !important;
-  border-radius: 0 0 70px 70px !important;
-  z-index: -1 !important;
-}
-
-.header_bottom_main .navbar-brand::after {
-  display: none !important;
-}
-
-.banner_section_main {
-  position: relative !important;
-  z-index: 1 !important;
-}
-/* ─── HEADER / NAVBAR ────────────────────────────────────── */
-
-.header_bottom_main .navbar {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-}
-
-.header_bottom_main .collapse.navbar-collapse {
-  flex-grow: 1 !important;
-  justify-content: center !important;
-}
-
-.header_bottom_main .navbar-nav .nav-item {
-  display: flex !important;
-  align-items: center !important;
-}
-
-.header_bottom_main .navbar-nav .nav-item + .nav-item::before {
-  content: "|" !important;
-  color: #ccc !important;
-  padding-right: 8px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  height: 100% !important;
-  line-height: 1 !important;
-}
-
-.header_bottom_main .navbar-nav .nav-link {
-  color: #333 !important;
-  transition: color 0.3s ease !important;
-}
-
-.header_bottom_main .navbar-nav .nav-link:hover {
-  color: #C9956B !important;
-}
-
-.header_bottom_main .navbar-nav .nav-link.active {
-  color: #C9956B !important;
-  font-weight: 600 !important;
-}
-
-/* Social icon circles */
-.header_bottom_main .d-flex a {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.header_bottom_main .d-flex .fab {
-  width: 38px !important;
-  height: 38px !important;
-  border-radius: 50% !important;
-  background-color: #C9956B !important;
-  color: #fff !important;
-  font-size: 16px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: all 0.3s ease !important;
-}
-
-.header_bottom_main .d-flex .fab:hover {
-  background-color: #fff !important;
-  color: #C9956B !important;
-  border: 2px solid #C9956B !important;
-}
-
-
-/* ─── BANNER ─────────────────────────────────────────────── */
-
-.banner_section_main {
-  overflow: hidden !important;
-}
-
-.banner_section_item {
-  padding-top: 100px !important;
-  padding-bottom: 100px !important;
-}
-
-.banner_sub_title {
-  position: relative;
-  display: inline-block;
-}
-
-.banner_sub_title .sub_title_bg {
-  filter: brightness(0) saturate(100%) invert(60%) sepia(50%) saturate(400%) hue-rotate(345deg) brightness(90%) !important;
-}
-
-.banner_right_thumb {
-  width: 250px !important;
-  max-width: 250px !important;
-}
-
-.banner_left_thumb {
-  width: 250px !important;
-  max-width: 250px !important;
-}
-
-.banner-btn-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.banner-btn {
-  padding: 14px 32px;
-  font-size: 16px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.banner-btn-primary {
-  background-color: #C9956B;
-  color: #fff;
-}
-
-.banner-btn-primary:hover {
-  background-color: #C9956B;
-  color: #fff;
-}
-
-.banner-btn-outline {
-  background-color: transparent;
-  color: #C9956B;
-  border: 2px solid #C9956B;
-}
-
-.banner-btn-outline:hover {
-  background-color: #C9956B;
-  color: #fff;
-}
-
-.btn.custom_btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 2px !important;
-}
-
-
-/* ─── CATEGORY SLIDER ────────────────────────────────────── */
-
-.category_section {
-  overflow: hidden !important;
-}
-
-.category_slick .item_content,
-.category_slick .item_image_content,
-.category_slick .item_image_content img,
-.category_slick .item_title {
-  cursor: default !important;
-  pointer-events: none !important;
-}
-
-
-/* ─── ABOUT ──────────────────────────────────────────────── */
-
-.exp_rotating_text text {
-  letter-spacing: 4px !important;
-}
-
-
-/* ─── PRODUCTS ───────────────────────────────────────────── */
-
-.product_section .tab-content {
-  margin-bottom: 0 !important;
-}
-
-.product_section .tab-pane {
-  display: none !important;
-}
-
-.product_section .tab-pane.show.active {
-  display: block !important;
-}
-
-
-/* ─── TESTIMONIALS ───────────────────────────────────────── */
-
-.testimonial_section {
-  padding-top: 80px !important;
-  padding-bottom: 80px !important;
-}
-
-.testimonial_section .slideshow3_slider.slick-dotted.slick-slider {
-  margin-bottom: 0 !important;
-}
-
-.testimonial_section .slick-dots {
-  position: relative !important;
-  bottom: auto !important;
-  margin-top: 20px !important;
-  margin-bottom: 0 !important;
-}
-
-.testimonial_section .slick-dots li button:before {
-  color: #C9956B !important;
-  font-size: 10px !important;
-}
-
-.testimonial_section .slick-dots li.slick-active button:before {
-  color: #C9956B !important;
-  opacity: 1 !important;
-}
-
-.testi_slide_wrap {
-  min-height: 220px !important;
-  padding: 30px 80px !important;
-  background: transparent !important;
-}
-
-.testi_img_wrap {
-  width: 280px !important;
-  height: 280px !important;
-  border-radius: 50% !important;
-  overflow: hidden !important;
-  border: 6px solid rgba(255, 255, 255, 0.3) !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3) !important;
-  margin: 0 auto;
-}
-
-.testi_img_wrap img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: top !important;
-}
-
-.testi_slide_heading {
-  font-size: 36px !important;
-  font-weight: 700 !important;
-  color: #fff !important;
-  line-height: 1.3 !important;
-}
-
-.testi_slide_desc {
-  font-size: 16px !important;
-  font-style: italic !important;
-  color: #f0e0cc !important;
-  line-height: 1.9 !important;
-}
-
-.testi_slide_name {
-  color: #C9956B !important;
-  font-weight: 700 !important;
-  font-size: 18px !important;
-}
-
-.testi_slide_name font {
-  color: #ccc !important;
-  font-weight: 400 !important;
-  font-size: 15px !important;
-}
-
-
-/* ─── FOOTER ─────────────────────────────────────────────── */
-
-.footer_section_v2 {
-  padding-top: 20px !important;
-}
-
-.footer_v2_top {
-  padding-top: 20px !important;
-  padding-bottom: 20px !important;
-}
-
-.footer_v2_top .row {
-  align-items: flex-start !important;
-}
-
-.footer_v2_top .row > [class*="col-"] {
-  padding-top: 0 !important;
-}
-
-.footer_v2_brand {
-  margin-bottom: 0 !important;
-}
-
-.footer_v2_brand .d-inline-block {
-  margin-bottom: 10px !important;
-}
-
-.footer_v2_logo {
-  width: 80px !important;
-  margin-bottom: 0px !important;
-}
-
-.footer_v2_about {
-  margin-bottom: 8px !important;
-}
-
-.footer_v2_social {
-  margin-top: 10px !important;
-}
-
-.footer_v2_heading {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  margin-bottom: 12px !important;
-}
-
-.footer_v2_links li {
-  margin-bottom: 0 !important;
-  padding: 0 !important;
-}
-
-.footer_v2_links li a {
-  display: block;
-  padding: 6px 0 !important;
-  line-height: 1.6 !important;
-}
-
-.footer_v2_contact li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 12px !important;
-  padding: 0 !important;
-}
-
-.footer_v2_contact li i {
-  margin-top: 3px;
-  min-width: 16px;
-  color: #C9956B;
-}
-
-.footer_v2_map {
-  margin-bottom: 8px !important;
-}
-
-.footer_v2_map iframe {
-  height: 120px !important;
-}
-/* ─── GLOBAL IMAGE SAFETY ────────────────────────────────── */
-
-img {
-  max-width: 100% !important;
-}
-
-
-</style>
 </head>
 
 <body>
@@ -555,6 +108,9 @@ img {
                <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
                   id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                   <div class="offcanvas-header">
+                     <a href="index.html" class="offcanvas-brand d-inline-flex align-items-center">
+                        <img src="assets/images/logo/vnil-logo-removebg-preview.png" alt="Vnil Nuts" class="offcanvas-brand-logo">
+                     </a>
                      <button type="button" class="btn-close mobile_menu_close text-reset"
                         data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
@@ -912,7 +468,7 @@ img {
                                  <path id="expCirclePath" d="M 100, 100 m -78, 0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0" />
                               </defs>
                               <text>
-                                 <textPath href="#expCirclePath" startOffset="0">YEARS OF EXPERIENCE  •  PREMIUM QUALITY  •  </textPath>
+                                 <textPath href="#expCirclePath" startOffset="0">YEARS OF EXPERIENCE  â€¢  PREMIUM QUALITY  â€¢  </textPath>
                               </text>
                            </svg>
                            <!-- <style>
@@ -931,9 +487,9 @@ img {
                      <div class="about_text_wrap ps-lg-4">
                         <p class="about_eyebrow fst-italic pb-2">We Believe That If You Eat Good, You Feel Good</p>
                         <h2 class="about_title pb-4">Handpicked Premium Dry Fruits, Delivered With Love</h2>
-                        <p class="about_desc pb-3">At VNIL Nuts, every almond, cashew, and raisin is more than just a product — it's a promise of purity, freshness, and uncompromised quality. We carefully source our dry fruits from the finest growers across the world.</p>
+                        <p class="about_desc pb-3">At VNIL Nuts, every almond, cashew, and raisin is more than just a product â€” it's a promise of purity, freshness, and uncompromised quality. We carefully source our dry fruits from the finest growers across the world.</p>
                         <p class="about_desc pb-3">Our story began with a simple belief: that nature offers the best nourishment when it reaches you untouched and unprocessed. From the orchards of Kashmir to the groves of California, we travel far to bring you only what we'd serve our own family.</p>
-                        <p class="about_desc pb-4">No preservatives. No additives. Just pure, premium goodness — handpicked, quality-tested, and packed with care so every bite is as honest as the soil it grew from.</p>
+                        <p class="about_desc pb-4">No preservatives. No additives. Just pure, premium goodness â€” handpicked, quality-tested, and packed with care so every bite is as honest as the soil it grew from.</p>
                         <a href="about-us.html" class="btn custom_btn rounded-pill text-white">Read Our Story <i class="fas fa-long-arrow-alt-right ps-2"></i></a>
                      </div>
                   </div>
@@ -2198,7 +1754,7 @@ img {
                                     </h4>
                                  </div>
                                  <div class="quality_desc">
-                                    <p>Sourced directly from premium origins — Kashmir, California, Iran — by expert hands.</p>
+                                    <p>Sourced directly from premium origins â€” Kashmir, California, Iran â€” by expert hands.</p>
                                  </div>
                               </div>
                               <div class="quality_img bg-white ms-4">
@@ -2213,7 +1769,7 @@ img {
                                     </h4>
                                  </div>
                                  <div class="quality_desc">
-                                    <p>No preservatives, no additives, no artificial colors — just nature's goodness, untouched.</p>
+                                    <p>No preservatives, no additives, no artificial colors â€” just nature's goodness, untouched.</p>
                                  </div>
                               </div>
                               <div class="quality_img bg-white ms-4">
@@ -2228,7 +1784,7 @@ img {
                                     </h4>
                                  </div>
                                  <div class="quality_desc">
-                                    <p>From the orchard to your home — every batch reaches you while still at its absolute peak.</p>
+                                    <p>From the orchard to your home â€” every batch reaches you while still at its absolute peak.</p>
                                  </div>
                               </div>
                               <div class="quality_img bg-white ms-4">
@@ -2238,7 +1794,7 @@ img {
                         </div>
                         <div class="col-lg-4">
                            <div class="quality_middle_gallery img_moving_anim1">
-                              <img src="assets/images/quality/nuts-flow.webp" alt="Premium Dry Fruits — Almonds, Cashews, Pistachios, Dates, Anjeer">
+                              <img src="assets/images/quality/nuts-flow.webp" alt="Premium Dry Fruits â€” Almonds, Cashews, Pistachios, Dates, Anjeer">
                            </div>
                         </div>
                         <div class="col-lg-4">
@@ -2280,7 +1836,7 @@ img {
                                     </h4>
                                  </div>
                                  <div class="quality_desc">
-                                    <p>Fair partnerships with growers — supporting communities while delivering the finest to you.</p>
+                                    <p>Fair partnerships with growers â€” supporting communities while delivering the finest to you.</p>
                                  </div>
                               </div>
                            </div>
@@ -2382,7 +1938,7 @@ img {
                                 <div id="faqCollapse5" class="accordion-collapse collapse show"
    aria-labelledby="faqHeading5" data-bs-parent="#faqAccordionRight">
    <div class="accordion-body">
-      Premium gift packs for Diwali, weddings & corporate gifting — beautifully curated for every special moment.
+      Premium gift packs for Diwali, weddings & corporate gifting â€” beautifully curated for every special moment.
    </div>
 </div>
 </div>
@@ -2398,7 +1954,7 @@ img {
                                  <div id="faqCollapse6" class="accordion-collapse collapse"
                                     aria-labelledby="faqHeading6" data-bs-parent="#faqAccordionRight">
                                     <div class="accordion-body">
-                                       Every single batch is inspected for freshness, taste, texture, and purity before it's packed. We follow strict food safety standards — only the finest grade makes it into a VNIL package.
+                                       Every single batch is inspected for freshness, taste, texture, and purity before it's packed. We follow strict food safety standards â€” only the finest grade makes it into a VNIL package.
                                     </div>
                                  </div>
                               </div>
@@ -2413,7 +1969,7 @@ img {
                                  <div id="faqCollapse7" class="accordion-collapse collapse"
                                     aria-labelledby="faqHeading7" data-bs-parent="#faqAccordionRight">
                                     <div class="accordion-body">
-                                       Most products stays fresh for 6–12 months when stored properly — best-before date on every pack.
+                                       Most products stays fresh for 6â€“12 months when stored properly â€” best-before date on every pack.
                                     </div>
                                  </div>
                               </div>
@@ -2428,7 +1984,7 @@ img {
                                  <div id="faqCollapse8" class="accordion-collapse collapse"
                                     aria-labelledby="faqHeading8" data-bs-parent="#faqAccordionRight">
                                     <div class="accordion-body">
-                                       We'd love to hear from you. Reach us through our Contact page, or email us directly at hello@vnilnuts.com — our team will get back to you with curated options for your needs.
+                                       We'd love to hear from you. Reach us through our Contact page, or email us directly at hello@vnilnuts.com â€” our team will get back to you with curated options for your needs.
                                     </div>
                                  </div>
                               </div>
@@ -2719,7 +2275,7 @@ img {
                      <div class="col-lg-9">
                         <span class="cta_eyebrow d-inline-block text-uppercase pb-2">Pure Goodness, Delivered</span>
                         <h2 class="cta_title pb-3">Taste the Premium Difference</h2>
-                        <p class="cta_desc pb-4">Explore our handpicked range of exotic dry fruits — carefully sourced, naturally pure, and crafted to bring health and richness to every moment.</p>
+                        <p class="cta_desc pb-4">Explore our handpicked range of exotic dry fruits â€” carefully sourced, naturally pure, and crafted to bring health and richness to every moment.</p>
                         <div class="cta_buttons d-flex flex-wrap justify-content-center gap-3">
                            <a href="products.html" class="btn custom_btn rounded-pill text-white px-4">Explore Our Products <i class="fas fa-long-arrow-alt-right ps-2"></i></a>
                            <a href="contact-us.html" class="btn cta_btn_outline rounded-pill px-4" style="display: inline-flex; align-items: center; justify-content: center;">Get In Touch</a> </div>
@@ -2782,7 +2338,7 @@ img {
                      <i class="fas fa-map-marker-alt"></i>
                     
                      <span>No.32, 1st Floor, GST Road,
-Tambaram Sanatorium, Chennai – 600047</span>
+Tambaram Sanatorium, Chennai â€“ 600047</span>
                   </li>
                </ul>
             </div>
@@ -3018,7 +2574,7 @@ Tambaram Sanatorium, Chennai – 600047</span>
                            <div class="product10_quantity_btn_wrap d-flex align-items-center">
                               <div class="quantity_input bg-white">
                                  <form action="#">
-                                    <span class="input_number_decrement">–</span>
+                                    <span class="input_number_decrement">â€“</span>
                                     <input class="input_number" value="2KG">
                                     <span class="input_number_increment">+</span>
                                  </form>
