@@ -24,7 +24,7 @@ class sndMail
         $mail->Port       = 587;
         $mail->SMTPAuth   = true;
         $mail->Username   = "soundarya.ramesh0712@gmail.com";
-        $mail->Password   = "blqm xbkd qncn kigy";    // ← paste your password here
+        $mail->Password   = "wprxfjbrqlgpirhr";    // ← paste your password here
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->setFrom("soundarya.ramesh0712@gmail.com", "Organi");
         $mail->isHTML(false);

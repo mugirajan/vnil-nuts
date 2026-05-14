@@ -6,7 +6,6 @@ $(document).ready(function () {
         const name    = $("#contact-name").val().trim();
         const phone   = $("#contact-phone").val().trim();
         const email   = $("#contact-email").val().trim();
-        const website = $("#contact-website").val().trim();
         const message = $("#contact-message").val().trim();
 
         if (!name || !email || !message) {
@@ -25,8 +24,8 @@ $(document).ready(function () {
             name   : name,
             phone  : phone,
             email  : email,
-            website: website,
             message: message
+            // ✅ website removed!
         };
 
         submitForm(formData, "contactMsg", "#contactForm");
@@ -36,7 +35,7 @@ $(document).ready(function () {
         showMessage(msgId, null, "Sending...");
 
         $.ajax({
-           url     : "../php/mailer.php",// ← path to mailer.php inside php/ folder
+            url     : "../php/mailer.php",
             type    : "POST",
             data    : data,
             dataType: "json",

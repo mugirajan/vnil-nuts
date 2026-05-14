@@ -368,36 +368,40 @@
                                 </div>
                                 <h3 class="comment_area_title mb-5">Send Us a Message</h3>
                                 <div class="comment_form_area">
-    <form id="contactForm" action="#">
-        <div id="contactMsg" style="margin-bottom:10px; font-weight:600;"></div>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="form_item">
-                    <input class="rounded-pill" type="text" id="contact-name"
-                        placeholder="Your Name*" required>
-                </div>
+<form id="contactForm" action="#">
+    <div id="contactMsg" style="margin-bottom:10px; font-weight:600;"></div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form_item">
+                <input class="rounded-pill" type="text" 
+                    id="contact-name" name="name"
+                    placeholder="Your Name*" required>
             </div>
-            <div class="col-lg-6">
-                <div class="form_item">
-                    <input class="rounded-pill" type="text" id="contact-phone"
-                        placeholder="Your Phone*" required>
-                </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form_item">
+                <input class="rounded-pill" type="text" 
+                    id="contact-phone" name="phone"
+                    placeholder="Your Phone*" required>
             </div>
-          <div class="col-12">
-    <div class="form_item">
-        <input class="rounded-pill" type="email" id="contact-email"
-            placeholder="Email Address*" required>
+        </div>
+        <div class="col-12">
+            <div class="form_item">
+                <input class="rounded-pill" type="email" 
+                    id="contact-email" name="email"
+                    placeholder="Email Address*" required>
+            </div>
+        </div>
     </div>
-</div>
-        </div>
-        <div class="form_item">
-            <textarea id="contact-message" placeholder="Your Comment*" required></textarea>
-        </div>
-        <button type="submit"
-            class="btn custom_btn rounded-pill py-3 text-white text-uppercase">
-            Send Message <i class="fas fa-long-arrow-alt-right"></i>
-        </button>
-    </form>
+    <div class="form_item">
+        <textarea id="contact-message" name="message" 
+            placeholder="Your Comment*" required></textarea>
+    </div>
+    <button type="submit"
+        class="btn custom_btn rounded-pill py-3 text-white text-uppercase">
+        Send Message <i class="fas fa-long-arrow-alt-right"></i>
+    </button>
+</form>
 </div>
                                 <!-- contact-info-right side thumb -->
                                 <img class="contact_info_thumb_right position-absolute"
