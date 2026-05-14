@@ -25,7 +25,6 @@ $(document).ready(function () {
             phone  : phone,
             email  : email,
             message: message
-            // ✅ website removed!
         };
 
         submitForm(formData, "contactMsg", "#contactForm");
@@ -43,6 +42,10 @@ $(document).ready(function () {
                 if (res.success) {
                     showMessage(msgId, true, "✅ Message sent successfully!");
                     $(formSelector)[0].reset();
+                    // ✅ Auto-hide after 10 seconds
+                    setTimeout(function () {
+                        $("#" + msgId).text("");
+                    }, 10000);
                 } else {
                     showMessage(msgId, false, "❌ " + res.message);
                 }
