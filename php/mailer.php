@@ -3,6 +3,21 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 
 require_once("./mailTrigger.php");
 
+$envPath = __DIR__ . '/.env';
+if (file_exists($envPath)) {
+    $lines = file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (strpos($line, '=') !== false && strpos($line, '#') !== 0) {
+            [$key, $value] = explode('=', $line, 2);
+            $key   = trim($key);
+            $value = trim($value);
+            putenv($key . '=' . $value);
+            $_ENV[$key]    = $value;
+            $_SERVER[$key] = $value;
+        }
+    }
+}
+
 // ── Security Headers ───────────────────────────────────────
 header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
 header("Content-Security-Policy: default-src 'self'; script-src 'self' https://www.google.com https://www.gstatic.com; frame-src https://www.google.com; connect-src 'self' https://www.google.com https://www.gstatic.com");
