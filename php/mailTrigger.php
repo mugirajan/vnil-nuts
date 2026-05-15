@@ -5,6 +5,18 @@ require_once("./vendor/autoload.php");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+// Load .env file
+$envPath = __DIR__ . '/../.env';
+if (file_exists($envPath)) {
+    $lines = file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (strpos($line, '=') !== false && strpos($line, '#') !== 0) {
+            [$key, $value] = explode('=', $line, 2);
+            putenv(trim($key) . '=' . trim($value));
+        }
+    }
+}
+
 class sndMail
 {
     private $valid = array("success" => false, "message" => "");
@@ -23,17 +35,32 @@ class sndMail
         $mail->Host       = "smtp.gmail.com";
         $mail->Port       = 587;
         $mail->SMTPAuth   = true;
-        $mail->Username   = "soundarya.ramesh0712@gmail.com";
-        $mail->Password   = "wprxfjbrqlgpirhr";    // ← paste your password here
+        $mail->Username   = getenv('GMAIL_USER');
+        $mail->Password   = getenv('GMAIL_PASS');
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->setFrom("soundarya.ramesh0712@gmail.com", "Vnil Nuts");
+        $mail->setFrom(getenv('GMAIL_USER'), "Vnil Nuts");
         $mail->isHTML(false);
         return $mail;
     }
 
-    // Contact form enquiry
+    // ── Contact form enquiry ───────────────────────────────
     public function contactEnquiry($data)
     {
+        // ── Input validation ──────────────────────────────
+        if (empty($data['email']) || empty($data['name']) || empty($data['message'])) {
+            $this->valid['success'] = false;
+            $this->valid['message'] = "Required fields are missing.";
+            return $this->valid;
+        }
+
+        // ── Email sanitization & validation ───────────────
+        $data['email'] = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
+        if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+            $this->valid['success'] = false;
+            $this->valid['message'] = "Invalid email address.";
+            return $this->valid;
+        }
+
         $mail = $this->configureMailer();
 
         try {
@@ -62,8 +89,8 @@ The Vnil Nuts Team
 
         try {
             // Send notification to admin
-            $mail->clearAddresses();
-            $mail->addAddress("soundarya.ramesh0712@gmail.com");
+            $mail->clearAllRecipients();
+            $mail->addAddress(getenv('GMAIL_USER'));
 
             $mail->Subject = "New Contact Enquiry - " . $data['name'];
             $mail->Body = "
@@ -87,12 +114,21 @@ Kindly follow up with the customer at the earliest.
         return $this->valid;
     }
 
-    // Blog comment enquiry
+    // ── Blog comment enquiry ───────────────────────────────
     public function blogEnquiry($data)
     {
+        // ── Input validation ──────────────────────────────
         if (empty($data['email']) || empty($data['name']) || empty($data['message'])) {
             $this->valid['success'] = false;
             $this->valid['message'] = "Required fields are missing.";
+            return $this->valid;
+        }
+
+        // ── Email sanitization & validation ───────────────
+        $data['email'] = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
+        if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+            $this->valid['success'] = false;
+            $this->valid['message'] = "Invalid email address.";
             return $this->valid;
         }
 
@@ -124,8 +160,8 @@ The Vnil Nuts Team
 
         try {
             // Send notification to admin
-            $mail->clearAddresses();
-            $mail->addAddress("soundarya.ramesh0712@gmail.com");
+            $mail->clearAllRecipients();
+            $mail->addAddress(getenv('GMAIL_USER'));
 
             $mail->Subject = "New Blog Comment - " . $data['name'];
             $mail->Body = "
@@ -142,6 +178,8 @@ Kindly review and approve the comment at the earliest.
             $this->valid['message'] = "Mails sent successfully.";
 
         } catch (Exception $e) {
+            // ── Log admin failure without overriding user success ──
+            error_log("Admin mail failed: " . $mail->ErrorInfo);
             $this->valid['message'] .= " | Admin mail failed: " . $mail->ErrorInfo;
         }
 
