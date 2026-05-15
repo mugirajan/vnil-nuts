@@ -80,13 +80,26 @@ if (isset($_POST['message'])) {
 $formsWithCaptcha = ["contactForm"];
 
 if (in_array($_POST["type"], $formsWithCaptcha)) {
+
     if (empty($_POST['g-recaptcha-response'])) {
         $res["message"] = "Please complete the CAPTCHA.";
         echo json_encode($res);
         exit;
     }
 
-    $secret = getenv('RECAPTCHA_SECRET');
+    // ── Check $_ENV first, then fall back to getenv() ──────
+    $secret = $_ENV['RECAPTCHA_SECRET'] ?? getenv('RECAPTCHA_SECRET') ?? '';
+
+    if (empty($secret)) {
+        error_log("reCAPTCHA ERROR: RECAPTCHA_SECRET is not set in environment.");
+        $res["message"] = "Server configuration error. Please contact support.";
+        echo json_encode($res);
+        exit;
+    }
+
+    // ── Debug: log secret to confirm it is loading ─────────
+    error_log("SECRET VALUE: [" . $secret . "]");
+
     $ch = curl_init("https://www.google.com/recaptcha/api/siteverify");
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
@@ -94,11 +107,34 @@ if (in_array($_POST["type"], $formsWithCaptcha)) {
         'response' => $_POST['g-recaptcha-response']
     ]));
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $verify  = curl_exec($ch);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+
+    $verify    = curl_exec($ch);
+    $curlError = curl_error($ch);
     curl_close($ch);
+
+    // ── cURL transport error ───────────────────────────────
+    if ($curlError) {
+        error_log("reCAPTCHA cURL error: " . $curlError);
+        $res["message"] = "CAPTCHA check failed due to a network error. Please try again.";
+        echo json_encode($res);
+        exit;
+    }
+
     $captcha = json_decode($verify);
 
+    // ── Google returned a bad/empty response ───────────────
+    if ($captcha === null) {
+        error_log("reCAPTCHA ERROR: Could not decode Google response: " . $verify);
+        $res["message"] = "CAPTCHA verification failed. Please try again.";
+        echo json_encode($res);
+        exit;
+    }
+
+    // ── CAPTCHA failed ─────────────────────────────────────
     if (!$captcha->success) {
+        $errorCodes = isset($captcha->{'error-codes'}) ? implode(', ', $captcha->{'error-codes'}) : 'none';
+        error_log("reCAPTCHA failed. Error codes: " . $errorCodes);
         $res["message"] = "CAPTCHA verification failed. Please try again.";
         echo json_encode($res);
         exit;
