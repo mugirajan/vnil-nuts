@@ -5,14 +5,18 @@ require_once("./vendor/autoload.php");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Load .env file
+// ── Load .env file ─────────────────────────────────────────
 $envPath = __DIR__ . '/../.env';
 if (file_exists($envPath)) {
     $lines = file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     foreach ($lines as $line) {
         if (strpos($line, '=') !== false && strpos($line, '#') !== 0) {
             [$key, $value] = explode('=', $line, 2);
-            putenv(trim($key) . '=' . trim($value));
+            $key   = trim($key);
+            $value = trim($value);
+            putenv($key . '=' . $value);
+            $_ENV[$key]    = $value;
+            $_SERVER[$key] = $value;
         }
     }
 }
@@ -26,6 +30,13 @@ class sndMail
         // session started by caller (mailer.php)
     }
 
+    // ── Helper: read env with fallback ────────────────────
+    private function env($key)
+    {
+        return $_ENV[$key] ?? getenv($key) ?? '';
+    }
+
+    // ── Configure PHPMailer ───────────────────────────────
     private function configureMailer()
     {
         $mail = new PHPMailer(true);
@@ -33,10 +44,10 @@ class sndMail
         $mail->Host       = "smtp.gmail.com";
         $mail->Port       = 587;
         $mail->SMTPAuth   = true;
-        $mail->Username   = getenv('GMAIL_USER');
-        $mail->Password   = getenv('GMAIL_PASS');
+        $mail->Username   = $this->env('GMAIL_USER');
+        $mail->Password   = $this->env('GMAIL_PASS');
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->setFrom(getenv('GMAIL_USER'), "Vnil Nuts");
+        $mail->setFrom($this->env('GMAIL_USER'), "Vnil Nuts");
         $mail->isHTML(false);
         return $mail;
     }
@@ -65,9 +76,9 @@ class sndMail
 
         // ── Send confirmation to user ─────────────────────
         try {
-    $mail->clearAllRecipients();
-    $mail->addAddress($data['email']);
-    $mail->Subject = "Your enquiry is received - " . $data['name'];
+            $mail->clearAllRecipients();
+            $mail->addAddress($data['email']);
+            $mail->Subject = "Your enquiry is received - " . $data['name'];
             $mail->Body    = "
 Dear {$data['name']},
 
@@ -87,7 +98,7 @@ The Vnil Nuts Team
         // ── Send notification to admin ────────────────────
         try {
             $mail->clearAllRecipients();
-            $mail->addAddress(getenv('GMAIL_USER'));
+            $mail->addAddress($this->env('GMAIL_USER'));
             $mail->Subject = "New Contact Enquiry - " . $data['name'];
             $mail->Body    = "
 Hello Admin,
@@ -139,9 +150,9 @@ Kindly follow up with the customer at the earliest.
 
         // ── Send confirmation to user ─────────────────────
         try {
-    $mail->clearAllRecipients();
-    $mail->addAddress($data['email']);
-    $mail->Subject = "Your comment is received - " . $data['name'];
+            $mail->clearAllRecipients();
+            $mail->addAddress($data['email']);
+            $mail->Subject = "Your comment is received - " . $data['name'];
             $mail->Body    = "
 Dear {$data['name']},
 
@@ -161,7 +172,7 @@ The Vnil Nuts Team
         // ── Send notification to admin ────────────────────
         try {
             $mail->clearAllRecipients();
-            $mail->addAddress(getenv('GMAIL_USER'));
+            $mail->addAddress($this->env('GMAIL_USER'));
             $mail->Subject = "New Blog Comment - " . $data['name'];
             $mail->Body    = "
 Hello Admin,
