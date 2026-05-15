@@ -364,27 +364,6 @@
     autoplaySpeed: 3000,
     prevArrow: ".ss2_left_arrow",
     nextArrow: ".ss2_right_arrow",
-    // responsive: [
-    //     {
-    //         breakpoint: 768,
-    //         settings: {
-    //             slidesToShow: 1
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 1025,
-    //         settings: {
-    //             slidesToShow: 2
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 1200,
-    //         settings: {
-    //             slidesToShow: 4
-    //         }
-    //     }
-    // ]
-    
   });
   
   // slick slider-3 start
@@ -402,33 +381,23 @@
     responsive: [
       {
         breakpoint: 576,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 768,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 992,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1200,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1300,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       }
     ]
   });
@@ -448,21 +417,15 @@
     responsive: [
       {
         breakpoint: 768,
-        settings: {
-          slidesToShow: 2
-        }
+        settings: { slidesToShow: 2 }
       },
       {
         breakpoint: 1025,
-        settings: {
-          slidesToShow: 3
-        }
+        settings: { slidesToShow: 3 }
       },
       {
         breakpoint: 1200,
-        settings: {
-          slidesToShow: 5
-        }
+        settings: { slidesToShow: 5 }
       }
     ]
   });
@@ -482,26 +445,18 @@
     responsive: [
       {
         breakpoint: 768,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1025,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1200,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       }
     ]
   });
-  
-  
   
   // slick slider-6 start
   $('.slideshow6_slider').slick({
@@ -518,39 +473,27 @@
     responsive: [
       {
         breakpoint: 480,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 576,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 768,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1025,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1200,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1400,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       }
     ]
   });
@@ -568,39 +511,27 @@
     responsive: [
       {
         breakpoint: 480,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 576,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 768,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1025,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1200,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1400,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       }
     ]
   });
@@ -618,39 +549,27 @@
     responsive: [
       {
         breakpoint: 480,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 576,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 768,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1025,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1200,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1400,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       }
     ]
   });
@@ -670,28 +589,21 @@
     responsive: [
       {
         breakpoint: 768,
-        settings: {
-          slidesToShow: 2
-        }
+        settings: { slidesToShow: 2 }
       },
       {
         breakpoint: 1025,
-        settings: {
-          slidesToShow: 3
-        }
+        settings: { slidesToShow: 3 }
       },
       {
         breakpoint: 1200,
-        settings: {
-          slidesToShow: 5
-        }
+        settings: { slidesToShow: 5 }
       }
     ]
   });
   
   
   // center slider start
-  
   $('.center').slick({
     centerMode: true,
     centerPadding: '60px',
@@ -741,9 +653,7 @@
       },
       {
         breakpoint: 768,
-        settings: {
-          vertical: true,
-        }
+        settings: { vertical: true }
       },
       {
         breakpoint: 580,
@@ -761,7 +671,6 @@
       }
     ]
   });
-  
   // vertical slider end ================
   
   // vertical slider start ================
@@ -788,20 +697,12 @@
     prevArrow: ".ss9_up_arrow",
     nextArrow: ".ss9_down_arrow",
     responsive: [
-      {
-        breakpoint: 992,
-      },
-      {
-        breakpoint: 768,
-      },
-      {
-        breakpoint: 580,
-      },
+      { breakpoint: 992 },
+      { breakpoint: 768 },
+      { breakpoint: 580 },
       {
         breakpoint: 380,
-        settings: {
-          slidesToShow: 1,
-        }
+        settings: { slidesToShow: 1 }
       }
     ]
   });
@@ -827,20 +728,12 @@
     focusOnSelect: true,
     verticalSwiping:true,
     responsive: [
-      {
-        breakpoint: 992,
-      },
-      {
-        breakpoint: 768,
-      },
-      {
-        breakpoint: 580,
-      },
+      { breakpoint: 992 },
+      { breakpoint: 768 },
+      { breakpoint: 580 },
       {
         breakpoint: 320,
-        settings: {
-          slidesToShow: 1,
-        }
+        settings: { slidesToShow: 1 }
       }
     ]
   });
@@ -866,42 +759,27 @@
     focusOnSelect: true,
     verticalSwiping:true,
     responsive: [
-      {
-        breakpoint: 992,
-      },
-      {
-        breakpoint: 768,
-      },
-      {
-        breakpoint: 580,
-      },
+      { breakpoint: 992 },
+      { breakpoint: 768 },
+      { breakpoint: 580 },
       {
         breakpoint: 380,
-        settings: {
-          slidesToShow: 1,
-        }
+        settings: { slidesToShow: 1 }
       }
     ]
   });
   
-  // main search btn - start // --------------------------------------------------
+  // main search btn - start
   $('.main_search_btn').on('click', function() {
     $(this).toggleClass('active');
   });
-  // main search btn - end // --------------------------------------------------
-  
-  // main search btn - start // --------------------------------------------------
   $('.main_search_btn2').on('click', function() {
     $(this).toggleClass('active');
   });
-  // main search btn - end // --------------------------------------------------
-  
-  // main search btn - start // --------------------------------------------------
   $('.main_search_btn3').on('click', function() {
     $(this).toggleClass('active');
   });
-  // main search btn - end // --------------------------------------------------
-  
+  // main search btn - end
   
   // popup images & videos - start ===============
   $('.popup_video').magnificPopup({
@@ -928,7 +806,6 @@
         return element.find('img');
       }
     }
-    
   });
   // popup images & videos - end =================
   
@@ -937,7 +814,7 @@
   // --------------------------------------------------
   var revenue_chart = $("#revenue_chart");
 
-  if(revenue_chart.length > 0) {
+  if (revenue_chart.length > 0) {
     var ctx = document.getElementById("revenue_chart").getContext('2d');
     var myChart = new Chart(ctx, {
       type: 'bar',
@@ -976,76 +853,69 @@
   
   var BAChartCountTotal = 0;
   if (BAChartDataValue.length > 0) {
-    BAChartCountTotal = BAChartDataValue.reduce(function (
-      acc,
-      currentVal,
-      currentIdx,
-      arr
-      ) {
-        return acc + currentVal;
+    BAChartCountTotal = BAChartDataValue.reduce(function (acc, currentVal) {
+      return acc + currentVal;
+    }, 0);
+  }
+
+  // ── FIX: only run chart if the canvas element exists on this page ──
+  window.addEventListener("load", function () {
+    var saleChartEl = document.getElementById("overall_sale_chart");
+    if (!saleChartEl) return; // safely exit if not on admin/dashboard page
+
+    var BAChartCtx = saleChartEl.getContext("2d");
+    var BAChartJobErr = new Chart(BAChartCtx, {
+      type: "doughnut",
+      data: {
+        datasets: [
+          {
+            data: BAChartDataValue,
+            backgroundColor: BAChartJobErrColors,
+            borderColor: "#fff",
+            borderWidth: 1
+          }
+        ],
+        labels: BAChartDataLabel
       },
-      0);
-    }
-    
-    window.addEventListener("load", function () {
-      var BAChartCtx = document
-      .getElementById("overall_sale_chart")
-      .getContext("2d");
-      var BAChartJobErr = new Chart(BAChartCtx, {
-        type: "doughnut",
-        data: {
-          datasets: [
+      options: {
+        responsive: false,
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          position: "top",
+          fontSize: 12,
+          fontColor: "#000",
+          fontStyle: "bold",
+          padding: 24,
+          text: "Title"
+        },
+        plugins: {
+          labels: [
             {
-              data: BAChartDataValue,
-              backgroundColor: BAChartJobErrColors,
-              borderColor: "#fff",
-              borderWidth: 1
+              render: "label",
+              fontColor: "#000",
+              position: "outside"
+            },
+            {
+              render: "percentage",
+              fontColor: "#fff"
             }
           ],
-          labels: BAChartDataLabel
-        },
-        options: {
-          responsive: false,
-          maintainAspectRatio: false,
-          title: {
-            display: true,
-            position: "top",
-            fontSize: 12,
-            fontColor: "#000",
-            fontStyle: "bold",
-            padding: 24,
-            text: "Title"
-          },
-          plugins: {
+          doughnutlabel: {
             labels: [
               {
-                render: "label",
-                fontColor: "#000",
-                position: "outside"
-              },
-              {
-                render: "percentage",
-                fontColor: "#fff"
+                text: "Total: " + BAChartCountTotal
               }
-            ],
-            doughnutlabel: {
-              labels: [
-                {
-                  text: "Total: " + BAChartCountTotal
-                }
-              ]
-            }
-          },
-          legend: {
-            display: false
+            ]
           }
+        },
+        legend: {
+          display: false
         }
-      });
+      }
     });
-    // chart pie - end
-    // --------------------------------------------------
-    
-    
-  })(jQuery);
+  });
+  // chart pie - end
+  // --------------------------------------------------
   
-  
+})(jQuery);
