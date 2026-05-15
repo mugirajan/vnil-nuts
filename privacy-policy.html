@@ -14,7 +14,7 @@
     <!-- Include google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Include bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -49,7 +49,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: var(--vnil-font-sans, 'DM Sans', system-ui, -apple-system, sans-serif);
       color: var(--text-dark);
       background: #fff;
       overflow-x: hidden;
@@ -91,7 +91,7 @@
 
   .main_menu_list .nav-link {
   color: var(--text-dark) !important;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--vnil-font-serif, 'Playfair Display', Georgia, serif);
   font-weight: 500;
   font-size: 18px;  /* ← changed from 14px */
   padding: 6px 12px;
@@ -143,7 +143,7 @@
     }
 
     .breadcrumb_cont h2 {
-      font-family: 'Montserrat', sans-serif;
+      font-family: var(--vnil-font-serif, 'Playfair Display', Georgia, serif);
       font-size: 34px;
       font-weight: 700;
       color: #fff;
@@ -169,7 +169,7 @@
       color: rgba(255,255,255,0.8);
       font-size: 13px;
       text-decoration: none;
-      font-family: 'Montserrat', sans-serif;
+      font-family: var(--vnil-font-serif, 'Playfair Display', Georgia, serif);
     }
 
     .breadcrumb_items a:hover { color: var(--accent); }
@@ -195,7 +195,7 @@
       margin-bottom: 36px;
       font-size: 13px;
       color: var(--text-muted);
-      font-family: 'Montserrat', sans-serif;
+      font-family: var(--vnil-font-serif, 'Playfair Display', Georgia, serif);
     }
 
     .policy_meta i { color: var(--accent); }
@@ -211,7 +211,7 @@
     .sub_label i { font-size: 6px; color: var(--accent); }
 
     .sub_label span {
-      font-family: 'Montserrat', sans-serif;
+      font-family: var(--vnil-font-serif, 'Playfair Display', Georgia, serif);
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -220,7 +220,7 @@
     }
 
     .policy_page_title {
-      font-family: 'Montserrat', sans-serif;
+      font-family: var(--vnil-font-serif, 'Playfair Display', Georgia, serif);
       font-size: 28px;
       font-weight: 700;
       color: var(--text-dark);
@@ -270,7 +270,7 @@
     }
 
     .policy_block h3 {
-      font-family: 'Montserrat', sans-serif;
+      font-family: var(--vnil-font-serif, 'Playfair Display', Georgia, serif);
       font-size: 15px;
       font-weight: 600;
       color: var(--text-dark);
@@ -321,7 +321,7 @@
     }
 
     .policy_contact_box h4 {
-      font-family: 'Montserrat', sans-serif;
+      font-family: var(--vnil-font-serif, 'Playfair Display', Georgia, serif);
       font-size: 15px;
       font-weight: 600;
       color: var(--text-dark);
@@ -386,7 +386,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                <!-- Logo Left -->
                <a class="navbar-brand" href="index.html">
-                  <img src="assets/images/logo/vnil-logo-removebg-preview.png" class="site-logo" alt="Vnil Nuts">
+                  <img loading="lazy" src="assets/images/logo/vnil-logo-removebg-preview.png" class="site-logo" alt="Vnil Nuts">
                </a>
 
                <!-- Menu Center -->
@@ -424,7 +424,7 @@
          <div class="mobileMenu d-block d-lg-none">
             <nav class="navbar navbar-expand-lg navbar-light">
                <a class="navbar-brand" href="index.html">
-                  <img src="assets/images/logo/vnil-logo-removebg-preview.png" class="site-logo" alt="Vnil Nuts">
+                  <img loading="lazy" src="assets/images/logo/vnil-logo-removebg-preview.png" class="site-logo" alt="Vnil Nuts">
                </a>
                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-expanded="false"
@@ -435,7 +435,7 @@
                   id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                   <div class="offcanvas-header">
                      <a href="index.html" class="offcanvas-brand d-inline-flex align-items-center">
-                        <img src="assets/images/logo/vnil-logo-removebg-preview.png" alt="Vnil Nuts" class="offcanvas-brand-logo">
+                        <img loading="lazy" src="assets/images/logo/vnil-logo-removebg-preview.png" alt="Vnil Nuts" class="offcanvas-brand-logo">
                      </a>
                      <button type="button" class="btn-close mobile_menu_close text-reset"
                         data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -685,7 +685,7 @@
             <div class="col-md-12 col-lg-4 pe-lg-5">
                <div class="footer_v2_brand">
                   <a href="index.html" class="d-inline-block mb-3">
-                     <img src="assets/images/logo/vnil-logo-removebg-preview.png" class="footer_v2_logo" alt="Vnil Nuts">
+                     <img loading="lazy" src="assets/images/logo/vnil-logo-removebg-preview.png" class="footer_v2_logo" alt="Vnil Nuts">
                   </a>
                   <p class="footer_v2_about">At VNIL Nuts, we bring you the finest handpicked dry fruits from nature's richest origins, carefully selected, naturally crafted, and packed with wholesome goodness.</p>
                   <ul class="list-unstyled d-flex footer_v2_social mb-0">
@@ -863,41 +863,41 @@
                               <div class="product11_slide_item">
                                  <div
                                     class="d-flex justify-content-center align-items-center position-relative overflow-hidden">
-                                    <img src="assets/images/product/product40.png" alt="image_not_found">
+                                    <img loading="lazy" src="assets/images/product/product40.png" alt="image_not_found">
                                  </div>
                                  <div
                                     class="d-flex justify-content-center align-items-center position-relative overflow-hidden">
-                                    <img src="assets/images/product/product40.png" alt="image_not_found">
+                                    <img loading="lazy" src="assets/images/product/product40.png" alt="image_not_found">
                                  </div>
                                  <div
                                     class="d-flex justify-content-center align-items-center position-relative overflow-hidden">
-                                    <img src="assets/images/product/product40.png" alt="image_not_found">
+                                    <img loading="lazy" src="assets/images/product/product40.png" alt="image_not_found">
                                  </div>
                               </div>
 
                               <div class="product10_thumb_item product11_slide_thumb">
                                  <div class="thumb_item">
-                                    <a href="#!"><img src="assets/images/product/product6.png"
+                                    <a href="#!"><img loading="lazy" src="assets/images/product/product6.png"
                                           alt="image_not_found"></a>
                                  </div>
                                  <div class="thumb_item">
-                                    <a href="#!"><img src="assets/images/product/product8.png"
+                                    <a href="#!"><img loading="lazy" src="assets/images/product/product8.png"
                                           alt="image_not_found"></a>
                                  </div>
                                  <div class="thumb_item">
-                                    <a href="#!"><img src="assets/images/product/product23.png"
+                                    <a href="#!"><img loading="lazy" src="assets/images/product/product23.png"
                                           alt="image_not_found"></a>
                                  </div>
                                  <div class="thumb_item">
-                                    <a href="#!"><img src="assets/images/product/product6.png"
+                                    <a href="#!"><img loading="lazy" src="assets/images/product/product6.png"
                                           alt="image_not_found"></a>
                                  </div>
                                  <div class="thumb_item">
-                                    <a href="#!"><img src="assets/images/product/product8.png"
+                                    <a href="#!"><img loading="lazy" src="assets/images/product/product8.png"
                                           alt="image_not_found"></a>
                                  </div>
                                  <div class="thumb_item">
-                                    <a href="#!"><img src="assets/images/product/product23.png"
+                                    <a href="#!"><img loading="lazy" src="assets/images/product/product23.png"
                                           alt="image_not_found"></a>
                                  </div>
                               </div>

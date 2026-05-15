@@ -5,20 +5,80 @@
    Source: assets/VNIL_Website_Project_Plan.docx
    ========================================================== */
 :root {
-  /* Color palette */
+  /* Brand color palette */
   --vnil-rose-gold:   #C9956B;   /* Primary — buttons, headings, icons, borders */
   --vnil-deep-black:  #1A1A1A;   /* Hero, navbar, footer bg */
-  --vnil-light-gold:  #E8C9A0;   /* Subheadings, hover, highlights */
+  --vnil-light-gold:  #FAF6F0;   /* True neutral cream (was #E8C9A0 orange-tinted) — subheading, hover, highlights */
   --vnil-copper:      #B07D52;   /* Links, dividers, secondary CTA */
   --vnil-cream:       #F9F4EE;   /* Product cards, content sections */
   --vnil-white:       #FFFFFF;
 
-  /* Typography */
+  /* Surface + contrast accents */
+  --vnil-nut-brown:   #5A3825;   /* Deep rich brown — product backgrounds, footer alt surface */
+  --vnil-forest:      #2C5F3D;   /* Contrast accent — price tags, new badges, callouts */
+
+  /* Semantic colors — for form validation, alerts, notifications */
+  --vnil-success:     #2C7A4B;
+  --vnil-error:       #B23A3A;
+  --vnil-warning:     #C99100;
+  --vnil-info:        #2C5F8C;
+
+  /* Typography families */
   --vnil-font-serif:  "Playfair Display", Georgia, serif;
-  --vnil-font-sans:   "Lato", system-ui, -apple-system, sans-serif;
+  --vnil-font-sans:   "DM Sans", system-ui, -apple-system, sans-serif;
+
+  /* Numeric type scale */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 17px;
+  --text-lg:   20px;
+  --text-xl:   24px;
+  --text-2xl:  32px;
+  --text-3xl:  40px;
+  --text-4xl:  48px;
+
+  /* Spacing scale — use for padding, margin, gap */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   24px;
+  --space-6:   32px;
+  --space-7:   40px;
+  --space-8:   48px;
+  --space-9:   64px;
+  --space-10:  80px;
+  --space-11:  96px;
+  --space-12:  128px;
+
+  /* Layout */
+  --container-max: 1280px;
+
+  /* Border radius */
+  --radius-sm:    4px;
+  --radius-md:    8px;
+  --radius-lg:   16px;
+
+  /* Elevation / shadows */
+  --shadow-card:  0 2px 8px  rgba(26, 26, 26, 0.06);
+  --shadow-hover: 0 6px 18px rgba(26, 26, 26, 0.10);
+  --shadow-modal: 0 16px 48px rgba(26, 26, 26, 0.18);
 }
 
-/* Body uses Lato */
+/* Dark-mode token plan — disabled until a full dark theme is shipped.
+   Uncomment the inner :root block to activate. */
+@media (prefers-color-scheme: dark) {
+  /*
+  :root {
+    --vnil-deep-black: #0E0E0E;
+    --vnil-cream:      #1F1A14;
+    --vnil-light-gold: #2A241E;
+    --vnil-white:      #F5EFE6;
+  }
+  */
+}
+
+/* Body uses DM Sans */
 body {
   line-height: 1.7;
   font-family: var(--vnil-font-sans);
@@ -36,13 +96,13 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2;
 }
 h1, .h1 { font-size: clamp(40px, 5vw, 48px); font-weight: 700; }
-h2, .h2 { font-size: clamp(28px, 3.5vw, 32px); font-weight: 400; }
-h3, .h3 { font-family: var(--vnil-font-sans); font-size: clamp(20px, 2.5vw, 24px); font-weight: 700; }
-h4, .h4 { font-family: var(--vnil-font-sans); font-size: 18px; font-weight: 700; }
-h5, .h5 { font-family: var(--vnil-font-sans); font-size: 16px; font-weight: 700; }
+h2, .h2 { font-size: clamp(28px, 3.5vw, 32px); font-weight: 700; }
+h3, .h3 { font-size: clamp(20px, 2.5vw, 24px); font-weight: 700; }
+h4, .h4 { font-size: 18px; font-weight: 700; }
+h5, .h5 { font-size: 16px; font-weight: 700; }
 
 p { font-size: 16px; }
-small, .small, .caption { font-size: 13px; font-weight: 300; }
+small, .small, .caption { font-size: 13px; font-weight: 400; }
 
 /* Hero / banner title gets the largest serif */
 .banner_title h1,
@@ -94,7 +154,7 @@ small, .small, .caption { font-size: 13px; font-weight: 300; }
 
 .banner_title h1 { font-size: clamp(40px, 6vw, 64px); }
 
-/* Nav links — Lato, slightly smaller */
+/* Nav links — DM Sans, slightly smaller */
 .navbar-nav .nav-link,
 .main_menu_list .nav-link {
   font-family: var(--vnil-font-sans) !important;
@@ -108,15 +168,15 @@ small, .small, .caption { font-size: 13px; font-weight: 300; }
   color: var(--vnil-rose-gold);
 }
 
-/* Buttons — Lato, bold, UPPERCASE per spec */
+/* Buttons — DM Sans, bold, Title Case (modern D2C convention) */
 .btn,
 .custom_btn,
 button.btn {
   font-family: var(--vnil-font-sans);
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-transform: none;
 }
 .custom_btn {
   background-color: var(--vnil-rose-gold);
@@ -128,13 +188,45 @@ button.btn {
   color: #fff;
 }
 
-/* Section subtitle eyebrow — small Lato uppercase */
+/* Button system v2 — primary (filled) + secondary (outline).
+   Use .btn-primary-vnil for main CTAs, .btn-secondary-vnil for tertiary actions. */
+.btn-primary-vnil {
+  background-color: var(--vnil-rose-gold);
+  border: 2px solid var(--vnil-rose-gold);
+  color: var(--vnil-white);
+  border-radius: var(--radius-md);
+  padding: 12px 28px;
+  transition: all 0.25s ease;
+}
+.btn-primary-vnil:hover,
+.btn-primary-vnil:focus {
+  background-color: var(--vnil-copper);
+  border-color: var(--vnil-copper);
+  color: var(--vnil-white);
+  box-shadow: var(--shadow-hover);
+}
+.btn-secondary-vnil {
+  background-color: transparent;
+  border: 2px solid var(--vnil-copper);
+  color: var(--vnil-copper);
+  border-radius: var(--radius-md);
+  padding: 12px 28px;
+  transition: all 0.25s ease;
+}
+.btn-secondary-vnil:hover,
+.btn-secondary-vnil:focus {
+  background-color: var(--vnil-copper);
+  color: var(--vnil-white);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Section subtitle eyebrow — small DM Sans uppercase */
 .category_sub_title span,
 .cta_eyebrow {
   font-family: var(--vnil-font-sans);
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 2.5px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--vnil-rose-gold);
 }
@@ -147,12 +239,15 @@ a:hover { color: var(--vnil-rose-gold); }
 ::selection { color: var(--vnil-white); background-color: var(--vnil-rose-gold); }
 ::-moz-selection { color: var(--vnil-white); background-color: var(--vnil-rose-gold); }
 
-/* Uniform 4em vertical padding across all content sections (banner/hero excluded) */
+/* Premium section padding: 5em desktop / 4em mobile (bumped from 2em / 3em).
+   NOTE: class names like sec_ptb_100 / sec_top_space_50 / sec_bottom_space_70 are
+   template-historical — their visible padding does NOT match the number in the name.
+   Renaming would touch every page, so the values are tuned here instead. */
 .sec_ptb_100,
 .sec_space_small,
 .sec_space_xxs_50 {
-  padding-top: 2em !important;
-  padding-bottom: 2em !important;
+  padding-top: 5em !important;
+  padding-bottom: 5em !important;
 }
 .sec_top_space_50 { padding-top: 4em !important; }
 .sec_bottom_space_70 { padding-bottom: 4em !important; }
@@ -163,9 +258,45 @@ a:hover { color: var(--vnil-rose-gold); }
   .sec_space_small,
   .sec_space_xxs_50,
   .cta_wrap {
-    padding-top: 3em !important;
-    padding-bottom: 3em !important;
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
   }
+}
+
+/* Accessibility — honor prefers-reduced-motion (was missing entirely).
+   Disables AOS reveal animations, Slick autoplay-implied transitions, and any
+   transition/animation longer than instant. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+    scroll-behavior: auto !important;
+  }
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Signature microinteraction — product card subtle tilt + lift on hover.
+   One distinctive motion across the site beats AOS-fade-up-on-everything. */
+.product_card,
+.product_box,
+.product_item,
+.product_inner {
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1),
+              box-shadow 0.35s ease;
+}
+.product_card:hover,
+.product_box:hover,
+.product_item:hover,
+.product_inner:hover {
+  transform: rotate(-2deg) translateY(-4px);
+  box-shadow: var(--shadow-hover);
 }
 
 /* ========================================================== */
