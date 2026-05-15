@@ -23,9 +23,7 @@ class sndMail
 
     public function __construct()
     {
-        if (!session_id()) {
-            session_start();
-        }
+        // session started by caller (mailer.php)
     }
 
     private function configureMailer()
@@ -61,13 +59,16 @@ class sndMail
             return $this->valid;
         }
 
-        $mail = $this->configureMailer();
+        $mail          = $this->configureMailer();
+        $userMailSent  = false;
+        $adminMailSent = false;
 
+        // ── Send confirmation to user ─────────────────────
         try {
-            // Send confirmation to user
-            $mail->addAddress($data['email']);
-            $mail->Subject = "Your enquiry is received - " . $data['name'];
-            $mail->Body = "
+    $mail->clearAllRecipients();
+    $mail->addAddress($data['email']);
+    $mail->Subject = "Your enquiry is received - " . $data['name'];
+            $mail->Body    = "
 Dear {$data['name']},
 
 Warm greetings from Vnil Nuts!
@@ -78,22 +79,17 @@ With warm regards,
 The Vnil Nuts Team
             ";
             $mail->send();
-
-            $this->valid['success'] = true;
-            $this->valid['message'] = "Mail sent successfully to user.";
-
+            $userMailSent = true;
         } catch (Exception $e) {
-            $this->valid['success'] = false;
-            $this->valid['message'] = "User mail failed: " . $mail->ErrorInfo;
+            error_log("User mail failed: " . $mail->ErrorInfo);
         }
 
+        // ── Send notification to admin ────────────────────
         try {
-            // Send notification to admin
             $mail->clearAllRecipients();
             $mail->addAddress(getenv('GMAIL_USER'));
-
             $mail->Subject = "New Contact Enquiry - " . $data['name'];
-            $mail->Body = "
+            $mail->Body    = "
 Hello Admin,
 
 A new enquiry has been submitted through the Vnil Nuts website by {$data['name']} who can be reached at {$data['email']} or {$data['phone']}. They have shared the following message — {$data['message']}
@@ -102,13 +98,18 @@ Kindly follow up with the customer at the earliest.
 - Vnil Nuts System
             ";
             $mail->send();
-
-            $this->valid['success'] = true;
-            $this->valid['message'] = "Mail sent successfully to admin.";
-
+            $adminMailSent = true;
         } catch (Exception $e) {
+            error_log("Admin mail failed: " . $mail->ErrorInfo);
+        }
+
+        // ── Final response ────────────────────────────────
+        if ($userMailSent && $adminMailSent) {
+            $this->valid['success'] = true;
+            $this->valid['message'] = "Mails sent successfully.";
+        } else {
             $this->valid['success'] = false;
-            $this->valid['message'] = "Admin mail failed: " . $mail->ErrorInfo;
+            $this->valid['message'] = "Mail delivery issue. Please try again.";
         }
 
         return $this->valid;
@@ -132,13 +133,16 @@ Kindly follow up with the customer at the earliest.
             return $this->valid;
         }
 
-        $mail = $this->configureMailer();
+        $mail          = $this->configureMailer();
+        $userMailSent  = false;
+        $adminMailSent = false;
 
+        // ── Send confirmation to user ─────────────────────
         try {
-            // Send confirmation to user
-            $mail->addAddress($data['email']);
-            $mail->Subject = "Your comment is received - " . $data['name'];
-            $mail->Body = "
+    $mail->clearAllRecipients();
+    $mail->addAddress($data['email']);
+    $mail->Subject = "Your comment is received - " . $data['name'];
+            $mail->Body    = "
 Dear {$data['name']},
 
 Thank you for being a part of the Vnil Nuts community!
@@ -149,22 +153,17 @@ With warm regards,
 The Vnil Nuts Team
             ";
             $mail->send();
-
-            $this->valid['success'] = true;
-            $this->valid['message'] = "Mail sent successfully to user.";
-
+            $userMailSent = true;
         } catch (Exception $e) {
-            $this->valid['success'] = false;
-            $this->valid['message'] = "User mail failed: " . $mail->ErrorInfo;
+            error_log("User mail failed: " . $mail->ErrorInfo);
         }
 
+        // ── Send notification to admin ────────────────────
         try {
-            // Send notification to admin
             $mail->clearAllRecipients();
             $mail->addAddress(getenv('GMAIL_USER'));
-
             $mail->Subject = "New Blog Comment - " . $data['name'];
-            $mail->Body = "
+            $mail->Body    = "
 Hello Admin,
 
 A new comment has been posted on the Vnil Nuts blog post titled \"{$data['blog_title']}\" by {$data['name']} who can be reached at {$data['email']}. They have shared the following message — {$data['message']}
@@ -173,14 +172,18 @@ Kindly review and approve the comment at the earliest.
 - Vnil Nuts System
             ";
             $mail->send();
+            $adminMailSent = true;
+        } catch (Exception $e) {
+            error_log("Admin mail failed: " . $mail->ErrorInfo);
+        }
 
+        // ── Final response ────────────────────────────────
+        if ($userMailSent && $adminMailSent) {
             $this->valid['success'] = true;
             $this->valid['message'] = "Mails sent successfully.";
-
-        } catch (Exception $e) {
-            // ── Log admin failure without overriding user success ──
-            error_log("Admin mail failed: " . $mail->ErrorInfo);
-            $this->valid['message'] .= " | Admin mail failed: " . $mail->ErrorInfo;
+        } else {
+            $this->valid['success'] = false;
+            $this->valid['message'] = "Mail delivery issue. Please try again.";
         }
 
         return $this->valid;

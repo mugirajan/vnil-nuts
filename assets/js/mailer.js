@@ -28,7 +28,7 @@ $(document).ready(function () {
         }
 
         // Phone format check (optional but filled)
-        if (phone && !/^[0-9+\-\s]{7,15}$/.test(phone)) {
+        if (phone && !/^[+]?[0-9\s\-]{7,15}$/.test(phone)) {
             showMessage("contactMsg", false, "Please enter a valid phone number.");
             return;
         }

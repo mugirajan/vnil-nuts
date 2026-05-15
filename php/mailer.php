@@ -1,8 +1,13 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 
 require_once("./mailTrigger.php");
 
+// ── Security Headers ───────────────────────────────────────
+header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
+header("Content-Security-Policy: default-src 'self'; script-src 'self' https://www.google.com https://www.gstatic.com; frame-src https://www.google.com; connect-src 'self' https://www.google.com https://www.gstatic.com");
+header("X-Content-Type-Options: nosniff");
+header("X-Frame-Options: SAMEORIGIN");
 header('Content-Type: application/json');
 
 $res = ["success" => false, "message" => ""];
@@ -26,7 +31,7 @@ if (empty($_POST['csrf_token']) ||
 $ip     = $_SERVER['REMOTE_ADDR'];
 $key    = 'rate_' . md5($ip);
 $now    = time();
-$window = 600; // 10 minutes
+$window = 600;
 $limit  = 5;
 
 if (!isset($_SESSION[$key])) {
@@ -81,17 +86,17 @@ if (in_array($_POST["type"], $formsWithCaptcha)) {
         exit;
     }
 
-$secret = getenv('RECAPTCHA_SECRET');
-$ch = curl_init("https://www.google.com/recaptcha/api/siteverify");
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
-    'secret'   => $secret,
-    'response' => $_POST['g-recaptcha-response']
-]));
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$verify  = curl_exec($ch);
-curl_close($ch);
-$captcha = json_decode($verify);
+    $secret = getenv('RECAPTCHA_SECRET');
+    $ch = curl_init("https://www.google.com/recaptcha/api/siteverify");
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
+        'secret'   => $secret,
+        'response' => $_POST['g-recaptcha-response']
+    ]));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $verify  = curl_exec($ch);
+    curl_close($ch);
+    $captcha = json_decode($verify);
 
     if (!$captcha->success) {
         $res["message"] = "CAPTCHA verification failed. Please try again.";
