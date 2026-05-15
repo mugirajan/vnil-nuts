@@ -52,10 +52,10 @@ small, .small, .caption { font-size: 13px; font-weight: 300; }
   font-family: var(--vnil-font-serif);
   font-weight: 700;
 }
-  /* Social icon circle style */
+  /* Social icon circle style — 44x44 to meet WCAG 2.1 touch-target minimum */
   .header_bottom_main .d-flex .fab {
-    width: 38px !important;
-    height: 38px !important;
+    width: 44px !important;
+    height: 44px !important;
     border-radius: 50% !important;
     background-color: #C9956B !important;
     color: #fff !important;
@@ -173,21 +173,6 @@ a:hover { color: var(--vnil-rose-gold); }
 .body_wrap {
   overflow: hidden;
   position: relative;
-}
-
-::-moz-selection {
-  color: #ffffff;
-  background-color: #000000;
-}
-
-::selection {
-  color: #ffffff;
-  background-color: #000000;
-}
-
-::-moz-selection {
-  color: #ffffff;
-  background-color: #000000;
 }
 
 iframe {
@@ -11666,8 +11651,8 @@ html, body {
 }
 
 .header_bottom_main .d-flex .fab {
-  width: 38px !important;
-  height: 38px !important;
+  width: 44px !important;
+  height: 44px !important;
   border-radius: 50% !important;
   background-color: #C9956B !important;
   color: #fff !important;
