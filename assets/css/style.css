@@ -13054,3 +13054,14 @@ section.contact_us_sec {
 section.contact_us_sec .row {
     align-items: center !important;
 }
+/* Section above (product9) */
+.product9_sec {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Service section top padding */
+section.service_setion.section-pad-lg {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
