@@ -13027,3 +13027,30 @@ img {
     width: 100% !important;
     border-radius: 10px;
 }
+
+/* Reduce bottom padding of contact section above */
+section.contact_us_sec {
+    padding-bottom: 0px !important;
+}
+
+/* Reduce top padding of address section */
+section.address_sec {
+    padding-top: 20px !important;
+}
+.contact_us_sec .btn,
+.contact_us_sec .custom_btn {
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+section.contact_us_sec {
+    padding-bottom: 30px !important;
+}
+section.contact_us_sec {
+    padding-top: 50px !important;
+    padding-bottom: 30px !important;
+}
+
+/* Vertically center both columns */
+section.contact_us_sec .row {
+    align-items: center !important;
+}
