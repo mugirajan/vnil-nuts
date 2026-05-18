@@ -1,7 +1,7 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) session_start();
 
-require_once("./mailTrigger.php");
+require_once __DIR__ . "/mailTrigger.php";
 
 $envPath = __DIR__ . '/.env';
 if (file_exists($envPath)) {
@@ -42,24 +42,39 @@ if (empty($_POST['csrf_token']) ||
     exit;
 }
 
-// ── 3. RATE LIMITING (5 submissions per 10 minutes) ────────
-$ip     = $_SERVER['REMOTE_ADDR'];
-$key    = 'rate_' . md5($ip);
-$now    = time();
-$window = 600;
-$limit  = 5;
+// ── 3. RATE LIMITING (5 submissions per 10 minutes, per IP, file-backed) ────────
+// File-backed so it survives across sessions/cookie clears; one tiny JSON file per IP.
+$ip          = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+$rateDir     = __DIR__ . '/rate_limit';
+$rateFile    = $rateDir . '/' . md5($ip) . '.json';
+$now         = time();
+$window      = 600;
+$limit       = 5;
 
-if (!isset($_SESSION[$key])) {
-    $_SESSION[$key] = ['count' => 0, 'start' => $now];
+if (!is_dir($rateDir)) {
+    @mkdir($rateDir, 0700, true);
 }
 
-if ($now - $_SESSION[$key]['start'] > $window) {
-    $_SESSION[$key] = ['count' => 0, 'start' => $now];
+$rateData = ['count' => 0, 'start' => $now];
+if (file_exists($rateFile)) {
+    $raw = @file_get_contents($rateFile);
+    if ($raw !== false) {
+        $parsed = json_decode($raw, true);
+        if (is_array($parsed) && isset($parsed['count'], $parsed['start'])) {
+            $rateData = $parsed;
+        }
+    }
 }
 
-$_SESSION[$key]['count']++;
+// Reset window if expired
+if ($now - $rateData['start'] > $window) {
+    $rateData = ['count' => 0, 'start' => $now];
+}
 
-if ($_SESSION[$key]['count'] > $limit) {
+$rateData['count']++;
+@file_put_contents($rateFile, json_encode($rateData), LOCK_EX);
+
+if ($rateData['count'] > $limit) {
     $res["message"] = "Too many requests. Please try again after 10 minutes.";
     echo json_encode($res);
     exit;
@@ -92,7 +107,7 @@ if (isset($_POST['message'])) {
 }
 
 // ── 6. reCAPTCHA VERIFICATION ─────────────────────────────
-$formsWithCaptcha = ["contactForm"];
+$formsWithCaptcha = ["contactForm", "commentForm"];
 
 if (in_array($_POST["type"], $formsWithCaptcha)) {
 
@@ -102,8 +117,8 @@ if (in_array($_POST["type"], $formsWithCaptcha)) {
         exit;
     }
 
-    // ── Check $_ENV first, then fall back to getenv() ──────
-    $secret = $_ENV['RECAPTCHA_SECRET'] ?? getenv('RECAPTCHA_SECRET') ?? '';
+    // ── Check $_ENV first, then fall back to getenv() (which returns false, not null) ──
+    $secret = $_ENV['RECAPTCHA_SECRET'] ?? (getenv('RECAPTCHA_SECRET') ?: '');
 
     if (empty($secret)) {
         error_log("reCAPTCHA ERROR: RECAPTCHA_SECRET is not set in environment.");
@@ -111,9 +126,6 @@ if (in_array($_POST["type"], $formsWithCaptcha)) {
         echo json_encode($res);
         exit;
     }
-
-    // ── Debug: log secret to confirm it is loading ─────────
-    error_log("SECRET VALUE: [" . $secret . "]");
 
     $ch = curl_init("https://www.google.com/recaptcha/api/siteverify");
     curl_setopt($ch, CURLOPT_POST, true);
@@ -157,13 +169,13 @@ if (in_array($_POST["type"], $formsWithCaptcha)) {
 }
 
 // ── 7. ROUTE TO HANDLER ───────────────────────────────────
-$sm = new sndMail();
-
 switch ($_POST["type"]) {
     case "contactForm":
+        $sm  = new sndMail();
         $res = $sm->contactEnquiry($_POST);
         break;
     case "commentForm":
+        $sm  = new sndMail();
         $res = $sm->blogEnquiry($_POST);
         break;
     default:

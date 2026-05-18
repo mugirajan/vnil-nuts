@@ -30,10 +30,10 @@ class sndMail
         // session started by caller (mailer.php)
     }
 
-    // ── Helper: read env with fallback ────────────────────
+    // ── Helper: read env with fallback (getenv returns false, not null) ────
     private function env($key)
     {
-        return $_ENV[$key] ?? getenv($key) ?? '';
+        return $_ENV[$key] ?? (getenv($key) ?: '');
     }
 
     // ── Configure PHPMailer ───────────────────────────────
