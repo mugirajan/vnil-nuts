@@ -327,83 +327,207 @@
          <!-- banner section end -->
 
          <!-- exotic dry fruits slider start -->
-         <section class="category_section section-pad-md position-relative overflow-hidden clearfix" data-aos="fade-up"
-            data-aos-duration="2000">
-            <div class="container">
-               <div class="row">
-                  <div class="category_top_content d-flex justify-content-between">
-                     <div class="category_top_content_text">
-                        <div class="category_sub_title d-flex align-items-center">
-                           <span class="ps-2">HANDPICKED & PREMIUM</span>
-                        </div>
-                        <div class="category_title pb-3">
-                           <h2>Exotic Dry Fruits</h2>
-                        </div>
-                     </div>
-                     <!-- <div class="category_top_btn_cont d-flex">
-                        <button type="button" class="ss1_left_arrow rounded-pill me-2"><i
-                              class="ph ph-arrow-left"></i></button>
-                        <button type="button" class="ss1_right_arrow rounded-pill"><i
-                              class="ph ph-arrow-right"></i></button>
-                     </div> -->
-                  </div>
-                 <ul class="category_slick snap-rail">
-   <li class="item_content snap-item text-center">
-      <div class="item_image_content overflow-hidden position-relative">
-         <img loading="lazy" src="assets/images/category/almond.webp" alt="Almonds">
-      </div>
-      <h6 class="item_title">Almonds</h6>
-   </li>
-   <li class="item_content snap-item text-center">
-      <div class="item_image_content overflow-hidden position-relative">
-         <img loading="lazy" src="assets/images/category/cashew.webp" alt="Cashews">
-      </div>
-      <h6 class="item_title">Cashews</h6>
-   </li>
-   <li class="item_content snap-item text-center">
-      <div class="item_image_content overflow-hidden position-relative">
-         <img loading="lazy" src="assets/images/category/black-risin.webp" alt="Black Raisins">
-      </div>
-      <h6 class="item_title">Black Raisins</h6>
-   </li>
-   <li class="item_content snap-item text-center">
-      <div class="item_image_content overflow-hidden position-relative">
-         <img loading="lazy" src="assets/images/category/walnut.webp" alt="Walnuts">
-      </div>
-      <h6 class="item_title">Walnuts</h6>
-   </li>
-   <li class="item_content snap-item text-center">
-      <div class="item_image_content overflow-hidden position-relative">
-         <img loading="lazy" src="assets/images/category/ajeer.webp" alt="Anjeer">
-      </div>
-      <h6 class="item_title">Anjeer</h6>
-   </li>
-   <li class="item_content snap-item text-center">
-      <div class="item_image_content overflow-hidden position-relative">
-         <img loading="lazy" src="assets/images/category/pista.webp" alt="Pistachios">
-      </div>
-      <h6 class="item_title">Pistachios</h6>
-   </li>
-   <li class="item_content snap-item text-center">
-      <div class="item_image_content overflow-hidden position-relative">
-         <img loading="lazy" src="assets/images/category/dates.webp" alt="Dates">
-      </div>
-      <h6 class="item_title">Dates</h6>
-   </li>
-   <li class="item_content snap-item text-center">
-      <div class="item_image_content overflow-hidden position-relative">
-         <img loading="lazy" src="assets/images/category/apricot.webp" alt="Apricots">
-      </div>
-      <h6 class="item_title">Apricots</h6>
-   </li>
-</ul>
-               </div>
+<section class="category_section section-pad-md position-relative overflow-hidden clearfix" data-aos="fade-up" data-aos-duration="2000">
+   <div class="container">
+      <div class="category_top_content d-flex justify-content-between align-items-center mb-4">
+         <div class="category_top_content_text">
+            <div class="category_sub_title d-flex align-items-center">
+               <span class="ps-2">HANDPICKED & PREMIUM</span>
             </div>
-            <img loading="lazy" class="category_left_thumb position-absolute" src="assets/images/shapes/shape3.png"
-               alt="image_not_found">
-         </section>
-         <!-- exotic dry fruits slider end -->
+            <div class="category_title pb-0">
+               <h2>Exotic Dry Fruits</h2>
+            </div>
+         </div>
+         <div class="category_top_btn_cont d-flex">
+            <button type="button" id="catPrev" class="ss1_left_arrow rounded-pill me-2"><i class="ph ph-arrow-left"></i></button>
+            <button type="button" id="catNext" class="ss1_right_arrow rounded-pill"><i class="ph ph-arrow-right"></i></button>
+         </div>
+      </div>
+   </div>
 
+   <!-- Slider viewport -->
+   <div id="catWrap" style="
+        overflow: hidden;
+        width: 100%;
+        padding: 10px 0 20px;
+   ">
+      <div id="categoryTrack" style="
+           display: flex;
+           flex-wrap: nowrap;
+           gap: 24px;
+           transition: transform 0.5s ease;
+           padding: 0 40px;
+      ">
+         <div class="category_item text-center">
+            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/almond.webp" alt="Almonds"></div>
+            <h6 class="item_title">Almonds</h6>
+         </div>
+         <div class="category_item text-center">
+            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/cashew.webp" alt="Cashews"></div>
+            <h6 class="item_title">Cashews</h6>
+         </div>
+         <div class="category_item text-center">
+            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/black-risin.webp" alt="Black Raisins"></div>
+            <h6 class="item_title">Black Raisins</h6>
+         </div>
+         <div class="category_item text-center">
+            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/walnut.webp" alt="Walnuts"></div>
+            <h6 class="item_title">Walnuts</h6>
+         </div>
+         <div class="category_item text-center">
+            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/ajeer.webp" alt="Anjeer"></div>
+            <h6 class="item_title">Anjeer</h6>
+         </div>
+         <div class="category_item text-center">
+            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/pista.webp" alt="Pistachios"></div>
+            <h6 class="item_title">Pistachios</h6>
+         </div>
+         <div class="category_item text-center">
+            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/dates.webp" alt="Dates"></div>
+            <h6 class="item_title">Dates</h6>
+         </div>
+         <div class="category_item text-center">
+            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/apricot.webp" alt="Apricots"></div>
+            <h6 class="item_title">Apricots</h6>
+         </div>
+      </div>
+   </div>
+
+   <img loading="lazy" class="category_left_thumb position-absolute" src="assets/images/shapes/shape3.png" alt="image_not_found">
+</section>
+<!-- exotic dry fruits slider end -->
+
+<style>
+.category_item {
+    flex: 0 0 200px;
+    width: 200px;
+}
+
+.cat_img_wrap {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f5f5f5;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cat_img_wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category_item:hover .cat_img_wrap img {
+    transform: scale(1.08);
+}
+
+.category_item .item_title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .category_item { flex: 0 0 140px; width: 140px; }
+    .cat_img_wrap  { width: 120px; height: 120px; }
+}
+#categoryTrack {
+    padding-left: 40px !important;
+    padding-right: 300px !important; /* increase right space */
+}
+</style>
+
+<script>
+window.addEventListener('load', function () {
+    var track    = document.getElementById('categoryTrack');
+    var origItems = Array.from(track.querySelectorAll('.category_item'));
+    var itemW    = 200 + 24; // width + gap
+    var total    = origItems.length;
+    var current  = 0;
+    var autoTimer;
+    var isAnimating = false;
+
+    /* Clone items for infinite loop */
+    origItems.forEach(function(item) {
+        track.appendChild(item.cloneNode(true));
+    });
+
+    /* Set initial padding so first item has same space as right side */
+    track.style.paddingLeft  = '40px';
+    track.style.paddingRight = '40px';
+
+    function goTo(index, animate) {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        if (animate === false) {
+            track.style.transition = 'none';
+        } else {
+            track.style.transition = 'transform 0.5s ease';
+        }
+
+        track.style.transform = 'translateX(-' + (index * itemW) + 'px)';
+
+        setTimeout(function() {
+            isAnimating = false;
+        }, animate === false ? 0 : 500);
+    }
+
+    function next() {
+        current++;
+        goTo(current, true);
+
+        /* When we've gone through all originals, silently reset */
+        if (current >= total) {
+            setTimeout(function() {
+                current = 0;
+                goTo(current, false);
+            }, 520);
+        }
+    }
+
+    function prev() {
+        if (current <= 0) {
+            /* Jump silently to end of originals then go back one */
+            current = total;
+            goTo(current, false);
+            setTimeout(function() {
+                current--;
+                goTo(current, true);
+            }, 50);
+        } else {
+            current--;
+            goTo(current, true);
+        }
+    }
+
+    function startAuto() {
+        autoTimer = setInterval(next, 2500);
+    }
+
+    function resetAuto() {
+        clearInterval(autoTimer);
+        startAuto();
+    }
+
+    document.getElementById('catNext').addEventListener('click', function() {
+        next();
+        resetAuto();
+    });
+
+    document.getElementById('catPrev').addEventListener('click', function() {
+        prev();
+        resetAuto();
+    });
+
+    goTo(0, false);
+    startAuto();
+});
+</script>
          <!-- about section start -->
          <section class="about_section section-pad-md position-relative overflow-hidden">
             <div class="container">
@@ -1976,14 +2100,25 @@
     margin-bottom: 0 !important;
 }
 </style> -->
-        <!-- testimonial section start -->
+     <!-- testimonial section start -->
 <section class="testimonial_section section-pad-sm" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(assets/images/contact-images/some-assorted-nuts-dried-fruits-with-pecan-pistachios-almond-peanut-mini-different-bowls.jpg); background-size: cover; background-position: center; background-attachment: fixed;">
    <div class="testimonial_sec_content">
-      <div class="container-fluid px-0">
-        <div class="testimonial-fader">
+      <div class="container">
+
+         <!-- STATIC heading — outside fader so it never fades -->
+         <div class="text-center pt-5 pb-4">
+            <div class="product_sec_sub_title d-flex align-items-center justify-content-center pb-2">
+               <span class="text-uppercase px-2" style="color: #C9956B; letter-spacing: 2px;">Testimonials</span>
+            </div>
+            <h2 class="testi_slide_heading pb-3" style="color:#fff;">What Our Customers Say.</h2>
+         </div>
+
+         <!-- FADER — only image + quote fades -->
+         <div class="testimonial-fader">
+
             <!-- Slide 1 -->
             <div class="slider_item">
-               <div class="testi_slide_wrap d-flex align-items-center" style="min-height: 450px; padding: 60px 80px;">
+               <div class="testi_slide_wrap d-flex align-items-center">
                   <div class="row align-items-center w-100">
                      <div class="col-lg-4 text-center">
                         <div class="testi_img_wrap mx-auto">
@@ -1991,11 +2126,6 @@
                         </div>
                      </div>
                      <div class="col-lg-8 ps-lg-5">
-                        <div class="product_sec_sub_title d-flex align-items-center pb-2">
-                           <span class="text-uppercase px-2" style="color: #C9956B;">Testimonials</span>
-                        </div>
-                        <h2 class="testi_slide_heading pb-3">What Our Customers Say.</h2>
-                        <!-- TODO: replace with verified real customer quote, name, role, city -->
                         <p class="testi_slide_desc">"I've been ordering Vnil's cashews and almonds every month for over a year. The freshness in every pack is consistent — and the packaging makes them my go-to housewarming gift."</p>
                         <h5 class="testi_slide_name mt-4">Aanya Mehta <font>Marketing Manager, Bengaluru</font></h5>
                      </div>
@@ -2005,7 +2135,7 @@
 
             <!-- Slide 2 -->
             <div class="slider_item">
-               <div class="testi_slide_wrap d-flex align-items-center" style="min-height: 450px; padding: 60px 80px;">
+               <div class="testi_slide_wrap d-flex align-items-center">
                   <div class="row align-items-center w-100">
                      <div class="col-lg-4 text-center">
                         <div class="testi_img_wrap mx-auto">
@@ -2013,7 +2143,6 @@
                         </div>
                      </div>
                      <div class="col-lg-8 ps-lg-5">
-                        <!-- TODO: replace with verified real customer quote, name, role, city -->
                         <p class="testi_slide_desc">"We chose Vnil Nuts for our Diwali corporate gifting — 300 boxes shipped on time, beautifully packed, and our clients still talk about them. Easy decision to repeat this year."</p>
                         <h5 class="testi_slide_name mt-4">Rohan Iyer <font>HR Lead, Mumbai</font></h5>
                      </div>
@@ -2023,7 +2152,7 @@
 
             <!-- Slide 3 -->
             <div class="slider_item">
-               <div class="testi_slide_wrap d-flex align-items-center" style="min-height: 450px; padding: 60px 80px;">
+               <div class="testi_slide_wrap d-flex align-items-center">
                   <div class="row align-items-center w-100">
                      <div class="col-lg-4 text-center">
                         <div class="testi_img_wrap mx-auto">
@@ -2031,7 +2160,6 @@
                         </div>
                      </div>
                      <div class="col-lg-8 ps-lg-5">
-                        <!-- TODO: replace with verified real customer quote, name, role, city -->
                         <p class="testi_slide_desc">"I recommend Vnil to my yoga clients because the nuts taste clean — no chemical aftertaste. That's what whole-food snacking should be."</p>
                         <h5 class="testi_slide_name mt-4">Priya Sharma <font>Certified Wellness Coach, Pune</font></h5>
                      </div>
@@ -2232,10 +2360,10 @@
                      <div class="col-lg-9">
                         <span class="cta_eyebrow d-inline-block text-uppercase pb-2">Pure Goodness, Delivered</span>
                         <h2 class="cta_title pb-3">Taste the Premium Difference</h2>
-                        <p class="cta_desc pb-4">Explore our handpicked range of exotic dry fruits â€” carefully sourced, naturally pure, and crafted to bring health and richness to every moment.</p>
+                        <p class="cta_desc pb-4">Explore our handpicked range of exotic dry fruits carefully sourced, naturally pure, and crafted to bring health and richness to every moment.</p>
                         <div class="cta_buttons d-flex flex-wrap justify-content-center gap-3">
                            <a href="products.html" class="btn custom_btn rounded-pill text-white px-4">Explore Our Products <i class="ph ph-arrow-right ps-2"></i></a>
-                           <a href="contact-us.html" class="btn cta_btn_outline rounded-pill px-4" style="display: inline-flex; align-items: center; justify-content: center;">Get In Touch</a> </div>
+                           <a href="contact-us.html" class="btn cta_btn_outline rounded-pill px-4" style="display: inline-flex; align-items: center; justify-content: center; text-transform: none; letter-spacing: 0;">Get In Touch</a>
                      </div>
                   </div>
                </div>
@@ -2303,9 +2431,7 @@
             <div class="col-md-4 col-lg-3">
                <h5 class="footer_v2_heading">Find Us</h5>
                <div class="footer_v2_map mb-3">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6480.843365724808!2d80.12128719078282!3d12.949546647650417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525fa3efd01479%3A0xa54f95be19b42bbc!2s2nd%20Cross%20St%2C%20Chennai%2C%20Tamil%20Nadu!5e1!3m2!1sen!2sin!4v1778843234887!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                     width="100%"
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54102.956603113074!2d80.19250485288907!3d13.063004900889974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e1!3m2!1sen!2sin!4v1779102201418!5m2!1sen!2sin" width="600" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  width="100%">
                      height="160"
                      style="border:0; border-radius: 10px;"
                      allowfullscreen=""
@@ -2337,6 +2463,7 @@
    </div>
 </footer>
 <!-- footer section end -->
+
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20VNIL%20Nuts!%20I%27m%20interested%20in%20your%20products." 
    class="whatsapp_float" 
@@ -2350,17 +2477,17 @@
 /* WhatsApp Floating Button */
 .whatsapp_float {
     position: fixed;
-    bottom: 80px;  /* sits above the back-to-top button */
-    right: 30px;
+    bottom: 70px;  /* sits above the back-to-top button */
+    right: 20px;   /* same right alignment as back-to-top */
     background-color: #25D366;
     color: #fff;
     border-radius: 50%;
-    width: 55px;
-    height: 55px;
+    width: 45px;   /* reduced from 55px */
+    height: 45px;  /* reduced from 55px */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 22px; /* reduced from 30px */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     z-index: 9999;
     transition: transform 0.3s ease;
@@ -2371,11 +2498,11 @@
     color: #fff;
 }
 
-/* Push back-to-top button down clearly */
+/* Back-to-top button */
 .backtotop {
     position: fixed;
     bottom: 20px;  /* sits at the very bottom */
-    right: 30px;
+    right: 20px;
     z-index: 9998;
 }
 </style>

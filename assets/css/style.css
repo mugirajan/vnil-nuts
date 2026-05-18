@@ -12925,7 +12925,7 @@ img {
 @media (max-width: 480px)  { .snap-item { flex-basis: calc(75% - 1.5rem); } }
 
 /* ── Testimonial Fader ── */
-.testimonial-fader { position: relative; min-height: 450px; }
+.testimonial-fader { position: relative; min-height: 320px; } /* reduced since heading moved out */
 .testimonial-fader .slider_item {
   position: absolute;
   inset: 0;
@@ -12946,4 +12946,84 @@ img {
     opacity: 1;
     position: static;
   }
+}
+.testimonial_section {
+    margin-bottom: 0 !important;
+    padding-bottom: 30px !important;
+}
+
+.service_section.section-pad-lg {
+    padding-top: 40px !important;
+}
+/* Remove white gap above testimonial */
+.testimonial_section {
+    margin-top: 0 !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+}
+
+/* Reduce inner fader height */
+.testimonial-fader {
+    min-height: 280px !important;
+}
+
+/* Reduce heading gap */
+.testimonial_sec_content .text-center.pt-5.pb-4 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+/* Reduce bottom padding of the section above testimonial */
+.faqs_section {
+    padding-bottom: 20px !important;
+}
+
+ .address_author {
+    position: absolute;
+    top: 20px;           /* inside the card */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ @media (max-width: 768px) {
+    .about_section_content {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        text-align: center;
+    }
+
+    .col-lg-6.ps-lg-5 {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .product_sec_sub_title {
+        justify-content: center;
+    }
+
+    .product_section_btn {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .backtotop {
+        right: 18px !important;
+    }
+}
+
+.btn.custom_btn,
+.cta_btn_outline {
+    letter-spacing: 0 !important;
+}
+
+.footer_v2_map iframe {
+    height: 200px !important;
+    width: 100% !important;
+    border-radius: 10px;
 }
