@@ -12868,3 +12868,34 @@ img {
 .section-pad-sm { padding-top: var(--space-section-sm) !important; padding-bottom: var(--space-section-sm) !important; }
 .section-pad-md { padding-top: var(--space-section-md) !important; padding-bottom: var(--space-section-md) !important; }
 .section-pad-lg { padding-top: var(--space-section-lg) !important; padding-bottom: var(--space-section-lg) !important; }
+
+/* Header social icons */
+.header_bottom_main .d-flex ul li a {
+  width: 36px;
+  height: 36px;
+  background: var(--vnil-rose-gold, #C9956B);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.header_bottom_main .d-flex ul li a:hover {
+  background: #fff;
+  color: #C9956B;
+  border: 1px solid #C9956B;
+}
+
+/* Header social icon size */
+.header_bottom_main .d-flex ul li a i {
+  font-size: 20px;
+}
+
+/* Footer social icon size */
+.footer_v2_social li a i {
+  font-size: 20px;
+}

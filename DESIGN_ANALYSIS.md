@@ -173,7 +173,7 @@ Vnil's choice is defensible *if* it leverages the extra pages for content (blog,
 
 ### Vnil
 
-- **Iconography:** Font Awesome 6.5 via CDN. Mass-market icon set. No custom icons. Mixed line + filled styles in social area (`fab fa-x-twitter` filled, but contact icons line).
+- **Iconography:** Font Awesome 6.5 via CDN. Mass-market icon set. No custom icons. Mixed line + filled styles in social area (`ph ph-x-logo` filled, but contact icons line).
 - **Cards:** SCSS partials exist for `_product.scss`, `_blogs.scss`, `_team.scss` — many e-commerce-flavored (`_cart.scss`, `_checkout.scss`, `_quick.scss`, `_register.scss`, `_review.scss`). The aspiration is a full store; the reality is a catalogue.
 - **Buttons:** UPPERCASE, rose-gold filled, copper hover. Single style — no ghost/outline variant defined consistently.
 - **Social icons:** Filled rose-gold 38×38px circles, hover inverts to white-with-border. Decent.

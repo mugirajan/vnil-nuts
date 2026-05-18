@@ -172,7 +172,7 @@ Files that currently load FA (line numbers approximate):
 
 | File | Line | Current |
 |---|---|---|
-| `index.html` | 12 | `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css` |
+| `index.html` | 12 | `https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css` |
 | `about-us.html` | 12 | same |
 | `contact-us.html` | 13 | same |
 | `products.html` | 12 | same |
@@ -198,15 +198,15 @@ The actual icons used (compiled from a full repo scan):
 
 | Font Awesome | Phosphor regular | Phosphor fill (if used filled) |
 |---|---|---|
-| `fas fa-arrow-up` | `ph ph-arrow-up` | — |
-| `fas fa-arrow-left` | `ph ph-arrow-left` | — |
+| `ph ph-arrow-up` | `ph ph-arrow-up` | — |
+| `ph ph-arrow-left` | `ph ph-arrow-left` | — |
 | `fas fa-arrow-right` | `ph ph-arrow-right` | — |
-| `fas fa-long-arrow-alt-right` | `ph ph-arrow-right` | — |
-| `fas fa-chevron-right` | `ph ph-caret-right` | — |
-| `fas fa-home` | `ph ph-house` | — |
+| `ph ph-arrow-right` | `ph ph-arrow-right` | — |
+| `ph ph-caret-right` | `ph ph-caret-right` | — |
+| `ph ph-house` | `ph ph-house` | — |
 | `fas fa-bars` | `ph ph-list` | — |
-| `fas fa-times` | `ph ph-x` | — |
-| `fas fa-search` | `ph ph-magnifying-glass` | — |
+| `ph ph-x` | `ph ph-x` | — |
+| `ph ph-magnifying-glass` | `ph ph-magnifying-glass` | — |
 | `fas fa-user` | `ph ph-user` | `ph-fill ph-user` |
 | `fas fa-user-circle` | `ph ph-user-circle` | — |
 | `fas fa-user-cog` | `ph ph-user-gear` | — |
@@ -215,16 +215,16 @@ The actual icons used (compiled from a full repo scan):
 | `fas fa-sign-out-alt` | `ph ph-sign-out` | — |
 | `fas fa-heart` | `ph ph-heart` | `ph-fill ph-heart` |
 | `fas fa-shopping-bag` | `ph ph-shopping-bag` | — |
-| `fas fa-shopping-cart` | `ph ph-shopping-cart` | — |
-| `fas fa-star` | `ph-fill ph-star` | `ph-fill ph-star` |
+| `ph ph-shopping-cart` | `ph ph-shopping-cart` | — |
+| `ph-fill ph-star` | `ph-fill ph-star` | `ph-fill ph-star` |
 | `fas fa-circle` (decorative dot) | `ph-fill ph-circle` | `ph-fill ph-circle` |
 | `fas fa-clock` | `ph ph-clock` | — |
 | `fas fa-calendar-alt` | `ph ph-calendar` | — |
-| `fas fa-envelope` | `ph ph-envelope` | — |
-| `fas fa-envelope-open-text` | `ph ph-envelope-open` | — |
-| `fas fa-phone` | `ph ph-phone` | — |
-| `fas fa-phone-volume` | `ph ph-phone-call` | — |
-| `fas fa-map-marker-alt` | `ph ph-map-pin` | — |
+| `ph ph-envelope` | `ph ph-envelope` | — |
+| `ph ph-envelope-open-text` | `ph ph-envelope-open` | — |
+| `ph ph-phone` | `ph ph-phone` | — |
+| `ph ph-phone-volume` | `ph ph-phone-call` | — |
+| `ph ph-map-pin` | `ph ph-map-pin` | — |
 | `fas fa-globe` | `ph ph-globe` | — |
 | `fas fa-globe-asia` | `ph ph-globe-hemisphere-east` | — |
 | `fas fa-link` | `ph ph-link` | — |
@@ -239,23 +239,23 @@ The actual icons used (compiled from a full repo scan):
 | `fas fa-handshake` | `ph ph-handshake` | — |
 | `fas fa-hand-holding-heart` | `ph ph-hand-heart` | — |
 | `fas fa-leaf` | `ph ph-leaf` | — |
-| `fas fa-seedling` | `ph ph-plant` | — |
+| `ph ph-plant` | `ph ph-plant` | — |
 | `fas fa-flask` | `ph ph-flask` | — |
 | `fas fa-award` | `ph ph-medal` | — |
 | `fas fa-gift` | `ph ph-gift` | — |
-| `fas fa-truck` | `ph ph-truck` | — |
+| `ph ph-truck` | `ph ph-truck` | — |
 | `fas fa-credit-card` | `ph ph-credit-card` | — |
 | `fas fa-box-open` | `ph ph-package` | — |
 | `fas fa-cookie-bite` | `ph ph-cookie` | — |
 | `fas fa-database` | `ph ph-database` | — |
 | `fas fa-child` | `ph ph-baby` | — |
-| `fas fa-quote-left` | `ph-fill ph-quotes` | — |
-| `fab fa-facebook-f` | `ph ph-facebook-logo` | — |
+| `ph-fill ph-quotes` | `ph-fill ph-quotes` | — |
+| `ph ph-facebook-logo` | `ph ph-facebook-logo` | — |
 | `fab fa-facebook-square` | `ph-fill ph-facebook-logo` | — |
-| `fab fa-instagram` | `ph ph-instagram-logo` | — |
-| `fab fa-x-twitter` | `ph ph-x-logo` | — |
-| `fab fa-twitter` | `ph ph-x-logo` | — |
-| `fab fa-linkedin-in` | `ph ph-linkedin-logo` | — |
+| `ph ph-instagram-logo` | `ph ph-instagram-logo` | — |
+| `ph ph-x-logo` | `ph ph-x-logo` | — |
+| `ph ph-x-logo` | `ph ph-x-logo` | — |
+| `ph ph-linkedin-logo` | `ph ph-linkedin-logo` | — |
 | `fab fa-linkedin` | `ph-fill ph-linkedin-logo` | — |
 | `fab fa-youtube` | `ph ph-youtube-logo` | — |
 | `fab fa-pinterest-p` | `ph ph-pinterest-logo` | — |
@@ -274,15 +274,15 @@ $map = [ordered]@{
   # Multi-word classes FIRST (longest match wins)
   'fab fa-google-plus-g'        = ''  # delete (Google+ is dead)
   'fab fa-facebook-square'      = 'ph-fill ph-facebook-logo'
-  'fab fa-linkedin-in'          = 'ph ph-linkedin-logo'
-  'fas fa-long-arrow-alt-right' = 'ph ph-arrow-right'
-  'fas fa-map-marker-alt'       = 'ph ph-map-pin'
-  'fas fa-envelope-open-text'   = 'ph ph-envelope-open'
+  'ph ph-linkedin-logo'          = 'ph ph-linkedin-logo'
+  'ph ph-arrow-right' = 'ph ph-arrow-right'
+  'ph ph-map-pin'       = 'ph ph-map-pin'
+  'ph ph-envelope-open-text'   = 'ph ph-envelope-open'
   'fas fa-external-link-alt'    = 'ph ph-arrow-square-out'
   'fas fa-exclamation-triangle' = 'ph ph-warning'
   'fas fa-sign-out-alt'         = 'ph ph-sign-out'
   'fas fa-hand-holding-heart'   = 'ph ph-hand-heart'
-  'fas fa-phone-volume'         = 'ph ph-phone-call'
+  'ph ph-phone-volume'         = 'ph ph-phone-call'
   'fas fa-globe-asia'           = 'ph ph-globe-hemisphere-east'
   'fas fa-shield-alt'           = 'ph ph-shield'
   'fas fa-info-circle'          = 'ph ph-info'
@@ -294,46 +294,46 @@ $map = [ordered]@{
   'fas fa-user-check'           = 'ph ph-user-check'
   'fas fa-user-cog'             = 'ph ph-user-gear'
   'fas fa-shopping-bag'         = 'ph ph-shopping-bag'
-  'fas fa-shopping-cart'        = 'ph ph-shopping-cart'
+  'ph ph-shopping-cart'        = 'ph ph-shopping-cart'
   'fas fa-credit-card'          = 'ph ph-credit-card'
   'fas fa-box-open'             = 'ph ph-package'
   'fas fa-cookie-bite'          = 'ph ph-cookie'
-  'fas fa-chevron-right'        = 'ph ph-caret-right'
+  'ph ph-caret-right'        = 'ph ph-caret-right'
   'fas fa-arrow-right'          = 'ph ph-arrow-right'
-  'fas fa-arrow-left'           = 'ph ph-arrow-left'
-  'fas fa-arrow-up'             = 'ph ph-arrow-up'
-  'fas fa-quote-left'           = 'ph-fill ph-quotes'
+  'ph ph-arrow-left'           = 'ph ph-arrow-left'
+  'ph ph-arrow-up'             = 'ph ph-arrow-up'
+  'ph-fill ph-quotes'           = 'ph-fill ph-quotes'
   'fas fa-gear-six'             = 'ph ph-gear-six'
   'fas fa-cogs'                 = 'ph ph-gear-six'
-  'fab fa-facebook-f'           = 'ph ph-facebook-logo'
-  'fab fa-instagram'            = 'ph ph-instagram-logo'
-  'fab fa-x-twitter'            = 'ph ph-x-logo'
-  'fab fa-twitter'              = 'ph ph-x-logo'
+  'ph ph-facebook-logo'           = 'ph ph-facebook-logo'
+  'ph ph-instagram-logo'            = 'ph ph-instagram-logo'
+  'ph ph-x-logo'            = 'ph ph-x-logo'
+  'ph ph-x-logo'              = 'ph ph-x-logo'
   'fab fa-linkedin'             = 'ph-fill ph-linkedin-logo'
   'fab fa-youtube'              = 'ph ph-youtube-logo'
   'fab fa-pinterest-p'          = 'ph ph-pinterest-logo'
   # Single-word classes
   'fas fa-bars'                 = 'ph ph-list'
-  'fas fa-times'                = 'ph ph-x'
-  'fas fa-search'               = 'ph ph-magnifying-glass'
-  'fas fa-home'                 = 'ph ph-house'
+  'ph ph-x'                = 'ph ph-x'
+  'ph ph-magnifying-glass'               = 'ph ph-magnifying-glass'
+  'ph ph-house'                 = 'ph ph-house'
   'fas fa-heart'                = 'ph ph-heart'
   'fas fa-user'                 = 'ph ph-user'
-  'fas fa-star'                 = 'ph-fill ph-star'
+  'ph-fill ph-star'                 = 'ph-fill ph-star'
   'fas fa-circle'               = 'ph-fill ph-circle'
   'fas fa-check'                = 'ph ph-check'
   'fas fa-clock'                = 'ph ph-clock'
-  'fas fa-envelope'             = 'ph ph-envelope'
-  'fas fa-phone'                = 'ph ph-phone'
+  'ph ph-envelope'             = 'ph ph-envelope'
+  'ph ph-phone'                = 'ph ph-phone'
   'fas fa-globe'                = 'ph ph-globe'
   'fas fa-link'                 = 'ph ph-link'
   'fas fa-handshake'            = 'ph ph-handshake'
   'fas fa-leaf'                 = 'ph ph-leaf'
-  'fas fa-seedling'             = 'ph ph-plant'
+  'ph ph-plant'             = 'ph ph-plant'
   'fas fa-flask'                = 'ph ph-flask'
   'fas fa-award'                = 'ph ph-medal'
   'fas fa-gift'                 = 'ph ph-gift'
-  'fas fa-truck'                = 'ph ph-truck'
+  'ph ph-truck'                = 'ph ph-truck'
   'fas fa-database'             = 'ph ph-database'
   'fas fa-child'                = 'ph ph-baby'
 }
