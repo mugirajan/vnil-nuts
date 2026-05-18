@@ -42,7 +42,11 @@
    <!-- Include nice-select CSS -->
    <link rel="stylesheet" href="assets/css/nice-select.css">
 
+   <!-- Include slick-theme CSS -->
+   <link rel="stylesheet" href="assets/css/slick-theme.css">
 
+   <!-- Include slick CSS -->
+   <link rel="stylesheet" href="assets/css/slick.css">
 
    <!-- Include stylesheet CSS -->
    <link rel="stylesheet" href="assets/css/style.css?v=9">
@@ -322,7 +326,7 @@
          </section>
          <!-- banner section end -->
 
-         <!-- exotic dry fruits slider start -->
+        <!-- exotic dry fruits slider start -->
 <section class="category_section section-pad-md position-relative overflow-hidden clearfix" data-aos="fade-up" data-aos-duration="2000">
    <div class="container">
       <div class="category_top_content d-flex justify-content-between align-items-center mb-4">
@@ -342,50 +346,49 @@
    </div>
 
    <!-- Slider viewport -->
-   <div id="catWrap" style="
-        overflow: hidden;
-        width: 100%;
-        padding: 10px 0 20px;
-   ">
-      <div id="categoryTrack" style="
-           display: flex;
-           flex-wrap: nowrap;
-           gap: 24px;
-           transition: transform 0.5s ease;
-           padding: 0 40px;
-      ">
-         <div class="category_item text-center">
-            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/almond.webp" alt="Almonds"></div>
-            <h6 class="item_title">Almonds</h6>
+   <div id="catWrap" style="overflow: hidden; width: 100%; padding: 10px 40px 20px; box-sizing: border-box;">
+      <div id="categoryTrack" style="display: flex; flex-wrap: nowrap; transition: transform 0.5s ease;">
+
+         <!-- Slide 1 -->
+         <div class="slide-page">
+            <div class="category_item text-center">
+               <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/almond.webp" alt="Almonds"></div>
+               <h6 class="item_title">Almonds</h6>
+            </div>
+            <div class="category_item text-center">
+               <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/cashew.webp" alt="Cashews"></div>
+               <h6 class="item_title">Cashews</h6>
+            </div>
+            <div class="category_item text-center">
+               <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/black-risin.webp" alt="Black Raisins"></div>
+               <h6 class="item_title">Black Raisins</h6>
+            </div>
+            <div class="category_item text-center">
+               <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/walnut.webp" alt="Walnuts"></div>
+               <h6 class="item_title">Walnuts</h6>
+            </div>
          </div>
-         <div class="category_item text-center">
-            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/cashew.webp" alt="Cashews"></div>
-            <h6 class="item_title">Cashews</h6>
+
+         <!-- Slide 2 -->
+         <div class="slide-page">
+            <div class="category_item text-center">
+               <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/ajeer.webp" alt="Anjeer"></div>
+               <h6 class="item_title">Anjeer</h6>
+            </div>
+            <div class="category_item text-center">
+               <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/pista.webp" alt="Pistachios"></div>
+               <h6 class="item_title">Pistachios</h6>
+            </div>
+            <div class="category_item text-center">
+               <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/dates.webp" alt="Dates"></div>
+               <h6 class="item_title">Dates</h6>
+            </div>
+            <div class="category_item text-center">
+               <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/apricot.webp" alt="Apricots"></div>
+               <h6 class="item_title">Apricots</h6>
+            </div>
          </div>
-         <div class="category_item text-center">
-            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/black-risin.webp" alt="Black Raisins"></div>
-            <h6 class="item_title">Black Raisins</h6>
-         </div>
-         <div class="category_item text-center">
-            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/walnut.webp" alt="Walnuts"></div>
-            <h6 class="item_title">Walnuts</h6>
-         </div>
-         <div class="category_item text-center">
-            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/ajeer.webp" alt="Anjeer"></div>
-            <h6 class="item_title">Anjeer</h6>
-         </div>
-         <div class="category_item text-center">
-            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/pista.webp" alt="Pistachios"></div>
-            <h6 class="item_title">Pistachios</h6>
-         </div>
-         <div class="category_item text-center">
-            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/dates.webp" alt="Dates"></div>
-            <h6 class="item_title">Dates</h6>
-         </div>
-         <div class="category_item text-center">
-            <div class="cat_img_wrap"><img loading="lazy" src="assets/images/category/apricot.webp" alt="Apricots"></div>
-            <h6 class="item_title">Apricots</h6>
-         </div>
+
       </div>
    </div>
 
@@ -394,135 +397,128 @@
 <!-- exotic dry fruits slider end -->
 
 <style>
+/* Each slide page fills full wrapper width */
+.slide-page {
+   display: flex;
+   min-width: 100%;
+   width: 100%;
+   box-sizing: border-box;
+   flex-shrink: 0;
+   gap: 24px;
+}
+
+/* Each item takes exactly 1/4 of the slide */
 .category_item {
-    flex: 0 0 200px;
-    width: 200px;
+   flex: 1;
+   min-width: 0;
 }
 
 .cat_img_wrap {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: #f5f5f5;
-    margin: 0 auto 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   width: 80%;
+   aspect-ratio: 1;
+   border-radius: 50%;
+   overflow: hidden;
+   background: #f5f5f5;
+   margin: 0 auto 12px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .cat_img_wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.3s ease;
 }
 
 .category_item:hover .cat_img_wrap img {
-    transform: scale(1.08);
+   transform: scale(1.08);
 }
 
 .category_item .item_title {
-    font-size: 15px;
-    font-weight: 600;
+   font-size: 15px;
+   font-weight: 600;
 }
 
 @media (max-width: 768px) {
-    .category_item { flex: 0 0 140px; width: 140px; }
-    .cat_img_wrap  { width: 120px; height: 120px; }
-}
-#categoryTrack {
-    padding-left: 40px !important;
-    padding-right: 300px !important; /* increase right space */
+   .slide-page { gap: 12px; }
+   .cat_img_wrap { width: 90%; }
 }
 </style>
 
 <script>
-window.addEventListener('load', function () {
-    var track    = document.getElementById('categoryTrack');
-    var origItems = Array.from(track.querySelectorAll('.category_item'));
-    var itemW    = 200 + 24; // width + gap
-    var total    = origItems.length;
-    var current  = 0;
-    var autoTimer;
-    var isAnimating = false;
+(function () {
+   const track = document.getElementById('categoryTrack');
+   const pages = Array.from(track.querySelectorAll('.slide-page'));
+   const total = pages.length;
 
-    /* Clone items for infinite loop */
-    origItems.forEach(function(item) {
-        track.appendChild(item.cloneNode(true));
-    });
+   // Clone all pages and append to end (for infinite forward loop)
+   pages.forEach(page => {
+      track.appendChild(page.cloneNode(true));
+   });
 
-    /* Set initial padding so first item has same space as right side */
-    track.style.paddingLeft  = '40px';
-    track.style.paddingRight = '40px';
+   // Clone all pages and prepend to start (for infinite backward loop)
+   pages.forEach(page => {
+      track.insertBefore(page.cloneNode(true), track.firstChild);
+   });
 
-    function goTo(index, animate) {
-        if (isAnimating) return;
-        isAnimating = true;
+   // Start at the first REAL page (after the prepended clones)
+   let current = total; // skip past the prepended clones
+   track.style.transition = 'none';
+   track.style.transform = `translateX(-${current * 100}%)`;
 
-        if (animate === false) {
-            track.style.transition = 'none';
-        } else {
-            track.style.transition = 'transform 0.5s ease';
-        }
+   function goToSlide(index) {
+      current = index;
+      track.style.transition = 'transform 0.5s ease';
+      track.style.transform = `translateX(-${current * 100}%)`;
+   }
 
-        track.style.transform = 'translateX(-' + (index * itemW) + 'px)';
+   // After transition ends, silently reset if we've gone into clones
+   track.addEventListener('transitionend', () => {
+      const allPages = total * 3; // original + clone front + clone back
 
-        setTimeout(function() {
-            isAnimating = false;
-        }, animate === false ? 0 : 500);
-    }
+      // Gone too far forward into end clones → jump to real start
+      if (current >= total * 2) {
+         current = total;
+         track.style.transition = 'none';
+         track.style.transform = `translateX(-${current * 100}%)`;
+      }
 
-    function next() {
-        current++;
-        goTo(current, true);
+      // Gone too far backward into start clones → jump to real end
+      if (current < total) {
+         current = total * 2 - 1;
+         track.style.transition = 'none';
+         track.style.transform = `translateX(-${current * 100}%)`;
+      }
+   });
 
-        /* When we've gone through all originals, silently reset */
-        if (current >= total) {
-            setTimeout(function() {
-                current = 0;
-                goTo(current, false);
-            }, 520);
-        }
-    }
+   // Auto slide every 3 seconds
+   let autoPlay = setInterval(() => goToSlide(current + 1), 3000);
 
-    function prev() {
-        if (current <= 0) {
-            /* Jump silently to end of originals then go back one */
-            current = total;
-            goTo(current, false);
-            setTimeout(function() {
-                current--;
-                goTo(current, true);
-            }, 50);
-        } else {
-            current--;
-            goTo(current, true);
-        }
-    }
+   function resetAuto() {
+      clearInterval(autoPlay);
+      autoPlay = setInterval(() => goToSlide(current + 1), 3000);
+   }
 
-    function startAuto() {
-        autoTimer = setInterval(next, 2500);
-    }
+   document.getElementById('catNext').addEventListener('click', () => {
+      goToSlide(current + 1);
+      resetAuto();
+   });
 
-    function resetAuto() {
-        clearInterval(autoTimer);
-        startAuto();
-    }
+   document.getElementById('catPrev').addEventListener('click', () => {
+      goToSlide(current - 1);
+      resetAuto();
+   });
 
-    document.getElementById('catNext').addEventListener('click', function() {
-        next();
-        resetAuto();
-    });
+   // Pause on hover, resume on leave
+   const wrap = document.getElementById('catWrap');
+   wrap.addEventListener('mouseenter', () => clearInterval(autoPlay));
+   wrap.addEventListener('mouseleave', () => {
+      autoPlay = setInterval(() => goToSlide(current + 1), 3000);
+   });
 
-    document.getElementById('catPrev').addEventListener('click', function() {
-        prev();
-        resetAuto();
-    });
-
-    goTo(0, false);
-    startAuto();
-});
+})();
 </script>
          <!-- about section start -->
          <section class="about_section section-pad-md position-relative overflow-hidden">
@@ -2102,11 +2098,11 @@ window.addEventListener('load', function () {
       <div class="container">
 
          <!-- STATIC heading — outside fader so it never fades -->
-         <div class="text-center pt-5 pb-4">
+         <div class="text-center pt-3 pb-0">
             <div class="product_sec_sub_title d-flex align-items-center justify-content-center pb-2">
                <span class="text-uppercase px-2" style="color: #C9956B; letter-spacing: 2px;">Testimonials</span>
             </div>
-            <h2 class="testi_slide_heading pb-3" style="color:#fff;">What Our Customers Say.</h2>
+            <h2 class="testi_slide_heading pb-1" style="color:#fff;">What Our Customers Say.</h2>
          </div>
 
          <!-- FADER — only image + quote fades -->

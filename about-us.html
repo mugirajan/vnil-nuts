@@ -354,8 +354,7 @@
 
                 <!-- vnil scale-stats strip start -->
                 <!-- TODO: confirm these numbers with the founder before launch. Placeholders below. -->
-                <section class="vnil_stats_section" style="background-color: var(--vnil-white, #FFFFFF); padding-top: 2.5em; padding-bottom: 2.5em; border-top: 1px solid rgba(201, 149, 107, 0.25); border-bottom: 1px solid rgba(201, 149, 107, 0.25);">
-                    <div class="container">
+              <section class="vnil_stats_section" style="background-color: var(--vnil-white, #FFFFFF); padding-top: 1em; padding-bottom: 1em; border-top: 1px solid rgba(201, 149, 107, 0.25); border-bottom: 1px solid rgba(201, 149, 107, 0.25);">   <div class="container">
                         <div class="row text-center g-0 justify-content-center align-items-center">
                             <div class="col-6 col-md-3" style="padding: 16px 12px; border-right: 1px solid rgba(201, 149, 107, 0.2);">
                                 <div class="vnil_stat_item">
@@ -385,7 +384,49 @@
                     </div>
                 </section>
                 <!-- vnil scale-stats strip end -->
+<style>
+/* Remove excess bottom padding from section above stats */
+.vnil_stats_section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
 
+/* Target the section directly above */
+.vnil_stats_section + section {
+    margin-top: 0 !important;
+}
+/* ── Fix gaps around stats strip ── */
+
+/* Section above stats */
+.product_section_2 {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Section below stats */
+.product9_sec {
+    margin-top: 1em !important;
+    padding-top: 4em !important;
+}
+.product_section_2 {
+    padding-bottom: 3em !important;
+}
+
+/* Remove the mt_50 mb_50 effect on that specific section */
+.product9_sec.mt_50 {
+    margin-top: 0 !important;
+}
+
+.product9_sec.mb_50 {
+    margin-bottom: 0 !important;
+}
+
+/* Stats strip itself — clean margins */
+.vnil_stats_section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+</style>
                 <!-- product-9 section start -->
                 <section class="product9_sec mt_50 mb_50 position-relative" data-aos="fade-up" data-aos-duration="2000">
                     <div class="product9_sec_wrap sec_space_large" style="background-color: #F9F4EE;">
@@ -537,6 +578,11 @@
                         </div>
                     </div>
                 </section>
+                
+                <style>
+.service_setion {
+    padding-bottom: 60px; 
+}</style>
                 <!-- service section end -->
 
                 <!-- cta section start -->

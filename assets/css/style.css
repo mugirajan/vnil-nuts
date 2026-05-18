@@ -12924,8 +12924,44 @@ img {
 @media (max-width: 768px)  { .snap-item { flex-basis: calc(50% - 1.5rem); } }
 @media (max-width: 480px)  { .snap-item { flex-basis: calc(75% - 1.5rem); } }
 
+
+/* Testimonial section — clean merged rule */
+.testimonial_section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+}
+
+/* Reduce fader height — was 280px causing the gap */
+.testimonial-fader {
+    min-height: auto !important;
+    position: relative;
+}
+
+/* Reduce bottom padding — was 80px */
+.testimonial_section .testimonial_sec_content {
+    padding-bottom: 30px !important;
+}
+
+/* Reduce heading gap */
+.testimonial_sec_content .text-center.pt-3.pb-2 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+.testimonial-fader .slider_item {
+  position: absolute;
+  inset: 0;
+  top: 0 !important;
+  align-items: flex-start !important;
+}
+
+.testi_slide_wrap {
+  align-items: flex-start !important;
+  padding-top: 0 !important;
+}
 /* ── Testimonial Fader ── */
-.testimonial-fader { position: relative; min-height: 320px; } /* reduced since heading moved out */
+.testimonial-fader { position: relative; min-height: 200px; padding-top: 0 !important; } /* reduced since heading moved out */
 .testimonial-fader .slider_item {
   position: absolute;
   inset: 0;
@@ -12968,8 +13004,8 @@ img {
 }
 
 /* Reduce heading gap */
-.testimonial_sec_content .text-center.pt-5.pb-4 {
-    padding-top: 20px !important;
+.testimonial_sec_content .text-center.pt-3.pb-2 {
+    padding-top: 10px !important;
     padding-bottom: 20px !important;
 }
 /* Reduce bottom padding of the section above testimonial */
@@ -13062,6 +13098,37 @@ section.contact_us_sec .row {
 
 /* Service section top padding */
 section.service_setion.section-pad-lg {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 80px !important;
+     padding-bottom: 98px !important;
+}
+@media (max-width: 768px) {
+    .whatsapp_float {
+        bottom: 70px !important;
+        right: 15px !important;
+    }
+
+    .backtotop {
+        bottom: 20px !important;
+        right: 15px !important;
+    }
+}
+@media (max-width: 768px) {
+    .whatsapp_float {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 18px !important;
+        bottom: 70px !important;  /* increased gap above back-to-top */
+        right: 20px !important;
+    }
+
+    .backtotop {
+        right: 0px !important;
+        bottom: 10px !important;
+    }
+
+    .backtotop a {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 14px !important;
+    }
 }
