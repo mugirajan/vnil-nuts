@@ -103,13 +103,13 @@ Warm off-white background → deep charcoal text → muted amber accents → cre
 ### Vnil's vertical rhythm (`style.css:151-169`)
 
 ```
-.sec_ptb_100, .sec_space_small  → 2em padding-top/bottom    (32px)
+.section-pad-md, .section-pad-md  → 2em padding-top/bottom    (32px)
 .sec_top_space_50               → 4em padding-top           (64px)
 .cta_wrap                       → 4em both sides            (64px)
 Mobile override                 → 3em                       (48px)
 ```
 
-**This is cramped for a "premium" brand.** Premium-positioned brands breathe — typical section padding is 80–120px (5–7.5em). At 2em, sections butt against each other and the design loses the visual quiet that signals luxury. The naming is also misleading (`sec_ptb_100` no longer means 100px).
+**This is cramped for a "premium" brand.** Premium-positioned brands breathe — typical section padding is 80–120px (5–7.5em). At 2em, sections butt against each other and the design loses the visual quiet that signals luxury. The naming is also misleading (`section-pad-md` no longer means 100px).
 
 ### Layout vs. Pioneer
 

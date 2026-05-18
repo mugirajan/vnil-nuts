@@ -13,7 +13,7 @@
 
 ## Table of contents
 
-1. [Rename `sec_ptb_100` utility classes (and fix the padding)](#1-rename-sec_ptb_100-utility-classes-and-fix-the-padding)
+1. [Rename `section-pad-md` utility classes (and fix the padding)](#1-rename-section-pad-md-utility-classes-and-fix-the-padding)
 2. [Replace Font Awesome with Phosphor / Lucide / Tabler](#2-replace-font-awesome-with-phosphor--lucide--tabler)
 3. [Replace Slick carousel with CSS-snap or Embla](#3-replace-slick-carousel-with-css-snap-or-embla)
 4. [Image folder cull (destructive)](#4-image-folder-cull-destructive)
@@ -22,12 +22,12 @@
 
 ---
 
-## 1. Rename `sec_ptb_100` utility classes (and fix the padding)
+## 1. Rename `section-pad-md` utility classes (and fix the padding)
 
 **Why this exists.** Today the class names lie. `assets/css/style.css:151-169` shows:
 
 ```css
-.sec_ptb_100, .sec_space_small, .sec_space_xxs_50 {
+.section-pad-md, .section-pad-md, .section-pad-sm {
   padding-top: 2em !important;
   padding-bottom: 2em !important;
 }
@@ -35,7 +35,7 @@
 .sec_bottom_space_70 { padding-bottom: 4em !important; }
 ```
 
-The name `sec_ptb_100` reads "100px padding". Actual value is 2em (~32px). The original definition in `assets/scss/elements/_space.scss:152` is `padding: 100px 0;` — but it's overridden later. Per [DESIGN_ANALYSIS.md §4](./DESIGN_ANALYSIS.md#4-layout-spacing--rhythm) we also want to **bump padding** from 2em → 5em desktop, 3em → 4em mobile.
+The name `section-pad-md` reads "100px padding". Actual value is 2em (~32px). The original definition in `assets/scss/elements/_space.scss:152` is `padding: 100px 0;` — but it's overridden later. Per [DESIGN_ANALYSIS.md §4](./DESIGN_ANALYSIS.md#4-layout-spacing--rhythm) we also want to **bump padding** from 2em → 5em desktop, 3em → 4em mobile.
 
 ### 1a. Decide the new naming scheme
 
@@ -44,17 +44,17 @@ Use a numeric spacing scale tied to actual values (CSS custom properties), not a
 | Token | Value desktop | Value mobile | Replaces |
 |---|---|---|---|
 | `--space-section-sm` | 3em | 2em | (new) |
-| `--space-section-md` | 5em | 4em | `sec_ptb_100`, `sec_space_small`, `sec_space_xxs_50`, `cta_wrap` |
-| `--space-section-lg` | 8em | 5em | `sec_space_xs_70`, `sec_space_mid_small` |
+| `--space-section-md` | 5em | 4em | `section-pad-md`, `section-pad-md`, `section-pad-sm`, `cta_wrap` |
+| `--space-section-lg` | 8em | 5em | `section-pad-lg`, `section-pad-lg` |
 | `--space-section-xl` | 12em | 6em | `sec_space_xlarge`, `sec_space_large` |
 
 New utility class names:
 
 | Old class | New class |
 |---|---|
-| `sec_ptb_100` | `section-pad-md` |
-| `sec_space_small` | `section-pad-md` |
-| `sec_space_xxs_50` | `section-pad-sm` |
+| `section-pad-md` | `section-pad-md` |
+| `section-pad-md` | `section-pad-md` |
+| `section-pad-sm` | `section-pad-sm` |
 | `sec_top_space_50` | `section-pad-top-md` |
 | `sec_bottom_space_70` | `section-pad-bottom-md` |
 | `cta_wrap` | keep name (semantic), but use new tokens internally |
@@ -110,9 +110,9 @@ PowerShell one-liner (run from repo root). Test on a single file first:
 
 ```powershell
 $replacements = @{
-  'sec_ptb_100'        = 'section-pad-md'
-  'sec_space_small'    = 'section-pad-md'
-  'sec_space_xxs_50'   = 'section-pad-sm'
+  'section-pad-md'        = 'section-pad-md'
+  'section-pad-md'    = 'section-pad-md'
+  'section-pad-sm'   = 'section-pad-sm'
   'sec_top_space_50'   = 'section-pad-top-md'
   'sec_bottom_space_70'= 'section-pad-bottom-md'
 }
@@ -128,9 +128,9 @@ Bash version (if dev prefers WSL/Git Bash):
 ```bash
 for f in *.html; do
   sed -i \
-    -e 's/sec_ptb_100/section-pad-md/g' \
-    -e 's/sec_space_small/section-pad-md/g' \
-    -e 's/sec_space_xxs_50/section-pad-sm/g' \
+    -e 's/section-pad-md/section-pad-md/g' \
+    -e 's/section-pad-md/section-pad-md/g' \
+    -e 's/section-pad-sm/section-pad-sm/g' \
     -e 's/sec_top_space_50/section-pad-top-md/g' \
     -e 's/sec_bottom_space_70/section-pad-bottom-md/g' \
     "$f"
@@ -141,7 +141,7 @@ done
 
 ```powershell
 # Should return 0 matches if the rename is complete:
-Select-String -Path "*.html","assets/css/*.css","assets/scss/**/*.scss" -Pattern "sec_ptb_100|sec_space_small|sec_space_xxs_50|sec_top_space_50|sec_bottom_space_70"
+Select-String -Path "*.html","assets/css/*.css","assets/scss/**/*.scss" -Pattern "section-pad-md|section-pad-md|section-pad-sm|sec_top_space_50|sec_bottom_space_70"
 ```
 
 Then open `index.html`, `about-us.html`, `products.html` in a browser and visually check that sections still have breathing room (they should now have *more* — that's intentional).

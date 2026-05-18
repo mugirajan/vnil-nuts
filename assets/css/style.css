@@ -240,12 +240,12 @@ a:hover { color: var(--vnil-rose-gold); }
 ::-moz-selection { color: var(--vnil-white); background-color: var(--vnil-rose-gold); }
 
 /* Premium section padding: 5em desktop / 4em mobile (bumped from 2em / 3em).
-   NOTE: class names like sec_ptb_100 / sec_top_space_50 / sec_bottom_space_70 are
+   NOTE: class names like section-pad-md / sec_top_space_50 / sec_bottom_space_70 are
    template-historical — their visible padding does NOT match the number in the name.
    Renaming would touch every page, so the values are tuned here instead. */
-.sec_ptb_100,
-.sec_space_small,
-.sec_space_xxs_50 {
+.section-pad-md,
+.section-pad-md,
+.section-pad-sm {
   padding-top: 5em !important;
   padding-bottom: 5em !important;
 }
@@ -254,9 +254,9 @@ a:hover { color: var(--vnil-rose-gold); }
 .cta_wrap { padding-top: 4em !important; padding-bottom: 4em !important; }
 .testimonial_section .testimonial_sec_content { padding-bottom: 4em !important; }
 @media (max-width: 767px) {
-  .sec_ptb_100,
-  .sec_space_small,
-  .sec_space_xxs_50,
+  .section-pad-md,
+  .section-pad-md,
+  .section-pad-sm,
   .cta_wrap {
     padding-top: 4em !important;
     padding-bottom: 4em !important;
@@ -1211,12 +1211,12 @@ p {
   padding-bottom: 130px;
 }
 
-.sec_space_mid_small {
+.section-pad-lg {
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
-.sec_space_small {
+.section-pad-md {
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -1226,7 +1226,7 @@ p {
   padding-bottom: 200px;
 }
 
-.sec_space_xs_70 {
+.section-pad-lg {
   padding-top: 70px;
   padding-bottom: 70px;
 }
@@ -1236,7 +1236,7 @@ p {
   padding-bottom: 60px;
 }
 
-.sec_space_xxs_50 {
+.section-pad-sm {
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -1325,7 +1325,7 @@ p {
   padding: 50px 0px;
 }
 
-.sec_ptb_100 {
+.section-pad-md {
   padding: 100px 0px;
 }
 
@@ -8872,7 +8872,7 @@ input[type=text]:focus {
     margin-bottom: 20px;
   }
 
-  .sec_space_mid_small {
+  .section-pad-lg {
     padding: 80px 0px;
   }
 
@@ -9384,7 +9384,7 @@ input[type=text]:focus {
             flex-direction: column;
   }
 
-  .sec_space_small {
+  .section-pad-md {
     padding: 50px 0px;
   }
 
@@ -10665,7 +10665,7 @@ input[type=text]:focus {
     font-size: 20px;
   }
 
-  .sec_space_mid_small {
+  .section-pad-lg {
     padding: 50px 0px;
   }
 
@@ -10849,7 +10849,7 @@ input[type=text]:focus {
     margin-top: 10px;
   }
 
-  .sec_space_xxs_50 {
+  .section-pad-sm {
     padding-bottom: 0px;
   }
 
@@ -12851,3 +12851,20 @@ img {
     background-image: url('../images/banner/banner1-480.avif');
   }
 }
+:root {
+  --space-section-sm: 3em;
+  --space-section-md: 5em;
+  --space-section-lg: 8em;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --space-section-sm: 2em;
+    --space-section-md: 4em;
+    --space-section-lg: 5em;
+  }
+}
+
+.section-pad-sm { padding-top: var(--space-section-sm) !important; padding-bottom: var(--space-section-sm) !important; }
+.section-pad-md { padding-top: var(--space-section-md) !important; padding-bottom: var(--space-section-md) !important; }
+.section-pad-lg { padding-top: var(--space-section-lg) !important; padding-bottom: var(--space-section-lg) !important; }
