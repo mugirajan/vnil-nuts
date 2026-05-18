@@ -12822,4 +12822,32 @@ img {
     font-size: 13px !important;
   }
 }
+
+/* Hero responsive background */
+.banner_section_item {
+  background-image: url('../images/banner/banner1-1920.avif');
+}
+
+@media (max-width: 1440px) {
+  .banner_section_item {
+    background-image: url('../images/banner/banner1-1440.avif');
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner_section_item {
+    background-image: url('../images/banner/banner1-1024.avif');
+  }
+}
+
+@media (max-width: 768px) {
+  .banner_section_item {
+    background-image: url('../images/banner/banner1-768.avif');
+  }
+}
+
+@media (max-width: 480px) {
+  .banner_section_item {
+    background-image: url('../images/banner/banner1-480.avif');
+  }
 }
