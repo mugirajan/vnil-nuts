@@ -493,13 +493,20 @@
   .col-lg-7.product9_right {
     padding-right: 15px !important;
   }
-  section.service_setion {
+ section.service_setion {
     padding-top: 40px !important;
-    padding-bottom: 40px !important;
+    padding-bottom: 40px !important;  /* was 40px */
+}
+section.service_setion {
+    padding-bottom: 45px !important;
+}
+.service_setion .row:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 </style>
                 <!-- service section start -->
-                <section class="service_setion section-pad-lg">
+                <section class="service_setion">
                        <div class="service_content_wrap">
                         <div class="container">
                             <div class="row">
@@ -580,8 +587,9 @@
                 </section>
                 
                 <style>
+                    
 .service_setion {
-    padding-bottom: 60px; 
+    padding-bottom: 0px; 
 }</style>
                 <!-- service section end -->
 
