@@ -418,7 +418,7 @@
             <!-- contact-us section end -->
          
 
-          <!-- address-section start -->
+         <!-- address-section start -->
 <section class="address_sec section-pad-md">
     <div class="address_sec_wrap">
         <div class="container-sm">
@@ -442,12 +442,12 @@
                             <i class="ph ph-circle"></i>
                         </div>
                         <h4 class="address_title">Phone</h4>
-                        <p class="address_desc">+91 99600437455</p>
-                        <p class="address_desc">+91 8778264164</p>
+                        <a href="tel:+919960043745" class="address_desc">+91 99600 43745</a>
+                        <a href="tel:+918778264164" class="address_desc">+91 8778264164</a>
                         <style>
                            .address_desc {
-    margin-bottom: 4px;
-}
+                               margin-bottom: 4px;
+                           }
                         </style>
                     </div>
                 </div>
@@ -471,11 +471,16 @@
                             <i class="ph ph-circle"></i>
                         </div>
                         <h4 class="address_title">Our Address</h4>
-                        <p class="address_desc">Vistanut international ltd, 
-No 1 Victoria street 
-Kamarajapuram 
-Anakaputhur 
-Chennai-600070</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Vistanut+international+ltd+No+1+Victoria+street+Kamarajapuram+Anakaputhur+Chennai+600070" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="address_desc">
+                            Vistanut international ltd,<br>
+                            No 1 Victoria street,
+                            Kamarajapuram,
+                            Anakaputhur,
+                            Chennai - 600070
+                        </a>
                     </div>
                 </div>
 
@@ -498,15 +503,33 @@ Chennai-600070</p>
                             <i class="ph ph-circle"></i>
                         </div>
                         <h4 class="address_title">E-Mail</h4>
-                        <p class="address_desc">vistanutlimited@gmail.com</p>
+                        <a href="mailto:vistanutlimited@gmail.com" class="address_desc">vistanutlimited@gmail.com</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- address-section end -->
-           
+<style>
+   .address_desc {
+    margin-bottom: 4px;
+    color: inherit;
+    text-decoration: none;
+}
+.address_desc:hover {
+    text-decoration: none;
+    color: inherit;
+}
+.address_sec .row {
+    align-items: stretch !important;
+}
+
+.address_sec .address_sec_cont {
+    height: 100% !important;
+    min-height: 220px;
+}
+</style>
+<!-- address-section end -->  
             <!-- contact-info section start -->
 
             <section class="contact_us_info position-relative" data-aos="fade-up" data-aos-duration="2000">
