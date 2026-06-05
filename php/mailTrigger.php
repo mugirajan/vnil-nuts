@@ -98,7 +98,7 @@ The Vnil Nuts Team
         // ── Send notification to admin ────────────────────
         try {
             $mail->clearAllRecipients();
-            $mail->addAddress($this->env('vistanutlimited@gmail.com'));
+            $mail->addAddress($this->env('ADMIN_EMAIL'));
             $mail->Subject = "New Contact Enquiry - " . $data['name'];
             $mail->Body    = "
 Hello Admin,
@@ -172,7 +172,7 @@ The Vnil Nuts Team
         // ── Send notification to admin ────────────────────
         try {
             $mail->clearAllRecipients();
-            $mail->addAddress($this->env('vistanutlimited@gmail.com'));
+            $mail->addAddress($this->env('ADMIN_EMAIL'));
             $mail->Subject = "New Blog Comment - " . $data['name'];
             $mail->Body    = "
 Hello Admin,
