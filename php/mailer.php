@@ -17,13 +17,7 @@ if (file_exists($envPath)) {
         }
     }
 }
-// TEMP DEBUG
-die(json_encode([
-    'debug' => true,
-    'env_exists' => file_exists(__DIR__ . '/.env'),
-    'recaptcha_secret' => $_ENV['RECAPTCHA_SECRET'] ?? 'NOT SET',
-    'gmail_user' => $_ENV['GMAIL_USER'] ?? 'NOT SET',
-]));
+
 
 // ── Security Headers ───────────────────────────────────────
 header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
