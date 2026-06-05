@@ -17,7 +17,16 @@ if (file_exists($envPath)) {
         }
     }
 }
+// TEMP DEBUG
+die(json_encode([
+    'debug' => true,
+    'env_exists' => file_exists(__DIR__ . '/.env'),
+    'recaptcha_secret' => $_ENV['RECAPTCHA_SECRET'] ?? 'NOT SET',
+    'gmail_user' => $_ENV['GMAIL_USER'] ?? 'NOT SET',
+]));
 
+// ── Security Headers ───────────────────────────────────────
+header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
 // ── Security Headers ───────────────────────────────────────
 header("Strict-Transport-Security: max-age=31536000; includeSubDomains");
 header("Content-Security-Policy: default-src 'self'; script-src 'self' https://www.google.com https://www.gstatic.com; frame-src https://www.google.com; connect-src 'self' https://www.google.com https://www.gstatic.com");
