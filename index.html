@@ -51,7 +51,92 @@
    <!-- Include stylesheet CSS -->
    <link rel="stylesheet" href="assets/css/style.css?v=9">
 
-   
+   <style>
+      /* ── Exotic Dry Fruits Slider – 320px fix ── */
+@media (max-width: 590px) {
+  #catWrap {
+    padding: 10px 12px 20px !important;
+  }
+
+  .slide-page {
+    gap: 8px !important;
+  }
+
+  .cat_img_wrap {
+    width: 100% !important;
+  }
+
+  .category_item .item_title {
+    font-size: 11px !important;
+  }
+}
+
+/* ── Testimonial Section – 320px fix ── */
+@media (max-width: 480px) {
+  .testi_slide_wrap {
+    padding: 20px 16px !important;
+  }
+
+  .testi_img_wrap {
+    width: 120px !important;
+    height: 120px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .testi_slide_desc {
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+  }
+
+  .testi_slide_name {
+    font-size: 14px !important;
+  }
+
+  .testi_slide_name font {
+    font-size: 12px !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .testimonial_section {
+    background-attachment: scroll !important; /* fixed bg breaks on tiny screens */
+  }
+
+  .testi_img_wrap {
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  .testi_slide_desc {
+    font-size: 12px !important;
+  }
+
+  .testi_slide_wrap {
+    padding: 16px 10px !important;
+  }
+}
+@media (max-width: 575px) {
+  .testi_slide_wrap .row {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .testi_slide_wrap .col-lg-8 {
+    padding-left: 0 !important;
+    margin-top: 12px !important;
+  }
+
+  .testi_img_wrap {
+    margin: 0 auto !important;
+  }
+}
+/* #catWrap {
+  box-sizing: border-box;
+  max-width: 100%;
+} */
+ 
+   </style>
 
 </head>
 
